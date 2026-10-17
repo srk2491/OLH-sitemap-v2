@@ -1,0 +1,125 @@
+[
+  {
+    "id": 1,
+    "name": "Goolimangala",
+    "taluk": "Anekal",
+    "latitude":12.850503,
+    "longitude":77.6937,
+    "agency": "KMV Limited",
+    "survey_no": "67",
+    "two_bhk": 144
+  },
+  {
+    "id": 2,
+    "name": "Lingapura",
+    "taluk": "Anekal",
+    "latitude": 12.757711,
+    "longitude": 77.668104,
+    "agency": "Ramky Infra",
+    "survey_no": "112",
+    "two_bhk": 266
+  },
+  {
+    "id": 3,
+    "name": "Anekal Gramantara",
+    "taluk": "Anekal",
+    "latitude": 12.708004,
+    "longitude": 77.668683,
+    "agency": "Ramky Infra",
+    "survey_no": "509",
+    "two_bhk": 653
+  },
+  {
+    "id": 4,
+    "name": "Ganigarahalli",
+    "taluk": "Dasarahalli",
+    "latitude": 13.098127,
+    "longitude": 77.505242,
+    "agency": "NCC Limited",
+    "survey_no": "74",
+    "two_bhk": 135
+  },
+  {
+    "id": 5,
+    "name": "Nagadasahalli",
+    "taluk": "Yelhanka",
+    "latitude": 13.160221,
+    "longitude": 77.590282,
+    "agency": "NCC Limited",
+    "survey_no": "63",
+    "two_bhk": 489
+  },
+  {
+    "id": 6,
+    "name": "Kenchanapura",
+    "taluk": "Yeshwanthapura",
+    "latitude": 12.955747,
+    "longitude": 77.438906,
+    "agency": "KPC Limited",
+    "survey_no": "63",
+    "two_bhk": 1067
+  },
+  {
+    "id": 7,
+    "name": "Nelaguli Parcel3 ",
+    "taluk": "Yeshanthapura",
+    "latitude": 12.773678,
+    "longitude": 77.481196,
+    "agency": "KBR Infratech",
+    "survey_no": "145/2",
+    "two_bhk": 164
+  },
+  {
+    "id": 8,
+    "name": "Nelaguli Parcel 2 ",
+    "taluk": "Yeshanthapura",
+    "latitude": 12.773778,
+    "longitude": 77.481362,
+    "agency": "KBR Infratech",
+    "survey_no": "145/2",
+    "two_bhk": 196
+  },
+  {
+    "id": 9,
+    "name": "Bheemanakuppe ",
+    "taluk": "Yeshanthapura",
+    "latitude": 12.894935,
+    "longitude": 77.432026,
+    "agency": "Madhuveer Enterprises",
+    "survey_no": "118",
+    "two_bhk": 96
+  },
+  {
+    "id": 10,
+    "name": "Thotagere ",
+    "taluk": "Yelahanka",
+    "latitude": 13.146741,
+    "longitude": 77.445055,
+    "agency": "SKS Karkala",
+    "survey_no": "14",
+    "two_bhk": 144
+  },
+
+  {
+    "id": 11,
+    "name": "K Narayanapura ",
+    "taluk": "K R Puram",
+    "latitude": 13.059588,
+    "longitude": 77.641022,
+    "agency": "Abhaya Builders",
+    "survey_no": "40",
+    "two_bhk": 160
+  },
+
+  {
+    "id": 12,
+    "name": "Muddayyanapalya ",
+    "taluk": "Yeshanthapura",
+    "latitude": 12.937212,
+    "longitude": 77.412863,
+    "agency": "DEC Infrastructure",
+    "survey_no": "28",
+    "two_bhk": 312
+  }
+  
+]

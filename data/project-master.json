@@ -1,0 +1,1416 @@
+{
+  "schema_version": 1,
+  "source": {
+    "filename": "Project Details 03.12.2025.xlsx",
+    "sheet": "Sheet3",
+    "as_of": "2025-12-03",
+    "sha256": "01f6f321a594d6ff6420affcdbea8021801b311826e6b3ef1e23fb3842ebce15",
+    "note": "Project unit counts are stock, not live availability. Blanks remain null."
+  },
+  "projects": [
+    {
+      "project_id": "xls-001",
+      "source_row": 4,
+      "serial": 1,
+      "package": "1",
+      "agency": "M/s Ramalingam Construction Company Limited (RCCL)",
+      "constituency": "KR Pura",
+      "name": "Horamavu Agara",
+      "survey": "104/1",
+      "one_bhk_units": 192,
+      "two_bhk_units": null,
+      "latitude": 13.034491,
+      "longitude": 77.646976,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಕೃಷ್ಣರಾಜಪುರಂ",
+        "location_kn": "ಹೊರಮಾವು ಆಗರ"
+      },
+      "legacy_keys": {
+        "1": "1-7"
+      }
+    },
+    {
+      "project_id": "xls-002",
+      "source_row": 5,
+      "serial": 2,
+      "package": "1",
+      "agency": "M/s Ramalingam Construction Company Limited (RCCL)",
+      "constituency": "KR Pura",
+      "name": "Kyalasanahalli",
+      "survey": "15",
+      "one_bhk_units": 332,
+      "two_bhk_units": null,
+      "latitude": 13.066422,
+      "longitude": 77.665222,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಕೃಷ್ಣರಾಜಪುರಂ",
+        "location_kn": "ಕ್ಯಾಲಸನಹಳ್ಳಿ"
+      },
+      "legacy_keys": {
+        "1": "1-5"
+      }
+    },
+    {
+      "project_id": "xls-003",
+      "source_row": 6,
+      "serial": 3,
+      "package": "1",
+      "agency": "M/s Ramalingam Construction Company Limited (RCCL)",
+      "constituency": "Mahadevapura",
+      "name": "Bidarahalli",
+      "survey": "193",
+      "one_bhk_units": 3967,
+      "two_bhk_units": null,
+      "latitude": 13.070155,
+      "longitude": 77.705979,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಮಹದೇವಪುರ",
+        "location_kn": "ಬಿದರಹಳ್ಳಿ"
+      },
+      "legacy_keys": {
+        "1": "1-6"
+      }
+    },
+    {
+      "project_id": "xls-004",
+      "source_row": 7,
+      "serial": 4,
+      "package": "2",
+      "agency": "M/s KMV Projects Limited",
+      "constituency": "Anekal",
+      "name": "Kooguru",
+      "survey": "69",
+      "one_bhk_units": 256,
+      "two_bhk_units": null,
+      "latitude": 12.9084,
+      "longitude": 77.806552,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಆನೇಕಲ್",
+        "location_kn": "ಕೂಗೂರು"
+      },
+      "legacy_keys": {
+        "1": "1-10"
+      }
+    },
+    {
+      "project_id": "xls-005",
+      "source_row": 8,
+      "serial": 5,
+      "package": "2",
+      "agency": "M/s KMV Projects Limited",
+      "constituency": "Anekal",
+      "name": "Chikkanahalli Kammanahalli",
+      "survey": "71",
+      "one_bhk_units": 530,
+      "two_bhk_units": null,
+      "latitude": 12.909276,
+      "longitude": 77.796008,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಆನೇಕಲ್",
+        "location_kn": "ಚಿಕ್ಕನಹಳ್ಳಿ ಕಮ್ಮನಹಳ್ಳಿ"
+      },
+      "legacy_keys": {
+        "1": "1-11"
+      }
+    },
+    {
+      "project_id": "xls-006",
+      "source_row": 9,
+      "serial": 6,
+      "package": "2",
+      "agency": "M/s KMV Projects Limited",
+      "constituency": "Anekal",
+      "name": "Goolimangala",
+      "survey": "67",
+      "one_bhk_units": 344,
+      "two_bhk_units": 144,
+      "latitude": 12.850503,
+      "longitude": 77.6937,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಆನೇಕಲ್",
+        "location_kn": "ಗೂಳಿಮಂಗಲ"
+      },
+      "legacy_keys": {
+        "2": "2-1"
+      }
+    },
+    {
+      "project_id": "xls-007",
+      "source_row": 10,
+      "serial": 7,
+      "package": "2",
+      "agency": "M/s KMV Projects Limited",
+      "constituency": "Bangalore South",
+      "name": "Doddanagamangala",
+      "survey": "11",
+      "one_bhk_units": 496,
+      "two_bhk_units": null,
+      "latitude": 12.851025,
+      "longitude": 77.682628,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಬೆಂಗಳೂರು ದಕ್ಷಿಣ",
+        "location_kn": "ದೊಡ್ಡನಾಗಮಂಗಲ"
+      },
+      "legacy_keys": {
+        "1": "1-16"
+      }
+    },
+    {
+      "project_id": "xls-008",
+      "source_row": 11,
+      "serial": 8,
+      "package": "2",
+      "agency": "M/s KMV Projects Limited",
+      "constituency": "Yeshwanthapura",
+      "name": "Devagere68",
+      "survey": "68",
+      "one_bhk_units": 624,
+      "two_bhk_units": null,
+      "latitude": 12.85016,
+      "longitude": 77.45845,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಶವಂತಪುರ",
+        "location_kn": "ದೇವಗೆರೆ"
+      },
+      "legacy_keys": {}
+    },
+    {
+      "project_id": "xls-009",
+      "source_row": 12,
+      "serial": 9,
+      "package": "3",
+      "agency": "M/s Ramky Infrastructure Limited",
+      "constituency": "Anekal",
+      "name": "Lingapura",
+      "survey": "112",
+      "one_bhk_units": 530,
+      "two_bhk_units": 266,
+      "latitude": 12.757711,
+      "longitude": 77.668104,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಆನೇಕಲ್",
+        "location_kn": "ಲಿಂಗಾಪುರ"
+      },
+      "legacy_keys": {
+        "1": "1-18",
+        "2": "2-2"
+      }
+    },
+    {
+      "project_id": "xls-010",
+      "source_row": 13,
+      "serial": 10,
+      "package": "3",
+      "agency": "M/s Ramky Infrastructure Limited",
+      "constituency": "Anekal",
+      "name": "Anekal Gramantara",
+      "survey": "509",
+      "one_bhk_units": 2387,
+      "two_bhk_units": 653,
+      "latitude": 12.708004,
+      "longitude": 77.668683,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಆನೇಕಲ್",
+        "location_kn": "ಆನೇಕಲ್ ಗ್ರಾಮಾಂತರ"
+      },
+      "legacy_keys": {
+        "1": "1-20",
+        "2": "2-3"
+      }
+    },
+    {
+      "project_id": "xls-011",
+      "source_row": 14,
+      "serial": 11,
+      "package": "4",
+      "agency": "M/s NCC Limited",
+      "constituency": "Dasarahalli",
+      "name": "Ganigarahalli",
+      "survey": "74",
+      "one_bhk_units": 796,
+      "two_bhk_units": 135,
+      "latitude": 13.098127,
+      "longitude": 77.505242,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ದಾಸರಹಳ್ಳಿ",
+        "location_kn": "ಗಾಣಿಗರಹಳ್ಳಿ"
+      },
+      "legacy_keys": {
+        "1": "1-45",
+        "2": "2-4"
+      }
+    },
+    {
+      "project_id": "xls-012",
+      "source_row": 15,
+      "serial": 12,
+      "package": "4",
+      "agency": "M/s NCC Limited",
+      "constituency": "Yelahanka",
+      "name": "Agraharapalya30",
+      "survey": "30",
+      "one_bhk_units": 488,
+      "two_bhk_units": null,
+      "latitude": 13.129492,
+      "longitude": 77.451443,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಲಹಂಕ",
+        "location_kn": "ಅಗ್ರಹಾರ ಪಾಳ್ಯ"
+      },
+      "legacy_keys": {
+        "1": "1-40"
+      }
+    },
+    {
+      "project_id": "xls-013",
+      "source_row": 16,
+      "serial": 13,
+      "package": "4",
+      "agency": "M/s NCC Limited",
+      "constituency": "Yelahanka",
+      "name": "Pillahalli",
+      "survey": "53",
+      "one_bhk_units": 306,
+      "two_bhk_units": null,
+      "latitude": 13.108397,
+      "longitude": 77.441265,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಲಹಂಕ",
+        "location_kn": "ಪಿಲ್ಲಹಳ್ಳಿ"
+      },
+      "legacy_keys": {
+        "1": "1-37"
+      }
+    },
+    {
+      "project_id": "xls-014",
+      "source_row": 17,
+      "serial": 14,
+      "package": "4",
+      "agency": "M/s NCC Limited",
+      "constituency": "Yelahanka",
+      "name": "Singanayakanahalli",
+      "survey": "111",
+      "one_bhk_units": 521,
+      "two_bhk_units": null,
+      "latitude": 13.150578,
+      "longitude": 77.558504,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಲಹಂಕ",
+        "location_kn": "ಸಿಂಗನಾಯಕನಹಳ್ಳಿ"
+      },
+      "legacy_keys": {}
+    },
+    {
+      "project_id": "xls-015",
+      "source_row": 18,
+      "serial": 15,
+      "package": "4",
+      "agency": "M/s NCC Limited",
+      "constituency": "Yelahanka",
+      "name": "Nagadasahalli",
+      "survey": "63",
+      "one_bhk_units": 418,
+      "two_bhk_units": 489,
+      "latitude": 13.160221,
+      "longitude": 77.590282,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಲಹಂಕ",
+        "location_kn": "ನಾಗದಾಸನಹಳ್ಳಿ"
+      },
+      "legacy_keys": {
+        "2": "2-5"
+      }
+    },
+    {
+      "project_id": "xls-016",
+      "source_row": 19,
+      "serial": 16,
+      "package": "4",
+      "agency": "M/s NCC Limited",
+      "constituency": "Yelahanka",
+      "name": "Bilijaji",
+      "survey": "27",
+      "one_bhk_units": 3592,
+      "two_bhk_units": null,
+      "latitude": 13.120585,
+      "longitude": 77.466508,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಲಹಂಕ",
+        "location_kn": "ಬಿಳಿಜಾಜಿ"
+      },
+      "legacy_keys": {}
+    },
+    {
+      "project_id": "xls-017",
+      "source_row": 20,
+      "serial": 17,
+      "package": "4",
+      "agency": "M/s NCC Limited",
+      "constituency": "Yelahanka",
+      "name": "Govindapura",
+      "survey": "2",
+      "one_bhk_units": 701,
+      "two_bhk_units": null,
+      "latitude": 13.125036,
+      "longitude": 77.4593,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಲಹಂಕ",
+        "location_kn": "ಗೋವಿಂದಪುರ"
+      },
+      "legacy_keys": {}
+    },
+    {
+      "project_id": "xls-018",
+      "source_row": 21,
+      "serial": 18,
+      "package": "5",
+      "agency": "M/s KMV Projects Limited",
+      "constituency": "Byatarayanapura",
+      "name": "Navaratna Agrahara",
+      "survey": "14",
+      "one_bhk_units": 140,
+      "two_bhk_units": null,
+      "latitude": 13.195536,
+      "longitude": 77.637084,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಬ್ಯಾಟರಾಯನಪುರ",
+        "location_kn": "ನವರತ್ನ ಅಗ್ರಹಾರ"
+      },
+      "legacy_keys": {
+        "1": "1-2"
+      }
+    },
+    {
+      "project_id": "xls-019",
+      "source_row": 22,
+      "serial": 19,
+      "package": "5",
+      "agency": "M/s KMV Projects Limited",
+      "constituency": "Byatarayanapura",
+      "name": "Baiyyappanahalli",
+      "survey": "80",
+      "one_bhk_units": 1187,
+      "two_bhk_units": null,
+      "latitude": 13.113383,
+      "longitude": 77.651942,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಬ್ಯಾಟರಾಯನಪುರ",
+        "location_kn": "ಬೈಯ್ಯಪ್ಪನಹಳ್ಳಿ"
+      },
+      "legacy_keys": {}
+    },
+    {
+      "project_id": "xls-020",
+      "source_row": 23,
+      "serial": 20,
+      "package": "5",
+      "agency": "M/s KMV Projects Limited",
+      "constituency": "Yelahanka",
+      "name": "Sadenahalli",
+      "survey": "30",
+      "one_bhk_units": 128,
+      "two_bhk_units": null,
+      "latitude": 13.185149,
+      "longitude": 77.570283,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಲಹಂಕ",
+        "location_kn": "ಸಾದೇನಹಳ್ಲಿ"
+      },
+      "legacy_keys": {
+        "1": "1-1"
+      }
+    },
+    {
+      "project_id": "xls-021",
+      "source_row": 24,
+      "serial": 21,
+      "package": "5",
+      "agency": "M/s KMV Projects Limited",
+      "constituency": "Yelahanka",
+      "name": "Kukkanahalli78",
+      "survey": "78",
+      "one_bhk_units": 512,
+      "two_bhk_units": null,
+      "latitude": 13.151541,
+      "longitude": 77.455081,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಲಹಂಕ",
+        "location_kn": "ಕುಕ್ಕನಹಳ್ಳಿ"
+      },
+      "legacy_keys": {}
+    },
+    {
+      "project_id": "xls-022",
+      "source_row": 25,
+      "serial": 22,
+      "package": "5",
+      "agency": "M/s KMV Projects Limited",
+      "constituency": "Yelahanka",
+      "name": "Kukkanahalli77",
+      "survey": "77",
+      "one_bhk_units": 600,
+      "two_bhk_units": null,
+      "latitude": 13.152758,
+      "longitude": 77.456176,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಲಹಂಕ",
+        "location_kn": "ಕುಕ್ಕನಹಳ್ಳಿ"
+      },
+      "legacy_keys": {}
+    },
+    {
+      "project_id": "xls-023",
+      "source_row": 26,
+      "serial": 23,
+      "package": "6",
+      "agency": "M/s KPC Ltd",
+      "constituency": "Yelahanka",
+      "name": "Bettanagere",
+      "survey": "46",
+      "one_bhk_units": 3097,
+      "two_bhk_units": null,
+      "latitude": 13.121896,
+      "longitude": 77.414788,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಲಹಂಕ",
+        "location_kn": "ಬೆತ್ತನಗೆರೆ"
+      },
+      "legacy_keys": {
+        "1": "1-36"
+      }
+    },
+    {
+      "project_id": "xls-024",
+      "source_row": 27,
+      "serial": 24,
+      "package": "6",
+      "agency": "M/s KPC Ltd",
+      "constituency": "Yeshwanthapura",
+      "name": "Kenchanapura",
+      "survey": "63",
+      "one_bhk_units": 225,
+      "two_bhk_units": 1067,
+      "latitude": 12.955747,
+      "longitude": 77.438906,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಶವಂತಪುರ",
+        "location_kn": "ಕೆಂಚನಾಪುರ"
+      },
+      "legacy_keys": {
+        "1": "1-30",
+        "2": "2-6"
+      }
+    },
+    {
+      "project_id": "xls-025",
+      "source_row": 28,
+      "serial": 25,
+      "package": "7",
+      "agency": "M/s KBR Infratech Ltd",
+      "constituency": "Yeshwanthapura",
+      "name": "Nelaguli Parcel-3",
+      "survey": "145-3",
+      "one_bhk_units": 734,
+      "two_bhk_units": 164,
+      "latitude": 12.773678,
+      "longitude": 77.481196,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಶವಂತಪುರ",
+        "location_kn": "ನೆಲಗುಳಿ ಭಾಗ-3"
+      },
+      "legacy_keys": {}
+    },
+    {
+      "project_id": "xls-026",
+      "source_row": 29,
+      "serial": 26,
+      "package": "7",
+      "agency": "M/s KBR Infratech Ltd",
+      "constituency": "Yeshwanthapura",
+      "name": "Nelaguli Parcel-2",
+      "survey": "145-2",
+      "one_bhk_units": 818,
+      "two_bhk_units": 196,
+      "latitude": 12.773778,
+      "longitude": 77.481362,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಶವಂತಪುರ",
+        "location_kn": "ನೆಲಗುಳಿ ಭಾಗ-2"
+      },
+      "legacy_keys": {}
+    },
+    {
+      "project_id": "xls-027",
+      "source_row": 30,
+      "serial": 27,
+      "package": "8A",
+      "agency": "M/s Madhuveer Enterprises",
+      "constituency": "Yeshwanthapura",
+      "name": "Bheemanakuppe_118",
+      "survey": "118",
+      "one_bhk_units": 0,
+      "two_bhk_units": 96,
+      "latitude": 12.894935,
+      "longitude": 77.432026,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಶವಂತಪುರ",
+        "location_kn": null
+      },
+      "legacy_keys": {
+        "2": "2-9"
+      }
+    },
+    {
+      "project_id": "xls-028",
+      "source_row": 31,
+      "serial": 28,
+      "package": "8B",
+      "agency": "M/s.GVR Infra",
+      "constituency": "Yeshwanthapura",
+      "name": "Devagere67",
+      "survey": "67",
+      "one_bhk_units": 140,
+      "two_bhk_units": null,
+      "latitude": 12.848509,
+      "longitude": 77.459706,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಶವಂತಪುರ",
+        "location_kn": "ದೇವಗೆರೆ"
+      },
+      "legacy_keys": {
+        "1": "1-24"
+      }
+    },
+    {
+      "project_id": "xls-029",
+      "source_row": 32,
+      "serial": 29,
+      "package": "8C",
+      "agency": "M/s DS Max",
+      "constituency": "Yeshwanthapura",
+      "name": "ChinnaKurchi",
+      "survey": "47",
+      "one_bhk_units": 1350,
+      "two_bhk_units": null,
+      "latitude": 12.824359,
+      "longitude": 77.468496,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಶವಂತಪುರ",
+        "location_kn": "ಚಿನ್ನ ಕುರ್ಚಿ"
+      },
+      "legacy_keys": {}
+    },
+    {
+      "project_id": "xls-030",
+      "source_row": 33,
+      "serial": 30,
+      "package": "8D",
+      "agency": "M/s.SKS Karkala",
+      "constituency": "Yeshwanthapura",
+      "name": "Punagamaranahalli",
+      "survey": "13",
+      "one_bhk_units": 482,
+      "two_bhk_units": null,
+      "latitude": 12.921147,
+      "longitude": 77.405079,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಶವಂತಪುರ",
+        "location_kn": "ಪುನಗಮಾರನಹಳ್ಲಿ"
+      },
+      "legacy_keys": {
+        "1": "1-27"
+      }
+    },
+    {
+      "project_id": "xls-031",
+      "source_row": 34,
+      "serial": 31,
+      "package": "8E",
+      "agency": "M/s.SKS Karkala",
+      "constituency": "Yelahanka",
+      "name": "Thotagere",
+      "survey": "14",
+      "one_bhk_units": 260,
+      "two_bhk_units": 144,
+      "latitude": 13.146741,
+      "longitude": 77.445055,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಲಹಂಕ",
+        "location_kn": "ತೋಟಗೆರೆ"
+      },
+      "legacy_keys": {
+        "2": "2-10"
+      }
+    },
+    {
+      "project_id": "xls-032",
+      "source_row": 35,
+      "serial": 32,
+      "package": "8F",
+      "agency": "M/s Abhaya Builders",
+      "constituency": "KR Pura",
+      "name": "K Narayanapura_40",
+      "survey": "40",
+      "one_bhk_units": 0,
+      "two_bhk_units": 160,
+      "latitude": 13.059588,
+      "longitude": 77.641022,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಕೃಷ್ಣರಾಜಪುರಂ",
+        "location_kn": null
+      },
+      "legacy_keys": {
+        "2": "2-11"
+      }
+    },
+    {
+      "project_id": "xls-033",
+      "source_row": 36,
+      "serial": 33,
+      "package": "9A",
+      "agency": "M/s Ramalingam Construction Company Limited (RCCL)",
+      "constituency": "Yeshwanthapura",
+      "name": "Muddayyanapalya",
+      "survey": "28",
+      "one_bhk_units": 5803,
+      "two_bhk_units": null,
+      "latitude": 12.937212,
+      "longitude": 77.412863,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಶವಂತಪುರ",
+        "location_kn": "ಮುದ್ದಯನಪಾಳ್ಯ"
+      },
+      "legacy_keys": {}
+    },
+    {
+      "project_id": "xls-034",
+      "source_row": 37,
+      "serial": 34,
+      "package": "9B",
+      "agency": "M/s DEC Infrastructre Ltd",
+      "constituency": "Yeshwanthapura",
+      "name": "Chikkelluru Rampura",
+      "survey": "1",
+      "one_bhk_units": 516,
+      "two_bhk_units": null,
+      "latitude": 12.87742,
+      "longitude": 77.426803,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಶವಂತಪುರ",
+        "location_kn": "ಚಿಕ್ಕೆಲ್ಲೂರು ರಾಂಪುರ"
+      },
+      "legacy_keys": {
+        "1": "1-25"
+      }
+    },
+    {
+      "project_id": "xls-035",
+      "source_row": 38,
+      "serial": 35,
+      "package": "9B",
+      "agency": "M/s DEC Infrastructre Ltd",
+      "constituency": "Yeshwanthapura",
+      "name": "Muddayyanapalya_28",
+      "survey": "28",
+      "one_bhk_units": null,
+      "two_bhk_units": 312,
+      "latitude": 12.937212,
+      "longitude": 77.412863,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಶವಂತಪುರ",
+        "location_kn": "ಮುದ್ದಯನಪಾಳ್ಯ"
+      },
+      "legacy_keys": {
+        "2": "2-12"
+      }
+    },
+    {
+      "project_id": "xls-036",
+      "source_row": 39,
+      "serial": 36,
+      "package": "Ph-II",
+      "agency": "M/s S Erappa",
+      "constituency": "Bangalore South",
+      "name": "J Bhangipura",
+      "survey": "29",
+      "one_bhk_units": 96,
+      "two_bhk_units": null,
+      "latitude": 12.760581,
+      "longitude": 77.624665,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಬೆಂಗಳೂರು ದಕ್ಷಿಣ",
+        "location_kn": "ಜೆ ಭಿಂಗಿಪುರ"
+      },
+      "legacy_keys": {}
+    },
+    {
+      "project_id": "xls-037",
+      "source_row": 40,
+      "serial": 37,
+      "package": "Ph-II",
+      "agency": "M/s Abhaya Builders",
+      "constituency": "Bangalore South",
+      "name": "Arehalli",
+      "survey": "28",
+      "one_bhk_units": 336,
+      "two_bhk_units": null,
+      "latitude": 12.916675,
+      "longitude": 77.53103,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಬೆಂಗಳೂರು ದಕ್ಷಿಣ",
+        "location_kn": null
+      },
+      "legacy_keys": {}
+    },
+    {
+      "project_id": "xls-038",
+      "source_row": 41,
+      "serial": 38,
+      "package": "Ph-II",
+      "agency": "M/s M R Protech Private Limited",
+      "constituency": "Byatarayanapura",
+      "name": "Gollahalli",
+      "survey": "43",
+      "one_bhk_units": 416,
+      "two_bhk_units": null,
+      "latitude": 13.152317,
+      "longitude": 77.72129,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಬ್ಯಾಟರಾಯನಪುರ",
+        "location_kn": "ಗೊಲ್ಲ ಹಳ್ಳಿ"
+      },
+      "legacy_keys": {}
+    },
+    {
+      "project_id": "xls-039",
+      "source_row": 42,
+      "serial": 39,
+      "package": "Ph-II",
+      "agency": "M/s Madhuveer Enterprises",
+      "constituency": "Byatarayanapura",
+      "name": "Boyilahalli",
+      "survey": "56",
+      "one_bhk_units": 256,
+      "two_bhk_units": null,
+      "latitude": 13.167654,
+      "longitude": 77.675577,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಬ್ಯಾಟರಾಯನಪುರ",
+        "location_kn": "ಬೋಯಿಲಹಳ್ಳಿ"
+      },
+      "legacy_keys": {}
+    },
+    {
+      "project_id": "xls-040",
+      "source_row": 43,
+      "serial": 40,
+      "package": "Ph-II",
+      "agency": "M/s GVR Infrastructures",
+      "constituency": "Byatarayanapura",
+      "name": "Kattigenahalli",
+      "survey": "28",
+      "one_bhk_units": 448,
+      "two_bhk_units": null,
+      "latitude": 13.112076,
+      "longitude": 77.632308,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಬ್ಯಾಟರಾಯನಪುರ",
+        "location_kn": "ಕಟ್ಟಿಗೇನಹಳ್ಳಿ"
+      },
+      "legacy_keys": {}
+    },
+    {
+      "project_id": "xls-041",
+      "source_row": 44,
+      "serial": 41,
+      "package": "Ph-II",
+      "agency": "M/s Propell Infra",
+      "constituency": "Byatarayanapura",
+      "name": "Kudregere",
+      "survey": "117",
+      "one_bhk_units": 224,
+      "two_bhk_units": null,
+      "latitude": 13.178136,
+      "longitude": 77.621146,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಬ್ಯಾಟರಾಯನಪುರ",
+        "location_kn": null
+      },
+      "legacy_keys": {}
+    },
+    {
+      "project_id": "xls-042",
+      "source_row": 45,
+      "serial": 42,
+      "package": "Ph-II",
+      "agency": "M/s Neha Infrastructures",
+      "constituency": "Byatarayanapura",
+      "name": "Mahadevagodikehalli (in lieu of Dasenahalli Sy.No 35)",
+      "survey": "198",
+      "one_bhk_units": 448,
+      "two_bhk_units": null,
+      "latitude": 13.14591,
+      "longitude": 77.69929,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಬ್ಯಾಟರಾಯನಪುರ",
+        "location_kn": null
+      },
+      "legacy_keys": {}
+    },
+    {
+      "project_id": "xls-043",
+      "source_row": 46,
+      "serial": 43,
+      "package": "Ph-II",
+      "agency": "M/s Jampana construction",
+      "constituency": "Byatarayanapura",
+      "name": "Bandikodigehally",
+      "survey": "106",
+      "one_bhk_units": 1104,
+      "two_bhk_units": null,
+      "latitude": 13.176482,
+      "longitude": 77.691235,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಬ್ಯಾಟರಾಯನಪುರ",
+        "location_kn": null
+      },
+      "legacy_keys": {}
+    },
+    {
+      "project_id": "xls-044",
+      "source_row": 47,
+      "serial": 44,
+      "package": "Ph-II",
+      "agency": "M/s SKS Karkala",
+      "constituency": "Dasarahalli",
+      "name": "Shettihalli",
+      "survey": "59",
+      "one_bhk_units": 336,
+      "two_bhk_units": null,
+      "latitude": 13.071326,
+      "longitude": 77.520589,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ದಾಸರಹಳ್ಳಿ",
+        "location_kn": "ಶೆಟ್ಟಿ ಹಳ್ಳಿ"
+      },
+      "legacy_keys": {
+        "1": "1-46"
+      }
+    },
+    {
+      "project_id": "xls-045",
+      "source_row": 48,
+      "serial": 45,
+      "package": "Ph-II",
+      "agency": "M/s Propella Infra",
+      "constituency": "KR Pura",
+      "name": "Horamavu",
+      "survey": "82",
+      "one_bhk_units": 52,
+      "two_bhk_units": null,
+      "latitude": 13.025578,
+      "longitude": 77.665921,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಕೃಷ್ಣರಾಜಪುರಂ",
+        "location_kn": "ಹೊರಮಾವು-82"
+      },
+      "legacy_keys": {}
+    },
+    {
+      "project_id": "xls-046",
+      "source_row": 49,
+      "serial": 46,
+      "package": "Ph-II",
+      "agency": "M/s Usha Constructions",
+      "constituency": "Yelahanka",
+      "name": "Itgalpura",
+      "survey": "50",
+      "one_bhk_units": 352,
+      "two_bhk_units": null,
+      "latitude": 13.166171,
+      "longitude": 77.544495,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಲಹಂಕ",
+        "location_kn": "ಇಟಗಲ್ ಪುರ"
+      },
+      "legacy_keys": {}
+    },
+    {
+      "project_id": "xls-047",
+      "source_row": 50,
+      "serial": 47,
+      "package": "Ph-II",
+      "agency": "M/s Usha Constructions",
+      "constituency": "Yelahanka",
+      "name": "Muthagadhahalli",
+      "survey": "20",
+      "one_bhk_units": 512,
+      "two_bhk_units": null,
+      "latitude": 13.150297,
+      "longitude": 77.532658,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಲಹಂಕ",
+        "location_kn": "ಮುತ್ತುಗದಹಳ್ಳಿ"
+      },
+      "legacy_keys": {}
+    },
+    {
+      "project_id": "xls-048",
+      "source_row": 51,
+      "serial": 48,
+      "package": "Ph-II",
+      "agency": "M/s NSL constructions pvt. Ltd.",
+      "constituency": "Yelahanka",
+      "name": "Thamarasanahalli",
+      "survey": "10",
+      "one_bhk_units": 704,
+      "two_bhk_units": null,
+      "latitude": 13.122632,
+      "longitude": 77.501871,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಲಹಂಕ",
+        "location_kn": "ತಮ್ಮರಸನಹಳ್ಳಿ"
+      },
+      "legacy_keys": {}
+    },
+    {
+      "project_id": "xls-049",
+      "source_row": 52,
+      "serial": 49,
+      "package": "Ph-II",
+      "agency": "M/s DS Max Private Limited",
+      "constituency": "Yelahanka",
+      "name": "Agraharapalya29",
+      "survey": "29",
+      "one_bhk_units": 992,
+      "two_bhk_units": null,
+      "latitude": 13.129331,
+      "longitude": 77.449106,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಲಹಂಕ",
+        "location_kn": "ಅಗ್ರಹಾರ ಪಾಳ್ಯ 29"
+      },
+      "legacy_keys": {
+        "1": "1-50"
+      }
+    },
+    {
+      "project_id": "xls-050",
+      "source_row": 53,
+      "serial": 50,
+      "package": "Ph-II",
+      "agency": "M/s CMK Projects Ltd.",
+      "constituency": "Yelahanka",
+      "name": "Kadathanamale",
+      "survey": "116",
+      "one_bhk_units": 672,
+      "two_bhk_units": null,
+      "latitude": 13.20783,
+      "longitude": 77.555289,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಲಹಂಕ",
+        "location_kn": "ಕಡತನಮಲೆ"
+      },
+      "legacy_keys": {}
+    },
+    {
+      "project_id": "xls-051",
+      "source_row": 54,
+      "serial": 51,
+      "package": "Ph-II",
+      "agency": "Subhash Singh Choudhary",
+      "constituency": "Yelahanka",
+      "name": "Hunnigere",
+      "survey": "109",
+      "one_bhk_units": 288,
+      "two_bhk_units": null,
+      "latitude": 13.037154,
+      "longitude": 77.392663,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಲಹಂಕ",
+        "location_kn": "ಹುಣ್ಣೀಗೆರೆ"
+      },
+      "legacy_keys": {}
+    },
+    {
+      "project_id": "xls-052",
+      "source_row": 55,
+      "serial": 52,
+      "package": "Ph-II",
+      "agency": "M/s Abhaya Builders",
+      "constituency": "Yelahanka",
+      "name": "Gowdanahalli",
+      "survey": "57",
+      "one_bhk_units": 320,
+      "two_bhk_units": null,
+      "latitude": 13.049626,
+      "longitude": 77.431247,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಲಹಂಕ",
+        "location_kn": "ಗೌಡನಹಳ್ಳಿ"
+      },
+      "legacy_keys": {
+        "1": "1-35"
+      }
+    },
+    {
+      "project_id": "xls-053",
+      "source_row": 56,
+      "serial": 53,
+      "package": "Ph-II",
+      "agency": "M/s SKS Karkala",
+      "constituency": "Yelahanka",
+      "name": "Mallasandra",
+      "survey": "35",
+      "one_bhk_units": 480,
+      "two_bhk_units": null,
+      "latitude": 13.00614,
+      "longitude": 77.403155,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಲಹಂಕ",
+        "location_kn": "ಮಲ್ಲಸಂದ್ರ"
+      },
+      "legacy_keys": {
+        "1": "1-31"
+      }
+    },
+    {
+      "project_id": "xls-054",
+      "source_row": 57,
+      "serial": 54,
+      "package": "Ph-II",
+      "agency": "M/s Star Infra",
+      "constituency": "Yelahanka",
+      "name": "Muthagadhahalli22",
+      "survey": "22",
+      "one_bhk_units": 928,
+      "two_bhk_units": null,
+      "latitude": 13.150616,
+      "longitude": 77.53215,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಲಹಂಕ",
+        "location_kn": "ಮುತ್ತುಗದಹಳ್ಳಿ"
+      },
+      "legacy_keys": {}
+    },
+    {
+      "project_id": "xls-055",
+      "source_row": 58,
+      "serial": 55,
+      "package": "Ph-II",
+      "agency": "M/s S.R Chandrasen",
+      "constituency": "Yelahanka",
+      "name": "Aluru",
+      "survey": "25",
+      "one_bhk_units": 448,
+      "two_bhk_units": null,
+      "latitude": 13.100147,
+      "longitude": 77.466975,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಲಹಂಕ",
+        "location_kn": null
+      },
+      "legacy_keys": {
+        "1": "1-38"
+      }
+    },
+    {
+      "project_id": "xls-056",
+      "source_row": 59,
+      "serial": 56,
+      "package": "Ph-II",
+      "agency": "M/s Propella Infra",
+      "constituency": "Yelahanka",
+      "name": "Koluvarayanahalli",
+      "survey": "70",
+      "one_bhk_units": 96,
+      "two_bhk_units": null,
+      "latitude": 13.169088,
+      "longitude": 77.521012,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಲಹಂಕ",
+        "location_kn": "ಕೋಲವೂರಾಯನಹಳ್ಳಿ"
+      },
+      "legacy_keys": {
+        "1": "1-47"
+      }
+    },
+    {
+      "project_id": "xls-057",
+      "source_row": 60,
+      "serial": 57,
+      "package": "Ph-II",
+      "agency": "M/s Shreedhar Babu",
+      "constituency": "Yelahanka",
+      "name": "Muddanahalli (in lieu of Kukkanahalli Sy.No 80)",
+      "survey": "1",
+      "one_bhk_units": 96,
+      "two_bhk_units": null,
+      "latitude": 13.149425,
+      "longitude": 77.578892,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಲಹಂಕ",
+        "location_kn": null
+      },
+      "legacy_keys": {}
+    },
+    {
+      "project_id": "xls-058",
+      "source_row": 61,
+      "serial": 58,
+      "package": "Ph-II",
+      "agency": "M/s Shreedhar Babu",
+      "constituency": "Yelahanka",
+      "name": "Muddanahalli (in lieu of Kodathi Sy.No 82/83)",
+      "survey": "1",
+      "one_bhk_units": 256,
+      "two_bhk_units": null,
+      "latitude": 13.149425,
+      "longitude": 77.578892,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಲಹಂಕ",
+        "location_kn": null
+      },
+      "legacy_keys": {}
+    },
+    {
+      "project_id": "xls-059",
+      "source_row": 62,
+      "serial": 59,
+      "package": "Ph-II",
+      "agency": "M/s Shreedhar Babu",
+      "constituency": "Yelahanka",
+      "name": "Muddanahalli",
+      "survey": "1",
+      "one_bhk_units": 224,
+      "two_bhk_units": null,
+      "latitude": 13.149425,
+      "longitude": 77.578892,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಲಹಂಕ",
+        "location_kn": null
+      },
+      "legacy_keys": {}
+    },
+    {
+      "project_id": "xls-060",
+      "source_row": 63,
+      "serial": 60,
+      "package": "Ph-II",
+      "agency": "M/s Shreedhar Babu",
+      "constituency": "Yelahanka",
+      "name": "Muddanahalli",
+      "survey": "1",
+      "one_bhk_units": 224,
+      "two_bhk_units": null,
+      "latitude": 13.149425,
+      "longitude": 77.578892,
+      "coordinate_source": "Workbook merged I62:J64",
+      "report_identity": {
+        "category_kn": "ಯಲಹಂಕ",
+        "location_kn": null
+      },
+      "legacy_keys": {}
+    },
+    {
+      "project_id": "xls-061",
+      "source_row": 64,
+      "serial": 61,
+      "package": "Ph-II",
+      "agency": "M/s Shreedhar Babu",
+      "constituency": "Yelahanka",
+      "name": "Muddanahalli",
+      "survey": "1",
+      "one_bhk_units": 192,
+      "two_bhk_units": null,
+      "latitude": 13.149425,
+      "longitude": 77.578892,
+      "coordinate_source": "Workbook merged I62:J64",
+      "report_identity": {
+        "category_kn": "ಯಲಹಂಕ",
+        "location_kn": null
+      },
+      "legacy_keys": {}
+    },
+    {
+      "project_id": "xls-062",
+      "source_row": 65,
+      "serial": 62,
+      "package": "Ph-II",
+      "agency": "M/s || NSL Construction Limited",
+      "constituency": "Yelahanka",
+      "name": "Avverhalli",
+      "survey": "10",
+      "one_bhk_units": 912,
+      "two_bhk_units": null,
+      "latitude": null,
+      "longitude": null,
+      "coordinate_source": "Not supplied",
+      "report_identity": {
+        "category_kn": "ಯಲಹಂಕ",
+        "location_kn": null
+      },
+      "legacy_keys": {}
+    },
+    {
+      "project_id": "xls-063",
+      "source_row": 66,
+      "serial": 63,
+      "package": "Ph-II",
+      "agency": "M/s Adhrust",
+      "constituency": "Yeshwanthapura",
+      "name": "Muddayanapalya (in lieu of Chunchunkuppe Sy No 23)",
+      "survey": "28",
+      "one_bhk_units": 624,
+      "two_bhk_units": null,
+      "latitude": 12.937212,
+      "longitude": 77.412863,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಶವಂತಪುರ",
+        "location_kn": "ಮುದ್ದಯನಪಾಳ್ಯ"
+      },
+      "legacy_keys": {}
+    },
+    {
+      "project_id": "xls-064",
+      "source_row": 67,
+      "serial": 64,
+      "package": "Ph-II",
+      "agency": "M/s || Guru Malappa and Company",
+      "constituency": "Yeshwanthapura",
+      "name": "Devagere (in lieu of Menasignahalli Sy.No 145)",
+      "survey": "69",
+      "one_bhk_units": 144,
+      "two_bhk_units": null,
+      "latitude": 12.852301,
+      "longitude": 77.457005,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಶವಂತಪುರ",
+        "location_kn": "ದೇವಗೆರೆ"
+      },
+      "legacy_keys": {}
+    },
+    {
+      "project_id": "xls-065",
+      "source_row": 68,
+      "serial": 65,
+      "package": "Ph-II",
+      "agency": "M/s || Madhuveer",
+      "constituency": "Yeshwanthapura",
+      "name": "Devagaere (in lieu of Bidhru Kuppe Sy.No 329)",
+      "survey": "69",
+      "one_bhk_units": 96,
+      "two_bhk_units": null,
+      "latitude": 12.852301,
+      "longitude": 77.457005,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಶವಂತಪುರ",
+        "location_kn": "ದೇವಗೆರೆ"
+      },
+      "legacy_keys": {}
+    },
+    {
+      "project_id": "xls-066",
+      "source_row": 69,
+      "serial": 66,
+      "package": "Ph-II",
+      "agency": "M/s || S Erappa",
+      "constituency": "Yeshwanthapura",
+      "name": "Devagere (in lieu of Yamare Sy.No 88)",
+      "survey": "69",
+      "one_bhk_units": 104,
+      "two_bhk_units": null,
+      "latitude": 12.852301,
+      "longitude": 77.457005,
+      "coordinate_source": "Workbook",
+      "report_identity": {
+        "category_kn": "ಯಶವಂತಪುರ",
+        "location_kn": "ದೇವಗೆರೆ"
+      },
+      "legacy_keys": {}
+    },
+    {
+      "project_id": "xls-067",
+      "source_row": 70,
+      "serial": 67,
+      "package": "Ph-II",
+      "agency": "M/s Adhrust",
+      "constituency": "Yeshwanthapura",
+      "name": "Kannminiki (in lieu of Chunchunkuppe Sy No 23)",
+      "survey": "41 & 42",
+      "one_bhk_units": 272,
+      "two_bhk_units": null,
+      "latitude": null,
+      "longitude": null,
+      "coordinate_source": "Not supplied",
+      "report_identity": {
+        "category_kn": "ಯಶವಂತಪುರ",
+        "location_kn": null
+      },
+      "legacy_keys": {}
+    }
+  ]
+}

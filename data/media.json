@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "sites": {
+    "1-7": [
+      {
+        "type": "image",
+        "src": "media/1-7/demo-sample-01-exterior.jpg",
+        "caption": "DEMO ONLY \u2014 sample photo, not an actual RGHCL site",
+        "alt": "Generic apartment sample photo for demonstration; not an actual RGHCL site"
+      },
+      {
+        "type": "image",
+        "src": "media/1-7/demo-sample-02-balconies.jpg",
+        "caption": "DEMO ONLY \u2014 sample photo, not an actual RGHCL site",
+        "alt": "Generic apartment sample photo for demonstration; not an actual RGHCL site"
+      }
+    ],
+    "1-6": [
+      {
+        "type": "image",
+        "src": "media/1-6/demo-sample-03-interior.jpg",
+        "caption": "DEMO ONLY \u2014 sample photo, not an actual RGHCL site",
+        "alt": "Generic apartment sample photo for demonstration; not an actual RGHCL site"
+      }
+    ]
+  }
+}
