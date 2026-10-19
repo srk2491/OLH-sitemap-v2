@@ -138,7 +138,20 @@
  .explorer-body .map-panel{height:100%;position:absolute;inset:0}
 }
 @media(max-height:740px) and (min-width:701px){
- .explorer-body .sidebar>.intro{display:none}
+ .explorer-body .sidebar>.intro{
+  display: block;
+  padding:8px 18px 6px;
+}
+
+.explorer-body .sidebar>.intro h1{
+  font-size:18px;
+  line-height:1.2;
+  margin-top:3px;
+}
+
+.explorer-body .sidebar>.intro .eyebrow{
+  font-size:9px;
+}
  .explorer-body .sidebar>.filter-block{padding-top:14px;min-height:170px}
 }
 
