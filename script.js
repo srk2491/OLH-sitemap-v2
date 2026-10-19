@@ -43,6 +43,67 @@ const translations = {
   }
 };
 const original=new Map([...document.querySelectorAll('[data-i18n]')].map(el=>[el,el.innerHTML]));
+// Static UI localization: keep DOM nodes, icons and option values intact.
+const staticTranslations = [
+ ['.brand-title','ವಸತಿ ಅನ್ವೇಷಕ'],
+ ['.brand small','ರಾಜೀವ್ ಗಾಂಧಿ ವಸತಿ ನಿಗಮ ನಿಯಮಿತ'],
+ ['#headerLocation small','ನಿಮ್ಮ ಹುಡುಕಾಟದ ಸ್ಥಳ'],
+ ['#savedBtn','ಉಳಿಸಿದವು'],
+ ['#accessBtn','ಓದುವಿಕೆ ಮತ್ತು ಪ್ರದರ್ಶನ'],
+ ['.collection-meta > span:first-child','ಯೋಜನಾ ಸ್ಥಳಗಳು'],
+ ['.city-pill','ಬೆಂಗಳೂರು'],
+ ['.filter-grid label:nth-child(2) > span','ಸಾರ್ವಜನಿಕ ಕೋಟಾ ಲಭ್ಯತೆ'],
+ ['#availabilityFilter option[value=""]','ಎಲ್ಲಾ ಸ್ಥಿತಿಗಳು'],
+ ['#availabilityFilter option[value="available"]','10 ಕ್ಕಿಂತ ಹೆಚ್ಚು'],
+ ['#availabilityFilter option[value="limited"]','1–10 ಲಭ್ಯ'],
+ ['#availabilityFilter option[value="zero"]','ಶೂನ್ಯ / ಋಣಾತ್ಮಕ ವರದಿ'],
+ ['#availabilityFilter option[value="unknown"]','ಮಾಹಿತಿ ಲಭ್ಯವಿಲ್ಲ'],
+ ['#sortBy option[value="number"]','ಪ್ರದಕ್ಷಿಣಾಕಾರ ಕ್ರಮ'],
+ ['#sortBy option[value="name"]','ಹೆಸರು ಅ–ಹ'],
+ ['#sortBy option[value="nearest"]','ಹತ್ತಿರದವು ಮೊದಲು'],
+ ['.numbering-help','ಪ್ರತಿ ವಸತಿ ಪ್ರಕಾರಕ್ಕೂ ಪ್ರತ್ಯೇಕ ಪ್ರದಕ್ಷಿಣಾಕಾರ ಸಂಖ್ಯೆಗಳಿವೆ. ಉಪಯೋಜನೆಗಳನ್ನು ನೋಡಲು ಸ್ಥಳವನ್ನು ವಿಸ್ತರಿಸಿ.'],
+ ['.map-caption','ನಕ್ಷೆಯನ್ನು ಅನ್ವೇಷಿಸಿ · ವಿವರಗಳು ಮತ್ತು ಚಿತ್ರಗಳನ್ನು ನೋಡಲು ಸ್ಥಳ ಆಯ್ಕೆಮಾಡಿ'],
+ ['.footer-links a','ಆಶ್ರಯ ಪೋರ್ಟಲ್ ↗'],
+ ['#listViewBtn','ಪಟ್ಟಿ'], ['#mapViewBtn','ನಕ್ಷೆ'],
+ ['#voiceTitle','ಧ್ವನಿಯ ಮೂಲಕ ಸ್ಥಳ ಹುಡುಕಿ'],
+ ['#voiceDialog > p:first-of-type','“ನೆಲಗುಳಿ ಮತ್ತು ಸಾದೇನಹಳ್ಳಿ ಹುಡುಕಿ” ಎಂದು ಹೇಳಿ. ಹಲವು ಸ್ಥಳಗಳ ಹೆಸರುಗಳನ್ನು ಹೇಳಬಹುದು.'],
+ ['label[for="voiceLanguage"]','ಮಾತನಾಡುವ ಭಾಷೆ'],
+ ['label[for="voiceTranscript"]','ನಿಮ್ಮ ಹುಡುಕಾಟ · ಬೇಕಿದ್ದರೆ ತಿದ್ದುಪಡಿ ಮಾಡಿ'],
+ ['#clearVoice','ಮಾತನ್ನು ತೆರವುಗೊಳಿಸಿ'],
+ ['#applyVoice','ಹುಡುಕಾಟ ಅನ್ವಯಿಸಿ'],
+ ['#voiceDialog > small','ನಿಮ್ಮ ಬ್ರೌಸರ್ ಧ್ವನಿಯನ್ನು ತನ್ನ ಧ್ವನಿ ಸೇವೆಗೆ ಕಳುಹಿಸಬಹುದು. ಈ ಆ್ಯಪ್ ಧ್ವನಿಮುದ್ರಣಗಳನ್ನು ಸಂಗ್ರಹಿಸುವುದಿಲ್ಲ.']
+];
+const staticNodes=staticTranslations.map(([selector,kn])=>{const el=document.querySelector(selector);return el?{el,kn,html:el.innerHTML}:null;}).filter(Boolean);
+const originalAttributes=[
+ ['#searchBox','aria-label','ಸ್ಥಳಗಳನ್ನು ಹುಡುಕಿ'], ['#searchBox','placeholder','ಹೆಸರು, ಕ್ಷೇತ್ರ ಅಥವಾ ಗುತ್ತಿಗೆದಾರರನ್ನು ಹುಡುಕಿ'],
+ ['#voiceTranscript','placeholder','ಸ್ಥಳ ಅಥವಾ ವಸತಿ ಆದ್ಯತೆ'],
+ ['#voiceBtn','aria-label','ಧ್ವನಿ ಹುಡುಕಾಟ ತೆರೆಯಿರಿ'], ['#voiceBtn','title','ಧ್ವನಿ ಹುಡುಕಾಟ'],
+ ['#accessBtn','aria-label','ಓದುವಿಕೆ ಮತ್ತು ಪ್ರದರ್ಶನ ಸೆಟ್ಟಿಂಗ್‌ಗಳು'],
+ ['#closeDetails','aria-label','ಯೋಜನೆ ವಿವರಗಳನ್ನು ಮುಚ್ಚಿ'],
+ ['#closeVoice','aria-label','ಧ್ವನಿ ಹುಡುಕಾಟ ಮುಚ್ಚಿ'],
+ ['#fitBtn','title','ಎಲ್ಲಾ ಹೊಂದುವ ಸ್ಥಳಗಳನ್ನು ನಕ್ಷೆಯಲ್ಲಿ ತೋರಿಸಿ']
+].map(([selector,attr,kn])=>{const el=document.querySelector(selector);return el?{el,attr,kn,en:el.getAttribute(attr)}:null;}).filter(Boolean);
+function applyStaticLanguage(){
+ original.forEach((v,el)=>{
+  if(lang==='en'){el.innerHTML=v;return;}
+  const value=translations.kn[el.dataset.i18n];if(!value)return;
+  // The heading has nested emphasis; retain it instead of flattening the DOM.
+  if(el.dataset.i18n==='heading')el.innerHTML='ನಿಮ್ಮ ಕನಸಿನ ಮನೆ.<br><em>ನಿಮಗಾಗಿ ಕಾಯುತ್ತಿದೆ.</em>';
+  else if(el.children.length===0)el.textContent=value;
+  else {const textNode=[...el.childNodes].find(n=>n.nodeType===Node.TEXT_NODE&&n.textContent.trim());if(textNode)textNode.textContent=value;}
+ });
+ staticNodes.forEach(({el,kn,html})=>{
+  if(lang==='en'){if(el.id==='savedBtn'||el.matches('.collection-meta > span:first-child,.city-pill,#listViewBtn,#mapViewBtn')){const node=[...el.childNodes].find(n=>n.nodeType===Node.TEXT_NODE&&n.textContent.trim());const tmp=document.createElement('div');tmp.innerHTML=html;const originalNode=[...tmp.childNodes].find(n=>n.nodeType===Node.TEXT_NODE&&n.textContent.trim());if(node&&originalNode)node.textContent=originalNode.textContent;}else el.innerHTML=html;return;}
+  if(el.id==='savedBtn'){const node=[...el.childNodes].find(n=>n.nodeType===Node.TEXT_NODE&&n.textContent.trim());if(node)node.textContent=' '+kn+' ';return;}
+  if(el.matches('.collection-meta > span:first-child')){const node=[...el.childNodes].find(n=>n.nodeType===Node.TEXT_NODE&&n.textContent.trim());if(node)node.textContent=' '+kn;return;}
+  if(el.matches('.city-pill,#listViewBtn,#mapViewBtn')){const node=[...el.childNodes].find(n=>n.nodeType===Node.TEXT_NODE&&n.textContent.trim());if(node)node.textContent=kn;return;}
+  el.textContent=kn;
+ });
+ originalAttributes.forEach(({el,attr,kn,en})=>el.setAttribute(attr,lang==='kn'?kn:en));
+ $('headerLocationText').textContent=state.position?tr('Your current location','ನಿಮ್ಮ ಪ್ರಸ್ತುತ ಸ್ಥಳ'):tr('Explore Bengaluru','ಬೆಂಗಳೂರನ್ನು ಅನ್ವೇಷಿಸಿ');
+ window.dispatchEvent(new CustomEvent('olh-language-change',{detail:{lang}}));
+}
+
 const labels={en:{availability:'Availability',unknown:'Data unavailable',zero:'None available',limited:'available',available:'available',sites:'sites found',directions:'Get directions',share:'Share site',photos:'Photos & videos',noMedia:'No photos or videos have been published for this site yet.'},kn:{availability:'ಲಭ್ಯತೆ',unknown:'ಮಾಹಿತಿ ಲಭ್ಯವಿಲ್ಲ',zero:'ಲಭ್ಯವಿಲ್ಲ',limited:'ಲಭ್ಯ',available:'ಲಭ್ಯ',sites:'ಸ್ಥಳಗಳು',directions:'ಮಾರ್ಗ ನೋಡಿ',share:'ಸ್ಥಳ ಹಂಚಿಕೊಳ್ಳಿ',photos:'ಚಿತ್ರಗಳು ಮತ್ತು ವೀಡಿಯೊಗಳು',noMedia:'ಈ ಸ್ಥಳಕ್ಕೆ ಇನ್ನೂ ಚಿತ್ರಗಳು ಅಥವಾ ವೀಡಿಯೊಗಳನ್ನು ಪ್ರಕಟಿಸಲಾಗಿಲ್ಲ.'}};
 const text=k=>labels[lang][k];
 const tr=(en,kn)=>lang==='kn'?kn:en;
@@ -459,7 +520,7 @@ $('closeViewer').addEventListener('click',()=>$('viewer').close());$('viewer').a
 $('mapViewBtn').addEventListener('click',()=>setView('map'));$('listViewBtn').addEventListener('click',()=>setView('list'));
 function requestLocation(){if($('locateBtn').disabled)return;if(!navigator.geolocation){$('locationStatus').textContent=tr('Location is not supported. You can still browse every site.','ಸ್ಥಳ ಸೇವೆ ಲಭ್ಯವಿಲ್ಲ. ಆದರೂ ಎಲ್ಲಾ ಸ್ಥಳಗಳನ್ನು ನೋಡಬಹುದು.');$('headerLocationText').textContent=tr('Explore Bengaluru','ಬೆಂಗಳೂರನ್ನು ಅನ್ವೇಷಿಸಿ');return;}$('locateBtn').disabled=true;$('headerLocation').disabled=true;$('locationStatus').textContent=tr('Finding your location…','ನಿಮ್ಮ ಸ್ಥಳವನ್ನು ಹುಡುಕಲಾಗುತ್ತಿದೆ…');$('headerLocationText').textContent=tr('Finding your location…','ನಿಮ್ಮ ಸ್ಥಳವನ್ನು ಹುಡುಕಲಾಗುತ್ತಿದೆ…');navigator.geolocation.getCurrentPosition(pos=>{state.position=[pos.coords.latitude,pos.coords.longitude];$('locateBtn').disabled=false;$('headerLocation').disabled=false;$('headerLocationText').textContent=tr('Your current location','ನಿಮ್ಮ ಪ್ರಸ್ತುತ ಸ್ಥಳ');$('locationStatus').textContent=tr('Distances are approximate straight-line distances.','ದೂರಗಳು ಅಂದಾಜು ನೇರ ರೇಖೆಯ ದೂರಗಳಾಗಿವೆ.');$('sortBy').querySelector('[value="nearest"]').disabled=false;state.sort='nearest';$('sortBy').value='nearest';if(map){if(userMarker)map.removeLayer(userMarker);userMarker=L.marker(state.position,{icon:L.divIcon({className:'',html:'<div class="user-pin"></div>',iconSize:[18,18],iconAnchor:[9,9]})}).bindTooltip(tr('You are here','ನೀವು ಇಲ್ಲಿದ್ದೀರಿ'),{permanent:true,direction:'right'}).addTo(map);}render();if(state.selected)renderDetails(sites.find(s=>s.key===state.selected));},err=>{$('locateBtn').disabled=false;$('headerLocation').disabled=false;$('headerLocationText').textContent=tr('Explore Bengaluru','ಬೆಂಗಳೂರನ್ನು ಅನ್ವೇಷಿಸಿ');$('locationStatus').textContent=err.code===1?tr('Location permission was denied. You can browse sites manually.','ಸ್ಥಳದ ಅನುಮತಿ ನಿರಾಕರಿಸಲಾಗಿದೆ. ಸ್ಥಳಗಳನ್ನು ಸ್ವತಃ ಹುಡುಕಬಹುದು.'):err.code===3?tr('Location timed out. Try again or browse manually.','ಸ್ಥಳ ಪತ್ತೆಗೆ ಸಮಯ ಮೀರಿದೆ. ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.'):tr('Location is unavailable. You can still explore every site.','ಸ್ಥಳದ ಮಾಹಿತಿ ಲಭ್ಯವಿಲ್ಲ. ಆದರೂ ಎಲ್ಲಾ ಸ್ಥಳಗಳನ್ನು ನೋಡಬಹುದು.');},{timeout:12000,maximumAge:60000});}
 $('locateBtn').addEventListener('click',requestLocation);$('headerLocation').addEventListener('click',requestLocation);
-$('languageBtn').addEventListener('click',()=>{lang=lang==='en'?'kn':'en';document.documentElement.lang=lang;$('languageBtn').textContent=lang==='en'?'ಕನ್ನಡ':'English';original.forEach((v,el)=>{if(lang==='kn')el.textContent=translations.kn[el.dataset.i18n]||el.textContent;else el.innerHTML=v;});$('searchBox').placeholder=lang==='kn'?'ಹೆಸರು, ಸ್ಥಳ ಸಂಖ್ಯೆ ಅಥವಾ ಸ್ಥಳ ಹುಡುಕಿ':'Search site, constituency or contractor';populateAreas();render();if(state.selected)renderDetails(sites.find(s=>s.key===state.selected));});
+$('languageBtn').addEventListener('click',()=>{lang=lang==='en'?'kn':'en';document.documentElement.lang=lang;$('languageBtn').textContent=lang==='en'?'ಕನ್ನಡ':'English';applyStaticLanguage();populateAreas();render();if(state.selected)renderDetails(sites.find(s=>s.key===state.selected));});
 function applyURL(){const p=new URLSearchParams(location.search);state.mode=p.get('bhk')==='2'?'2':'1';state.search=p.get('q')||'';state.location='';state.constituency=p.get('constituency')||p.get('area')||'';state.availability=['available','limited','zero','unknown'].includes(p.get('status'))?p.get('status'):'';state.selected=null;$('searchBox').value=state.search;$('availabilityFilter').value=state.availability;populateAreas();if(!$('constituencyFilter').value)state.constituency='';document.querySelectorAll('[data-mode]').forEach(b=>{b.classList.toggle('active',b.dataset.mode===state.mode);b.setAttribute('aria-pressed',b.dataset.mode===state.mode);});render();fit();if(p.get('site'))selectSite(p.get('site'),false);}
 window.addEventListener('popstate',()=>{closeDetails(false);applyURL();});
 initMap();
