@@ -21,7 +21,7 @@ async function loadPreviewCovers(){
 }
 window.addEventListener('pagehide',event=>{if(!event.persisted)coverURLs.forEach(URL.revokeObjectURL);});
 
-const translations={kn:{filtersLocation:assemblyConstituency:'ವಿಧಾನಸಭಾ ಕ್ಷೇತ್ರ',
+const translations={kn:{filtersLocation:'ಫಿಲ್ಟರ್‌ಗಳು ಮತ್ತು ಸ್ಥಳ',assemblyConstituency:'ವಿಧಾನಸಭಾ ಕ್ಷೇತ್ರ',
 publicQuota:'ಸಾರ್ವಜನಿಕ ಕೋಟಾ ಲಭ್ಯತೆ',
 numberingHelp:'ಪ್ರತಿ ವಸತಿ ಪ್ರಕಾರಕ್ಕೂ ಪ್ರತ್ಯೇಕ ಸಂಖ್ಯೆಗಳಿವೆ. ಉಪಯೋಜನೆಗಳನ್ನು ನೋಡಲು ಸ್ಥಳವನ್ನು ವಿಸ್ತರಿಸಿ.','ಫಿಲ್ಟರ್‌ಗಳು ಮತ್ತು ಸ್ಥಳ',eyebrow:'ನಿಮ್ಮ ಕನಸಿನ ಮನೆ',heading:'ನಿಮ್ಮ ಕನಸಿನ ಮನೆ ಹುಡುಕಿ.',intro:'ವಸತಿ ಸ್ಥಳಗಳು, ಲಭ್ಯತೆ ಮತ್ತು ಮಾರ್ಗದ ಮಾಹಿತಿಯನ್ನು ನೋಡಿ.',homes:'ಮನೆಗಳು',location:'ಸ್ಥಳ',availability:'ಲಭ್ಯತೆ',locate:'ನನ್ನ ಸ್ಥಳ ಬಳಸಿ',reset:'ಫಿಲ್ಟರ್ ತೆರವುಗೊಳಿಸಿ',disclaimer:'ಲಭ್ಯತೆಯನ್ನು ಅಧಿಕೃತವಾಗಿ ದೃಢೀಕರಿಸಬೇಕು.',mapEyebrow:'ಸ್ಥಳಗಳನ್ನು ಅನ್ವೇಷಿಸಿ',fit:'ಎಲ್ಲಾ ಸ್ಥಳಗಳು',legend:'ಲಭ್ಯತೆ',projectDetails:'ಯೋಜನೆಯ ವಿವರಗಳು'}};
 const original=new Map([...document.querySelectorAll('[data-i18n]')].map(el=>[el,el.innerHTML]));
