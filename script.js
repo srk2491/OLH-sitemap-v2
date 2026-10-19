@@ -116,18 +116,312 @@ function populateAreas(){const areas=[...new Set(sites.filter(s=>s.mode===state.
 
 function changeMode(mode){state.expanded=null;state.mode=mode;state.location='';state.constituency='';state.selected=null;closeDetails(false);populateAreas();document.querySelectorAll('[data-mode]').forEach(b=>{b.classList.toggle('active',b.dataset.mode===mode);b.setAttribute('aria-pressed',b.dataset.mode===mode);});render();writeURL();fit();}
 function selectSite(key,update=true){const s=filtered.find(s=>s.key===key);if(!s)return;state.selected=key;state.expanded=s.locationId;render();renderDetails(s);if(!$('siteDialog').open){if(innerWidth<=700)$('siteDialog').showModal();else $('siteDialog').show();}$('detailTitle').focus({preventScroll:true});if(map&&OLH.validCoordinates(s))map.panTo([s.latitude,s.longitude],{animate:!matchMedia('(prefers-reduced-motion: reduce)').matches});if(update)writeURL();}
-function availabilityTable(s){
- const missing=lang==='kn'?'ಮಾಹಿತಿ ಲಭ್ಯವಿಲ್ಲ':'Data unavailable';
- const publicLabel=lang==='kn'?'ಸಾರ್ವಜನಿಕ ಕೋಟಾ':'Public quota availability';
- const mlaLabel=lang==='kn'?'ಶಾಸಕರ ಕೋಟಾ':'MLA quota availability';
- const value=n=>n===null||n===undefined?`<span class="quota-missing">${missing}</span>`:n<0?`<span class="negative-quota">${n.toLocaleString('en-IN')}</span>`:n.toLocaleString('en-IN');
- const rows=['SC','General','Minority','Total'].map((label,i)=>`<tr${i===3?' class="quota-total"':''}><th scope="row">${label}</th><td>${value(i===3?s.available:s.breakdown?.[i])}</td><td>${value(i===3?s.mlaAvailable:s.mlaBreakdown?.[i])}</td></tr>`).join('');
- return `<table class="quota-table"><caption>Reported availability by quota</caption><thead><tr><th scope="col">Category</th><th scope="col">${publicLabel}</th><th scope="col">${mlaLabel}</th></tr></thead><tbody>${rows}</tbody></table><p class="quota-note">${escapeHTML(s.mlaReason||'MLA quota counts were not supplied for this project.')} Public and MLA quotas are shown separately.</p>`;
+function availabilityTable(s) {
+  const kn = lang === 'kn';
+
+  const missing = kn ? 'ಮಾಹಿತಿ ಲಭ್ಯವಿಲ್ಲ' : 'Data unavailable';
+  const publicLabel = kn ? 'ಸಾರ್ವಜನಿಕ ಕೋಟಾ' : 'Public quota availability';
+  const mlaLabel = kn ? 'ಶಾಸಕರ ಕೋಟಾ' : 'MLA quota availability';
+
+  const categories = kn
+    ? ['ಪರಿಶಿಷ್ಟ ಜಾತಿ (SC)', 'ಸಾಮಾನ್ಯ (General)', 'ಅಲ್ಪಸಂಖ್ಯಾತರು (Minority)', 'ಒಟ್ಟು']
+    : ['SC', 'General', 'Minority', 'Total'];
+
+  const value = n =>
+    n === null || n === undefined
+      ? `<span class="quota-missing">${missing}</span>`
+      : n < 0
+        ? `<span class="negative-quota">${n.toLocaleString('en-IN')}</span>`
+        : n.toLocaleString('en-IN');
+
+  const rows = categories.map((label, i) =>
+    `<tr${i === 3 ? ' class="quota-total"' : ''}>
+      <th scope="row">${label}</th>
+      <td>${value(i === 3 ? s.available : s.breakdown?.[i])}</td>
+      <td>${value(i === 3 ? s.mlaAvailable : s.mlaBreakdown?.[i])}</td>
+    </tr>`
+  ).join('');
+
+  const caption = kn
+    ? 'ಕೋಟಾವಾರು ವರದಿಯಾದ ಲಭ್ಯತೆ'
+    : 'Reported availability by quota';
+
+  const categoryHeading = kn ? 'ವರ್ಗ' : 'Category';
+
+  const fallbackReason = kn
+    ? 'ಈ ಯೋಜನೆಗೆ ಶಾಸಕರ ಕೋಟಾದ ಸಂಖ್ಯೆಗಳು ಲಭ್ಯವಾಗಿಲ್ಲ.'
+    : 'MLA quota counts were not supplied for this project.';
+
+  const explanation = kn
+    ? 'ಸಾರ್ವಜನಿಕ ಮತ್ತು ಶಾಸಕರ ಕೋಟಾಗಳನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ತೋರಿಸಲಾಗಿದೆ.'
+    : 'Public and MLA quotas are shown separately.';
+
+  // Preserve the original source explanation if one exists.
+  const reason = s.mlaReason || fallbackReason;
+
+  return `
+    <table class="quota-table">
+      <caption>${caption}</caption>
+      <thead>
+        <tr>
+          <th scope="col">${categoryHeading}</th>
+          <th scope="col">${publicLabel}</th>
+          <th scope="col">${mlaLabel}</th>
+        </tr>
+      </thead>
+      <tbody>${rows}</tbody>
+    </table>
+    <p class="quota-note">
+      ${escapeHTML(reason)} ${explanation}
+    </p>`;
 }
-function renderDetails(s){const pair=(name,value)=>`<div><dt>${name}</dt><dd>${escapeHTML(value||'Not supplied')}</dd></div>`;const photo=coverPhoto(s.key);
- const sourceNote=`<details class="source-note"><summary>About this availability data</summary>${s.approximate?'<p>Availability for this parcel needs confirmation with RGHCL.</p>':''}<p>${s.available===null?escapeHTML(s.reason):'These are reported counts in the supplied Ashraya data, not a guarantee of allotment.'}</p>${s.records.length>0&&s.matchMethod==='unresolved'?`<p>These source rows refer to the location. They have not been assigned to this individual parcel.</p>${s.records.map(r=>`<div class="source-row"><strong lang="kn">${escapeHTML(r.name)}</strong>${escapeHTML(r.category)} · ${r.total===null?'Counts need review':r.total+' reported flats'}${r.survey?' · Survey '+escapeHTML(r.survey):''}</div>`).join('')}`:''}<p><a href="https://ashraya.karnataka.gov.in/cm_selection_flat/frmConstwise_Report_Available.aspx" target="_blank" rel="noopener noreferrer">Check the official report ↗</a></p></details>`;
- $('details').innerHTML=`<div class="detail-body"><div class="detail-hero">${photo?`<img src="${escapeHTML(photo.src)}" alt="${escapeHTML(photo.alt||s.name)}">`:icon('building')}<span class="detail-hero-label">${icon(photo?'camera':'building')}${photo?'Site photography':'Project location · Site photos coming soon'}</span></div><div class="detail-title-row"><span class="project-type">${s.mode} BHK · LOCATION ${s.number} · ${escapeHTML(s.parcelLabel)}</span><button class="save-site" data-save="${s.key}" aria-pressed="${saved.has(s.key)}" aria-label="Save site">${icon('heart')}</button></div><h2 id="detailTitle" tabindex="-1">${escapeHTML(displayName(s))}</h2>${s.nameKn&&lang==='en'?`<p class="kn-name" lang="kn">${escapeHTML(s.nameKn)}</p>`:''}<p class="detail-subtitle">Constituency: ${escapeHTML(s.constituency||s.area)}</p><div class="availability-box"><span class="eyebrow">${lang==='kn'?'ಸಾರ್ವಜನಿಕ ಕೋಟಾ ಲಭ್ಯತೆ':'PUBLIC QUOTA AVAILABILITY'}</span>${s.available!==null?`<span class="count">${s.available.toLocaleString('en-IN')} <small style="font-size:11px;font-weight:500;letter-spacing:0">reported available</small></span><p>Confirm current availability before applying.</p>`:`<span class="count unknown-count">Availability data unavailable</span><p>Please confirm current availability with RGHCL.</p>${s.units!==undefined?`<p style="margin-top:8px"><strong>${s.units===null?'Unknown':s.units.toLocaleString('en-IN')}</strong> project units in the source file. Available stock is not supplied.</p>`:''}`}${availabilityTable(s)}${sourceNote}</div><div class="detail-reader"><button class="quiet" data-read="${s.key}" aria-label="Read ${escapeHTML(s.name)} details aloud">Read this project</button><button class="quiet" data-reader-pause>Pause</button><button class="quiet" data-reader-stop>Stop reading</button><p data-reader-message role="status"></p></div><div class="detail-actions">${OLH.validCoordinates(s)?`<a class="primary" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/dir/?api=1&destination=${s.latitude},${s.longitude}">${icon('arrow')}${text('directions')}</a>`:''}<button class="quiet" id="shareBtn">${icon('share')}${text('share')}</button></div><dl class="detail-meta">${pair('Assembly constituency',s.constituency)}${pair('Project stock · '+s.mode+' BHK',s.units?.toLocaleString('en-IN'))}${pair('Survey number',s.survey)}${pair('Contractor',s.agency)}${pair('Distance · straight-line',!OLH.validCoordinates(s)?'Not available':state.position?distanceText(s):'Allow location to calculate')}</dl><section class="media-section"><h3>${text('photos')}</h3><p>A closer look at the project, published by the maintainer.</p><div id="siteGallery" class="media-grid"></div><div id="galleryStatus" class="media-empty">Loading gallery…</div></section></div>`;
- $('shareBtn').addEventListener('click',share);$('details').querySelector('[data-save]').addEventListener('click',e=>{toggleSaved(e.currentTarget.dataset.save);});renderGallery(s);
+function renderDetails(s) {
+  const kn = lang === 'kn';
+  const t = (en, kannada) => kn ? kannada : en;
+
+  const pair = (name, value) => `
+    <div>
+      <dt>${escapeHTML(name)}</dt>
+      <dd>${escapeHTML(value ?? t('Not supplied', 'ಮಾಹಿತಿ ನೀಡಲಾಗಿಲ್ಲ'))}</dd>
+    </div>`;
+
+  const photo = coverPhoto(s.key);
+
+  const sourceNote = `
+    <details class="source-note">
+      <summary>${t('About this availability data', 'ಈ ಲಭ್ಯತೆಯ ಮಾಹಿತಿಯ ಕುರಿತು')}</summary>
+
+      ${s.approximate
+        ? `<p>${t(
+            'Availability for this parcel needs confirmation with RGHCL.',
+            'ಈ ಯೋಜನೆಯ ಲಭ್ಯತೆಯನ್ನು RGHCL ಮೂಲಕ ದೃಢೀಕರಿಸಬೇಕು.'
+          )}</p>`
+        : ''}
+
+      <p>${s.available === null
+        ? escapeHTML(s.reason || t(
+            'Availability information was not supplied.',
+            'ಲಭ್ಯತೆಯ ಮಾಹಿತಿ ನೀಡಲಾಗಿಲ್ಲ.'
+          ))
+        : t(
+            'These are reported counts in the supplied Ashraya data, not a guarantee of allotment.',
+            'ಇವು ಆಶ್ರಯ ಮಾಹಿತಿಯಲ್ಲಿ ವರದಿಯಾದ ಸಂಖ್ಯೆಗಳು. ಇವು ಮನೆ ಹಂಚಿಕೆಯ ಖಾತರಿಯಲ್ಲ.'
+          )}</p>
+
+      ${s.records.length > 0 && s.matchMethod === 'unresolved'
+        ? `
+          <p>${t(
+            'These source rows refer to the location. They have not been assigned to this individual parcel.',
+            'ಈ ಮೂಲ ದಾಖಲೆಗಳು ಸ್ಥಳಕ್ಕೆ ಸಂಬಂಧಿಸಿವೆ. ಇವುಗಳನ್ನು ನಿರ್ದಿಷ್ಟ ಉಪಯೋಜನೆಗೆ ಇನ್ನೂ ಹೊಂದಿಸಲಾಗಿಲ್ಲ.'
+          )}</p>
+
+          ${s.records.map(r => `
+            <div class="source-row">
+              <strong lang="kn">${escapeHTML(r.name)}</strong>
+              ${escapeHTML(r.category)} ·
+              ${r.total === null
+                ? t('Counts need review', 'ಸಂಖ್ಯೆಗಳ ಪರಿಶೀಲನೆ ಅಗತ್ಯ')
+                : `${r.total} ${t('reported flats', 'ವರದಿಯಾದ ಮನೆಗಳು')}`}
+              ${r.survey
+                ? ` · ${t('Survey', 'ಸರ್ವೆ ಸಂಖ್ಯೆ')} ${escapeHTML(r.survey)}`
+                : ''}
+            </div>
+          `).join('')}
+        `
+        : ''}
+
+      <p>
+        <a href="https://ashraya.karnataka.gov.in/cm_selection_flat/frmConstwise_Report_Available.aspx"
+           target="_blank"
+           rel="noopener noreferrer">
+          ${t('Check the official report ↗', 'ಅಧಿಕೃತ ವರದಿಯನ್ನು ಪರಿಶೀಲಿಸಿ ↗')}
+        </a>
+      </p>
+    </details>`;
+
+  const availableContent = s.available !== null
+    ? `
+      <span class="count">
+        ${s.available.toLocaleString('en-IN')}
+        <small style="font-size:11px;font-weight:500;letter-spacing:0">
+          ${t('reported available', 'ವರದಿಯಾದ ಲಭ್ಯತೆ')}
+        </small>
+      </span>
+      <p>${t(
+        'Confirm current availability before applying.',
+        'ಅರ್ಜಿ ಸಲ್ಲಿಸುವ ಮೊದಲು ಪ್ರಸ್ತುತ ಲಭ್ಯತೆಯನ್ನು ದೃಢೀಕರಿಸಿ.'
+      )}</p>`
+    : `
+      <span class="count unknown-count">
+        ${t('Availability data unavailable', 'ಲಭ್ಯತೆಯ ಮಾಹಿತಿ ಲಭ್ಯವಿಲ್ಲ')}
+      </span>
+      <p>${t(
+        'Please confirm current availability with RGHCL.',
+        'ಪ್ರಸ್ತುತ ಲಭ್ಯತೆಯನ್ನು RGHCL ಮೂಲಕ ದೃಢೀಕರಿಸಿ.'
+      )}</p>
+
+      ${s.units !== undefined
+        ? `<p style="margin-top:8px">
+            <strong>${s.units === null
+              ? t('Unknown', 'ತಿಳಿದಿಲ್ಲ')
+              : s.units.toLocaleString('en-IN')}</strong>
+            ${t(
+              'project units in the source file. Available stock is not supplied.',
+              'ಮೂಲ ದಾಖಲೆಯಲ್ಲಿರುವ ಒಟ್ಟು ಮನೆಗಳು. ಲಭ್ಯವಿರುವ ಮನೆಗಳ ಸಂಖ್ಯೆ ನೀಡಲಾಗಿಲ್ಲ.'
+            )}
+          </p>`
+        : ''}`;
+
+  $('details').innerHTML = `
+    <div class="detail-body">
+
+      <div class="detail-hero">
+        ${photo
+          ? `<img src="${escapeHTML(photo.src)}"
+                  alt="${escapeHTML(photo.alt || s.name)}">`
+          : icon('building')}
+
+        <span class="detail-hero-label">
+          ${icon(photo ? 'camera' : 'building')}
+          ${photo
+            ? t('Site photography', 'ಯೋಜನೆಯ ಛಾಯಾಚಿತ್ರ')
+            : t(
+                'Project location · Site photos coming soon',
+                'ಯೋಜನೆಯ ಸ್ಥಳ · ಛಾಯಾಚಿತ್ರಗಳು ಶೀಘ್ರದಲ್ಲೇ'
+              )}
+        </span>
+      </div>
+
+      <div class="detail-title-row">
+        <span class="project-type">
+          ${s.mode} BHK · ${t('LOCATION', 'ಸ್ಥಳ')} ${s.number}
+          · ${escapeHTML(s.parcelLabel)}
+        </span>
+
+        <button class="save-site"
+                data-save="${escapeHTML(s.key)}"
+                aria-pressed="${saved.has(s.key)}"
+                aria-label="${t('Save site', 'ಸ್ಥಳವನ್ನು ಉಳಿಸಿ')}">
+          ${icon('heart')}
+        </button>
+      </div>
+
+      <h2 id="detailTitle" tabindex="-1">
+        ${escapeHTML(displayName(s))}
+      </h2>
+
+      ${s.nameKn && lang === 'en'
+        ? `<p class="kn-name" lang="kn">${escapeHTML(s.nameKn)}</p>`
+        : ''}
+
+      <p class="detail-subtitle">
+        ${t('Constituency', 'ವಿಧಾನಸಭಾ ಕ್ಷೇತ್ರ')}:
+        ${escapeHTML(s.constituency || s.area)}
+      </p>
+
+      <div class="availability-box">
+        <span class="eyebrow">
+          ${t('PUBLIC QUOTA AVAILABILITY', 'ಸಾರ್ವಜನಿಕ ಕೋಟಾ ಲಭ್ಯತೆ')}
+        </span>
+
+        ${availableContent}
+        ${availabilityTable(s)}
+        ${sourceNote}
+      </div>
+
+      <div class="detail-reader">
+        <button class="quiet"
+                data-read="${escapeHTML(s.key)}"
+                aria-label="${t('Read project details aloud', 'ಯೋಜನೆಯ ವಿವರಗಳನ್ನು ಧ್ವನಿಯಲ್ಲಿ ಓದಿ')}">
+          ${t('Read this project', 'ಈ ಯೋಜನೆಯನ್ನು ಓದಿ')}
+        </button>
+
+        <button class="quiet" data-reader-pause>
+          ${t('Pause', 'ವಿರಾಮ')}
+        </button>
+
+        <button class="quiet" data-reader-stop>
+          ${t('Stop reading', 'ಓದುವುದನ್ನು ನಿಲ್ಲಿಸಿ')}
+        </button>
+
+        <p data-reader-message role="status"></p>
+      </div>
+
+      <div class="detail-actions">
+        ${OLH.validCoordinates(s)
+          ? `<a class="primary"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.google.com/maps/dir/?api=1&destination=${s.latitude},${s.longitude}">
+                ${icon('arrow')}${text('directions')}
+             </a>`
+          : ''}
+
+        <button class="quiet" id="shareBtn">
+          ${icon('share')}${text('share')}
+        </button>
+      </div>
+
+      <dl class="detail-meta">
+        ${pair(
+          t('Assembly constituency', 'ವಿಧಾನಸಭಾ ಕ್ಷೇತ್ರ'),
+          s.constituency
+        )}
+
+        ${pair(
+          t('Project stock', 'ಯೋಜನೆಯ ಒಟ್ಟು ಮನೆಗಳು') + ' · ' + s.mode + ' BHK',
+          s.units?.toLocaleString('en-IN')
+        )}
+
+        ${pair(
+          t('Survey number', 'ಸರ್ವೆ ಸಂಖ್ಯೆ'),
+          s.survey
+        )}
+
+        ${pair(
+          t('Contractor', 'ಗುತ್ತಿಗೆದಾರ'),
+          s.agency
+        )}
+
+        ${pair(
+          t('Distance · straight-line', 'ದೂರ · ನೇರ ರೇಖೆಯಲ್ಲಿ'),
+          !OLH.validCoordinates(s)
+            ? t('Not available', 'ಲಭ್ಯವಿಲ್ಲ')
+            : state.position
+              ? distanceText(s)
+              : t(
+                  'Allow location to calculate',
+                  'ದೂರ ತಿಳಿಯಲು ಸ್ಥಳದ ಅನುಮತಿ ನೀಡಿ'
+                )
+        )}
+      </dl>
+
+      <section class="media-section">
+        <h3>${text('photos')}</h3>
+
+        <p>${t(
+          'A closer look at the project, published by the maintainer.',
+          'ನಿರ್ವಾಹಕರು ಪ್ರಕಟಿಸಿದ ಯೋಜನೆಯ ಚಿತ್ರಗಳು ಮತ್ತು ವೀಡಿಯೊಗಳು.'
+        )}</p>
+
+        <div id="siteGallery" class="media-grid"></div>
+
+        <div id="galleryStatus" class="media-empty">
+          ${t('Loading gallery…', 'ಚಿತ್ರಗಳನ್ನು ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ…')}
+        </div>
+      </section>
+
+    </div>`;
+
+  $('shareBtn').addEventListener('click', share);
+
+  $('details')
+    .querySelector('[data-save]')
+    .addEventListener('click', e => {
+      toggleSaved(e.currentTarget.dataset.save);
+    });
+
+  renderGallery(s);
 }
 async function renderGallery(s){const token=++galleryToken;galleryURLs.forEach(URL.revokeObjectURL);galleryURLs=[];
  try{const result=await OLHMedia.gallery(manifest,s.key,preview);if(token!==galleryToken||state.selected!==s.key)return;
