@@ -80,6 +80,12 @@ def scrape_sub_table():
 # --- STEP 3: MAIN EXECUTION ---
 try:
     driver.get("https://ashraya.karnataka.gov.in/cm_selection_flat/frmConstwise_Report_Available.aspx")
+    os.makedirs("scraper-debug", exist_ok=True)
+    print("Page URL:", driver.current_url)
+    print("Page title:", driver.title)
+    driver.save_screenshot("scraper-debug/page.png")
+    with open("scraper-debug/page.html", "w", encoding="utf-8") as f:
+        f.write(driver.page_source)	
     all_master_data = []
     
     wait.until(EC.presence_of_element_located((By.ID, 'grdConstwise_LinkButton1_0')))
