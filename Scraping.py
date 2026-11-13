@@ -41,7 +41,7 @@ def get_matched_english_name(kannada_name_from_web):
 options = webdriver.ChromeOptions()
 # Do not make driver.get wait for every network resource; the Ashraya site
 # can keep connections open. Explicit waits below wait for the actual tables.
-options.page_load_strategy = "none"
+options.page_load_strategy = "eager"
 options.add_argument("--headless=new")
 options.add_argument("--no-sandbox")
 options.add_argument("--disable-dev-shm-usage")
