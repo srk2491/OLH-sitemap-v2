@@ -5,13 +5,13 @@
       {
         "type": "image",
         "src": "media/1-7/demo-sample-01-exterior.jpg",
-        "caption": "DEMO ONLY \u2014 sample photo, not an actual RGHCL site",
+        "caption": "DEMO ONLY — sample photo, not an actual RGHCL site",
         "alt": "Generic apartment sample photo for demonstration; not an actual RGHCL site"
       },
       {
         "type": "image",
         "src": "media/1-7/demo-sample-02-balconies.jpg",
-        "caption": "DEMO ONLY \u2014 sample photo, not an actual RGHCL site",
+        "caption": "DEMO ONLY — sample photo, not an actual RGHCL site",
         "alt": "Generic apartment sample photo for demonstration; not an actual RGHCL site"
       }
     ],
@@ -19,8 +19,66 @@
       {
         "type": "image",
         "src": "media/1-6/demo-sample-03-interior.jpg",
-        "caption": "DEMO ONLY \u2014 sample photo, not an actual RGHCL site",
+        "caption": "DEMO ONLY — sample photo, not an actual RGHCL site",
         "alt": "Generic apartment sample photo for demonstration; not an actual RGHCL site"
+      },
+      {
+        "type": "image",
+        "src": "media/1-6/281276b5-9694-45fd-81eb-31fedaac6d1f.jpg",
+        "caption": "",
+        "alt": "Site media"
+      }
+    ],
+    "1-1": [
+      {
+        "type": "image",
+        "src": "media/1-1/6c308ff3-b4b7-4376-a2a4-9076c5044009.jpg",
+        "caption": "sadenahalli demo",
+        "alt": "sadenahalli demo"
+      }
+    ],
+    "1-18": [
+      {
+        "type": "image",
+        "src": "media/1-18/c257de61-e9a1-4a8c-95ed-607045e9b4b9.jpg",
+        "caption": "Layout",
+        "alt": "Layout"
+      }
+    ],
+    "1-38": [
+      {
+        "type": "image",
+        "src": "media/1-38/36f8db48-a8b4-4268-8d73-44ce3848ce80.jpg",
+        "caption": "Demo building",
+        "alt": "Demo"
+      }
+    ],
+    "1-35": [
+      {
+        "type": "image",
+        "src": "media/1-35/8c06346e-2897-4405-acd8-c422bf5b6ad5.jpg",
+        "caption": "Front View",
+        "alt": "Front View"
+      },
+      {
+        "type": "image",
+        "src": "media/1-35/4172203b-d7b9-4f27-921d-11d6b8aff1f0.jpg",
+        "caption": "layout plan",
+        "alt": "layout plan"
+      }
+    ],
+    "1-xls-006": [
+      {
+        "type": "image",
+        "src": "media/1-xls-006/86a306f0-bbba-46f1-a52e-f3de9c28fcd9.jpg",
+        "caption": "this is for demo ",
+        "alt": "this is for demo "
+      },
+      {
+        "type": "image",
+        "src": "media/1-xls-006/16f5ffe3-b716-45f7-9789-e3a54e818324.jpg",
+        "caption": "demo demo",
+        "alt": "demo demo"
       }
     ]
   }

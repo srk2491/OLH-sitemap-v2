@@ -1,0 +1,589 @@
+[
+  {
+    "cells": [
+      {
+        "text": "ಕ್ಷೇತ್ರ",
+        "rowSpan": 3,
+        "colSpan": 1
+      },
+      {
+        "text": "ಸ್ಥಳ",
+        "rowSpan": 3,
+        "colSpan": 1
+      },
+      {
+        "text": "ಸಾರ್ವಜನಿಕರ ಫ್ಲಾಟ್ ಗಳ ಸ್ಥಿತಿ",
+        "rowSpan": 1,
+        "colSpan": 12
+      },
+      {
+        "text": "ಸ್ಥಳೀಯ ಕ್ಷೇತ್ರವಾರು ಫ್ಲಾಟ್ ಗಳ ಸ್ಥಿತಿ",
+        "rowSpan": 1,
+        "colSpan": 12
+      }
+    ]
+  },
+  {
+    "cells": [
+      {
+        "text": "ಒಟ್ಟು ಫ್ಲಾಟ್ ಗಳು",
+        "rowSpan": 1,
+        "colSpan": 4
+      },
+      {
+        "text": "ಆಯ್ಕೆ ಮಾಡಲಾಗಿರುವ ಒಟ್ಟು ಫ್ಲಾಟ್ ಗಳು",
+        "rowSpan": 1,
+        "colSpan": 4
+      },
+      {
+        "text": "ಲಭ್ಯವಿರುವ ಫ್ಲಾಟ್ ಗಳು",
+        "rowSpan": 1,
+        "colSpan": 4
+      },
+      {
+        "text": "ಒಟ್ಟು ಫ್ಲಾಟ್ ಗಳು",
+        "rowSpan": 1,
+        "colSpan": 4
+      },
+      {
+        "text": "ಆಯ್ಕೆ ಮಾಡಲಾಗಿರುವ ಒಟ್ಟು ಫ್ಲಾಟ್ ಗಳು",
+        "rowSpan": 1,
+        "colSpan": 4
+      },
+      {
+        "text": "ಲಭ್ಯವಿರುವ ಫ್ಲಾಟ್ ಗಳು",
+        "rowSpan": 1,
+        "colSpan": 4
+      }
+    ]
+  },
+  {
+    "cells": [
+      {
+        "text": "ಪ.ಜಾ/ಪ.ಪಂ",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "ಸಾಮಾನ್ಯ",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "ಅಲ್ಪಸಂಖ್ಯಾತರು",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "ಒಟ್ಟು",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "ಪ.ಜಾ/ಪ.ಪಂ",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "ಸಾಮಾನ್ಯ",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "ಅಲ್ಪಸಂಖ್ಯಾತರು",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "ಒಟ್ಟು",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "ಪ.ಜಾ/ಪ.ಪಂ",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "ಸಾಮಾನ್ಯ",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "ಅಲ್ಪಸಂಖ್ಯಾತರು",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "ಒಟ್ಟು",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "ಪ.ಜಾ/ಪ.ಪಂ",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "ಸಾಮಾನ್ಯ",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "ಅಲ್ಪಸಂಖ್ಯಾತರು",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "ಒಟ್ಟು",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "ಪ.ಜಾ/ಪ.ಪಂ",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "ಸಾಮಾನ್ಯ",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "ಅಲ್ಪಸಂಖ್ಯಾತರು",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "ಒಟ್ಟು",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "ಪ.ಜಾ/ಪ.ಪಂ",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "ಸಾಮಾನ್ಯ",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "ಅಲ್ಪಸಂಖ್ಯಾತರು",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "ಒಟ್ಟು",
+        "rowSpan": 1,
+        "colSpan": 1
+      }
+    ]
+  },
+  {
+    "cells": [
+      {
+        "text": "ಕೃಷ್ಣರಾಜಪುರಂ",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "ಕ್ಯಾಲಸನಹಳ್ಳಿ",
+        "rowSpan": 1,
+        "colSpan": 1,
+        "locationId": "grdLocationwise_LinkButton1_0"
+      },
+      {
+        "text": "67",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "83",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "16",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "166",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "67",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "83",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "16",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "166",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "0",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "0",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "0",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "0",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "66",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "82",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "18",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "166",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "23",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "25",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "8",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "56",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "43",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "57",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "10",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "110",
+        "rowSpan": 1,
+        "colSpan": 1
+      }
+    ]
+  },
+  {
+    "cells": [
+      {
+        "text": "ಕೃಷ್ಣರಾಜಪುರಂ",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "ಹೊರಮಾವು ಆಗರ",
+        "rowSpan": 1,
+        "colSpan": 1,
+        "locationId": "grdLocationwise_LinkButton1_1"
+      },
+      {
+        "text": "39",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "48",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "9",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "96",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "39",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "48",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "9",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "96",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "0",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "0",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "0",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "0",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "39",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "47",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "10",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "96",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "15",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "12",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "8",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "35",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "24",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "35",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "2",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "61",
+        "rowSpan": 1,
+        "colSpan": 1
+      }
+    ]
+  },
+  {
+    "cells": [
+      {
+        "text": "ಕೃಷ್ಣರಾಜಪುರಂ",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "ಹೊರಮಾವು-82",
+        "rowSpan": 1,
+        "colSpan": 1,
+        "locationId": "grdLocationwise_LinkButton1_2"
+      },
+      {
+        "text": "10",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "13",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "3",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "26",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "10",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "13",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "3",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "26",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "0",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "0",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "0",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "0",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "10",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "13",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "3",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "26",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "0",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "0",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "0",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "0",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "10",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "13",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "3",
+        "rowSpan": 1,
+        "colSpan": 1
+      },
+      {
+        "text": "26",
+        "rowSpan": 1,
+        "colSpan": 1
+      }
+    ]
+  }
+]

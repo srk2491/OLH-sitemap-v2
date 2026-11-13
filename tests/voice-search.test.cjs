@@ -1,0 +1,27 @@
+const assert=require('node:assert/strict'),V=require('../voice-search'),C=require('../core'),L=require('../locations');
+const sites=L.decorate(C.buildMasterSites(require('../data/project-master.json'),require('../ashraya_master_report.json'))),items=V.catalog(sites);
+const parse=t=>V.analyse(t,items),values=t=>parse(t).matches.map(x=>x.value).sort();
+assert.deepEqual(values('Find Nelaguli and Sadenahalli'),['Nelaguli','Sadenahalli']);
+assert.deepEqual(values('ನೆಲಗುಳಿ ಮತ್ತು ಸಾದೇನಹಳ್ಳಿ'),['Nelaguli','Sadenahalli']);
+assert.deepEqual(values('ಶೆಟ್ಟಿ ಹಳ್ಳಿ'),['Shettihalli']);assert.deepEqual(values('Shetty halli'),['Shettihalli']);
+assert.equal(values('Horamavu Agara').length,1);assert.equal(values('Nelaguli parcel 2')[0],'Nelaguli Parcel-2');
+assert.equal(values('notnelaguli').length,0);assert.equal(values('Shettyhalii').length,0);assert(parse('Shettyhalii').suggestions.some(x=>x.value==='Shettihalli'));
+assert.deepEqual(values('Nelaguli and Mars'),['Nelaguli']);assert.equal(parse('Nelaguli and Mars').remaining,'mars');
+assert.equal(parse('show 2 BHK in Yelhanka').mode,'2');assert.equal(parse('two bedroom near me').near,true);assert.equal(parse('1 BHK and 2 BHK').modeConflict,true);
+const two=V.intent(parse('Nelaguli Sadenahalli').matches,'1',false);const found=C.filterSites(sites,{mode:two.mode,search:two.query});assert(found.some(s=>s.name==='Sadenahalli'));assert(found.some(s=>/Nelaguli/.test(s.name)));assert(found.every(s=>s.mode==='1'));
+const constituency=V.intent(parse('Yelahanka').matches,'2',false);assert.equal(constituency.constituency,'Yelahanka');assert.equal(constituency.query,'');
+let states=[],texts=[],errors=[],instances=[],timers=new Map(),seq=0;
+class Recognition{constructor(){instances.push(this)}start(){this.starts=(this.starts||0)+1}stop(){this.stops=(this.stops||0)+1}abort(){this.aborts=(this.aborts||0)+1}}
+const rec=V.recorder({Recognition,onState:s=>states.push(s),onText:(...x)=>texts.push(x),onError:e=>errors.push(e),setTimer:fn=>{timers.set(++seq,fn);return seq},clearTimer:id=>timers.delete(id)});
+const result=(r,parts,from=0)=>r.onresult({resultIndex:from,results:parts.map(([text,final])=>Object.assign([{transcript:text},{transcript:'alternative'}],{isFinal:final}))});
+rec.start('en-IN','');let r=instances.at(-1);assert.equal(states.at(-1),'connecting');assert.equal(r.continuous,false);assert.equal(r.interimResults,true);assert.equal(r.maxAlternatives,3);r.onstart();assert.equal(states.at(-1),'listening');
+result(r,[['Nela',false]]);assert.equal(texts.at(-1)[0],'');assert.equal(texts.at(-1)[1],'Nela');
+rec.stop();assert.equal(r.stops,1);assert(!r.aborts);assert.equal(states.at(-1),'processing');assert.equal(rec.start('en-IN',''),false);
+result(r,[['Nelaguli',true]]);r.onend();assert.equal(texts.at(-1)[0],'Nelaguli');assert.equal(states.at(-1),'review');assert.equal(timers.size,0);
+rec.start('kn-IN','Nelaguli');r=instances.at(-1);r.onstart();result(r,[['Sadenahalli',true]]);result(r,[['Sadenahalli',true]]);r.onend();assert.equal(texts.at(-1)[0],'Nelaguli, Sadenahalli');assert.equal(r.lang,'kn-IN');
+rec.start('en-IN','');r=instances.at(-1);r.onstart();result(r,[['Nelaguli',true],['Sade',false]]);result(r,[['Nelaguli',true],['Sadenahalli',true]],1);assert.equal(texts.at(-1)[0],'Nelaguli, Sadenahalli');
+rec.cancel();const count=texts.length;result(r,[['Ghost',true]]);r.onend();assert.equal(texts.length,count);assert.equal(r.aborts,1);
+rec.start('en-IN','');r=instances.at(-1);r.onerror({error:'not-allowed'});r.onend();assert.equal(states.at(-1),'error');assert.equal(errors.at(-1),'not-allowed');assert.equal(rec.isActive(),false);assert.equal(timers.size,0);
+rec.start('en-IN','');r=instances.at(-1);[...timers.values()][0]();assert.equal(errors.at(-1),'start-timeout');assert.equal(r.aborts,1);
+rec.start('en-IN','');r=instances.at(-1);r.onstart();rec.stop();[...timers.values()][0]();assert.equal(errors.at(-1),'timeout');assert.equal(rec.isActive(),false);
+console.log('PASS bilingual multi-location matching, reviewed aliases, confirm-only suggestions, type/constituency filters, interim/final capture, Stop versus Cancel, repeated results, late events, errors and timeouts.');

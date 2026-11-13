@@ -1,0 +1,15 @@
+const assert=require('node:assert/strict'),OLH=require('../core.js'),master=require('../data/project-master.json'),report=require('../ashraya_master_report.json');
+const sites=OLH.buildMasterSites(master,report),one=sites.filter(s=>s.mode==='1'),two=sites.filter(s=>s.mode==='2');
+assert.equal(master.projects.length,67);assert.equal(one.length,64);assert.equal(two.length,12);assert.equal(new Set(sites.map(s=>s.key)).size,76);
+assert.equal(one.reduce((n,s)=>n+s.units,0),45124);assert.equal(two.reduce((n,s)=>n+s.units,0),3826);
+assert.equal(sites.find(s=>s.key==='1-7').name,'Horamavu Agara');assert.equal(sites.find(s=>s.key==='1-6').name,'Bidarahalli');
+const get=n=>one.find(s=>s.number===n);
+assert.equal(get(25).available,27);assert.equal(get(26).available,24);assert.notEqual(get(25).key,get(26).key);
+for(const n of [8,12,21,22,28,33,47,54,63,64,65,66])assert.equal(get(n).available,null,`ambiguous project ${n}`);
+assert.equal(get(44).available,-1);assert(get(44).sourceIssue);assert.equal(get(49).available,132);
+const subset=OLH.filterSites(sites,{constituency:'Yelahanka'});assert(subset.length>1&&subset.every(s=>s.constituency==='Yelahanka'));
+assert.equal(OLH.filterSites(sites,{search:'yelahanka'}).length,subset.length);assert(OLH.filterSites(sites,{search:'Ramalingam'}).length>0);
+const nearest=OLH.filterSites(sites,{sort:'nearest',position:[13,77.5]});assert(nearest.slice(-2).every(s=>!OLH.validCoordinates(s)));assert.equal(one.filter(s=>!OLH.validCoordinates(s)).length,2);
+assert(two.every(s=>s.available===null));
+const reordered=OLH.buildMasterSites(master,[...report].reverse().map(c=>({...c,data:[...c.data].reverse()})));const counts=items=>items.map(s=>[s.key,s.available,s.mlaAvailable,s.matchMethod]);assert.deepEqual(counts(reordered),counts(sites));
+console.log('PASS workbook totals, 76 unique housing entries, parcel matching, ambiguity safeguards, media identities, constituency/agency search, missing coordinates and reorder stability');

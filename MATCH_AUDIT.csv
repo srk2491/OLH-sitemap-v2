@@ -1,0 +1,77 @@
+﻿serial,project_id,name,mode,units,match,sourceStock,sourceRef,reason
+1,xls-001,Horamavu Agara,1,192,Verified unique location + DU stock,192,report-3ea40b91,Figures displayed as reported.
+2,xls-002,Kyalasanahalli,1,332,Verified unique location + DU stock,332,report-60a700e2,Figures displayed as reported.
+3,xls-003,Bidarahalli,1,3967,unresolved,,,Availability not published. No verified report assignment for this project.
+4,xls-004,Kooguru,1,256,unresolved,,,Availability not published. No verified report assignment for this project.
+5,xls-005,Chikkanahalli Kammanahalli,1,530,Verified unique location + DU stock,530,report-139727e9,Figures displayed as reported.
+6,xls-006,Goolimangala,1,344,Verified unique location + DU stock,344,report-f5edb2af,Figures displayed as reported.
+6,xls-006,Goolimangala,2,144,unresolved,,,Availability not published. The workbook provides 2 BHK project stock only.
+7,xls-007,Doddanagamangala,1,496,unresolved,,,Availability not published. No verified report assignment for this project.
+8,xls-008,Devagere68,1,624,Verified unique location + DU stock,624,report-36c07c76,Figures displayed as reported.
+9,xls-009,Lingapura,1,530,Verified unique location + DU stock,530,report-d3b8b4de,Figures displayed as reported.
+9,xls-009,Lingapura,2,266,unresolved,,,Availability not published. The workbook provides 2 BHK project stock only.
+10,xls-010,Anekal Gramantara,1,2387,Verified unique location + DU stock,2387,report-8cddf7e7,Figures displayed as reported.
+10,xls-010,Anekal Gramantara,2,653,unresolved,,,Availability not published. The workbook provides 2 BHK project stock only.
+11,xls-011,Ganigarahalli,1,796,Verified unique location + DU stock,796,report-643036de,Figures displayed as reported.
+11,xls-011,Ganigarahalli,2,135,unresolved,,,Availability not published. The workbook provides 2 BHK project stock only.
+12,xls-012,Agraharapalya30,1,488,Verified unique location + DU stock,488,report-af7dc905,Figures displayed as reported.
+13,xls-013,Pillahalli,1,306,Verified unique location + DU stock,306,report-399ff5fe,Figures displayed as reported.
+14,xls-014,Singanayakanahalli,1,521,Verified unique location + DU stock,521,report-4ebcd109,Figures displayed as reported.
+15,xls-015,Nagadasahalli,1,418,Verified unique location + DU stock,418,report-eb3e017a,Figures displayed as reported.
+15,xls-015,Nagadasahalli,2,489,unresolved,,,Availability not published. The workbook provides 2 BHK project stock only.
+16,xls-016,Bilijaji,1,3592,Verified unique location + DU stock,3592,report-e7acba63,Figures displayed as reported.
+17,xls-017,Govindapura,1,701,Verified unique location + DU stock,701,report-2a22a05c,Figures displayed as reported.
+18,xls-018,Navaratna Agrahara,1,140,Verified unique location + DU stock,140,report-ee4116cc,Figures displayed as reported.
+19,xls-019,Baiyyappanahalli,1,1187,Verified unique location + DU stock,1187,report-7fbbc6c,Figures displayed as reported.
+20,xls-020,Sadenahalli,1,128,unresolved,,,Availability not published. No verified report assignment for this project.
+21,xls-021,Kukkanahalli78,1,512,Verified unique location + DU stock,512,report-c605b3d5,Figures displayed as reported.
+22,xls-022,Kukkanahalli77,1,600,Verified unique location + DU stock,600,report-64995796,Figures displayed as reported.
+23,xls-023,Bettanagere,1,3097,unresolved,,,Availability not published. No verified report assignment for this project.
+24,xls-024,Kenchanapura,1,225,Verified unique location + DU stock,225,report-c240e216,Figures displayed as reported.
+24,xls-024,Kenchanapura,2,1067,unresolved,,,Availability not published. The workbook provides 2 BHK project stock only.
+25,xls-025,Nelaguli Parcel-3,1,734,unresolved,,,Availability not published. No verified report assignment for this project.
+25,xls-025,Nelaguli Parcel-3,2,164,unresolved,,,Availability not published. The workbook provides 2 BHK project stock only.
+26,xls-026,Nelaguli Parcel-2,1,818,Verified unique location + DU stock,818,report-abca2ec2,Figures displayed as reported.
+26,xls-026,Nelaguli Parcel-2,2,196,unresolved,,,Availability not published. The workbook provides 2 BHK project stock only.
+27,xls-027,Bheemanakuppe_118,2,96,unresolved,,,Availability not published. The workbook provides 2 BHK project stock only.
+28,xls-028,Devagere67,1,140,Verified unique location + DU stock,140,report-c7f9b143,Figures displayed as reported.
+29,xls-029,ChinnaKurchi,1,1350,unresolved,,,Availability not published. No verified report assignment for this project.
+30,xls-030,Punagamaranahalli,1,482,Verified unique location + DU stock,482,report-f8d927ee,Figures displayed as reported.
+31,xls-031,Thotagere,1,260,Verified unique location + DU stock,260,report-ddb3d953,Figures displayed as reported.
+31,xls-031,Thotagere,2,144,unresolved,,,Availability not published. The workbook provides 2 BHK project stock only.
+32,xls-032,K Narayanapura_40,2,160,unresolved,,,Availability not published. The workbook provides 2 BHK project stock only.
+33,xls-033,Muddayyanapalya,1,5803,unresolved,,,Availability not published. No verified report assignment for this project.
+34,xls-034,Chikkelluru Rampura,1,516,Verified unique location + DU stock,516,report-f27224e2,Figures displayed as reported.
+35,xls-035,Muddayyanapalya_28,2,312,unresolved,,,Availability not published. The workbook provides 2 BHK project stock only.
+36,xls-036,J Bhangipura,1,96,Verified unique location + DU stock,96,report-a489839,Figures displayed as reported.
+37,xls-037,Arehalli,1,336,unresolved,,,Availability not published. No verified report assignment for this project.
+38,xls-038,Gollahalli,1,416,Verified unique location + DU stock,416,report-6e013e73,Figures displayed as reported.
+39,xls-039,Boyilahalli,1,256,unresolved,,,Availability not published. No verified report assignment for this project.
+40,xls-040,Kattigenahalli,1,448,unresolved,,,Availability not published. No verified report assignment for this project.
+41,xls-041,Kudregere,1,224,unresolved,,,Availability not published. No verified report assignment for this project.
+42,xls-042,Mahadevagodikehalli (in lieu of Dasenahalli Sy.No 35),1,448,unresolved,,,Availability not published. No verified report assignment for this project.
+43,xls-043,Bandikodigehally,1,1104,unresolved,,,Availability not published. No verified report assignment for this project.
+44,xls-044,Shettihalli,1,336,Verified unique location + DU stock,336,report-11d41f46,Figures displayed as reported.
+45,xls-045,Horamavu,1,52,Verified unique location + DU stock,52,report-c7b058ac,Figures displayed as reported.
+46,xls-046,Itgalpura,1,352,Verified unique location + DU stock,352,report-fc6bb84e,Figures displayed as reported.
+47,xls-047,Muthagadhahalli,1,512,Verified unique location + DU stock,512,report-3ad2300,Figures displayed as reported.
+48,xls-048,Thamarasanahalli,1,704,Verified unique location + DU stock,704,report-4cf1e6ad,Figures displayed as reported.
+49,xls-049,Agraharapalya29,1,992,Verified unique location + DU stock,992,report-ed8a43aa,Figures displayed as reported.
+50,xls-050,Kadathanamale,1,672,unresolved,,,Availability not published. No verified report assignment for this project.
+51,xls-051,Hunnigere,1,288,Verified unique location + DU stock,288,report-e9567fcf,Figures displayed as reported.
+52,xls-052,Gowdanahalli,1,320,Verified unique location + DU stock,320,report-c4a26a4b,Figures displayed as reported.
+53,xls-053,Mallasandra,1,480,Verified unique location + DU stock,480,report-f766d7,Figures displayed as reported.
+54,xls-054,Muthagadhahalli22,1,928,unresolved,,,Availability not published. No verified report assignment for this project.
+55,xls-055,Aluru,1,448,unresolved,,,Availability not published. No verified report assignment for this project.
+56,xls-056,Koluvarayanahalli,1,96,Verified unique location + DU stock,96,report-6d3f1ec8,Figures displayed as reported.
+57,xls-057,Muddanahalli (in lieu of Kukkanahalli Sy.No 80),1,96,unresolved,,,Availability not published. No verified report assignment for this project.
+58,xls-058,Muddanahalli (in lieu of Kodathi Sy.No 82/83),1,256,unresolved,,,Availability not published. No verified report assignment for this project.
+59,xls-059,Muddanahalli,1,224,unresolved,,,Availability not published. No verified report assignment for this project.
+60,xls-060,Muddanahalli,1,224,unresolved,,,Availability not published. No verified report assignment for this project.
+61,xls-061,Muddanahalli,1,192,unresolved,,,Availability not published. No verified report assignment for this project.
+62,xls-062,Avverhalli,1,912,unresolved,,,Availability not published. No verified report assignment for this project.
+63,xls-063,Muddayanapalya (in lieu of Chunchunkuppe Sy No 23),1,624,unresolved,,,Availability not published. No verified report assignment for this project.
+64,xls-064,Devagere (in lieu of Menasignahalli Sy.No 145),1,144,unresolved,,,Availability not published. No verified report assignment for this project.
+65,xls-065,Devagaere (in lieu of Bidhru Kuppe Sy.No 329),1,96,unresolved,,,Availability not published. No verified report assignment for this project.
+66,xls-066,Devagere (in lieu of Yamare Sy.No 88),1,104,unresolved,,,Availability not published. No verified report assignment for this project.
+67,xls-067,Kannminiki (in lieu of Chunchunkuppe Sy No 23),1,272,unresolved,,,Availability not published. No verified report assignment for this project.

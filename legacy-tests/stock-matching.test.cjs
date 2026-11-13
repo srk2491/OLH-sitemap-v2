@@ -1,0 +1,13 @@
+const assert=require('node:assert/strict'),O=require('../core');
+const project=(id,units)=>({project_id:'p'+id,serial:id,one_bhk_units:units,report_identity:{category_kn:'Y',location_kn:'A'},name:'A',survey:String(id),legacy_keys:{}});
+const row=(stock,total=1)=>({location_kn:'A',public_stock:{Total:stock},mla_stock:{Total:0},'SC flats':total,'GEN flats':0,'Min Flats':0,Total:total,mla_quota:{SC:-2,General:1,Minority:0,Total:-1}});
+const build=(ps,rs)=>O.buildMasterSites({projects:ps,source:{filename:'fixture'}},[{category_name:'Y',data:rs}]);
+let s=build([project(1,35),project(2,34),project(3,33)],[row(32,-3),row(35),row(34)]);
+assert.deepEqual(s.map(x=>x.sourceStock),[35,34,32]);assert.deepEqual(s.map(x=>x.approximate),[false,false,true]);assert.equal(s[2].available,-3);assert.deepEqual(s[2].breakdown,[-3,0,0]);assert.equal(s[2].mlaAvailable,-1);assert.equal(O.status(s[2]),'zero');
+assert.deepEqual(build([project(1,35),project(2,34),project(3,33)],[row(34),row(32,-3),row(35)]).map(x=>[x.sourceStock,x.available]),s.map(x=>[x.sourceStock,x.available]));
+const ag=project(12,488);ag.report_identity.location_kn='ಅಗ್ರಹಾರ ಪಾಳ್ಯ';const ar={...row(242),location_kn:'ಅಗ್ರಹಾರ ಪಾಳ್ಯ',mla_stock:{Total:246}};s=build([ag],[ar]);assert.equal(s[0].sourceStock,488);assert.equal(s[0].approximate,false);assert.equal(s[0].available,1);
+s=build([project(1,35),project(2,35)],[row(35),row(35)]);assert(s.every(x=>x.available===null));
+s=build([project(1,35),project(2,34),project(3,33)],[row(35),row(32)]);assert.equal(s[0].available,1);assert(s.slice(1).every(x=>x.available===null));
+const other=row(35);other.location_kn='B';assert.equal(build([project(1,35)],[other])[0].available,null);
+const groups=[{category_name:'Z',data:[row(35)]}];assert.equal(O.buildMasterSites({projects:[project(1,35)],source:{}},groups)[0].available,null);
+console.log('PASS 242+246=488; exact-first 35/34/33→35/34/32; negatives; row order; ties, unequal groups and unrelated names remain unassigned');

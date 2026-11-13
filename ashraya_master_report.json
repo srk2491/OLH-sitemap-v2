@@ -6,9 +6,9 @@
                 "location_kn": "ಆನೇಕಲ್ ಗ್ರಾಮಾಂತರ",
                 "location_en": "Anekal Gramanthara",
                 "SC flats": "351",
-                "GEN flats": "344",
+                "GEN flats": "343",
                 "Min Flats": "64",
-                "Total": "759",
+                "Total": "758",
                 "mla_quota": {
                     "SC": "463",
                     "General": "560",
@@ -353,10 +353,10 @@
             {
                 "location_kn": "ಚಿಕ್ಕನಹಳ್ಳಿ ಕಮ್ಮನಹಳ್ಳಿ",
                 "location_en": "Chikkanahalli Kamanahalli",
-                "SC flats": "5",
+                "SC flats": "4",
                 "GEN flats": "8",
-                "Min Flats": "7",
-                "Total": "20",
+                "Min Flats": "3",
+                "Total": "15",
                 "mla_quota": {
                     "SC": "54",
                     "General": "73",
@@ -2002,8 +2002,8 @@
             {
                 "location_kn": "ಬಿದರಹಳ್ಳಿ",
                 "location_en": "Bidarahalli",
-                "SC flats": "541",
-                "GEN flats": "624",
+                "SC flats": "540",
+                "GEN flats": "625",
                 "Min Flats": "54",
                 "Total": "1219",
                 "mla_quota": {
@@ -2036,9 +2036,9 @@
                 },
                 "public_stock": {
                     "SC": "841",
-                    "General": "1050",
+                    "General": "1051",
                     "Minority": "211",
-                    "Total": "2102",
+                    "Total": "2103",
                     "source_headers": {
                         "SC": [
                             "ಸಾರ್ವಜನಿಕರ ಫ್ಲಾಟ್ ಗಳ ಸ್ಥಿತಿ",
@@ -2090,7 +2090,7 @@
                         ]
                     }
                 },
-                "combined_stock": 4199,
+                "combined_stock": 4200,
                 "location_id": "grdLocationwise_LinkButton1_0",
                 "public_source_headers": {
                     "SC": [
@@ -2123,10 +2123,10 @@
             {
                 "location_kn": "ಅಗ್ರಹಾರ ಪಾಳ್ಯ",
                 "location_en": "Unknown (ಅಗ್ರಹಾರ ಪಾಳ್ಯ)",
-                "SC flats": "11",
+                "SC flats": "10",
                 "GEN flats": "0",
                 "Min Flats": "0",
-                "Total": "11",
+                "Total": "10",
                 "mla_quota": {
                     "SC": "44",
                     "General": "-88",
@@ -2703,10 +2703,10 @@
             {
                 "location_kn": "ಕುಕ್ಕನಹಳ್ಳಿ",
                 "location_en": "Kukkanahalli",
-                "SC flats": "59",
-                "GEN flats": "6",
-                "Min Flats": "10",
-                "Total": "75",
+                "SC flats": "57",
+                "GEN flats": "1",
+                "Min Flats": "7",
+                "Total": "65",
                 "mla_quota": {
                     "SC": "81",
                     "General": "47",
@@ -3051,10 +3051,10 @@
             {
                 "location_kn": "ಗೌಡನಹಳ್ಳಿ",
                 "location_en": "Gowdanahalli",
-                "SC flats": "17",
+                "SC flats": "15",
                 "GEN flats": "0",
                 "Min Flats": "0",
-                "Total": "17",
+                "Total": "15",
                 "mla_quota": {
                     "SC": "60",
                     "General": "80",
@@ -3979,10 +3979,10 @@
             {
                 "location_kn": "ಮುತ್ತುಗದಹಳ್ಳಿ",
                 "location_en": "Muthugadahalli",
-                "SC flats": "39",
+                "SC flats": "38",
                 "GEN flats": "0",
                 "Min Flats": "0",
-                "Total": "39",
+                "Total": "38",
                 "mla_quota": {
                     "SC": "102",
                     "General": "128",
@@ -5377,9 +5377,9 @@
                 "location_kn": "ಮುದ್ದಯನಪಾಳ್ಯ",
                 "location_en": "Muddayyanapalya",
                 "SC flats": "1414",
-                "GEN flats": "1509",
+                "GEN flats": "1510",
                 "Min Flats": "308",
-                "Total": "3231",
+                "Total": "3232",
                 "mla_quota": {
                     "SC": "1208",
                     "General": "1506",

@@ -1,0 +1,16 @@
+const assert=require('assert'),fs=require('fs'),path=require('path');
+const root=path.join(__dirname,'..'),core=require('../core.js');
+const master=JSON.parse(fs.readFileSync(path.join(root,'data/project-master.json')));
+const report=JSON.parse(fs.readFileSync(path.join(root,'ashraya_master_report.json')));
+const sites=core.buildMasterSites(master,report);
+assert.strictEqual(master.projects.length,67);
+assert.strictEqual(report.reduce((n,g)=>n+g.data.length,0),47);
+assert(master.projects.every(p=>p.name_kn&&p.booking_status==='unknown'));
+const matched=sites.filter(s=>s.mode==='1'&&s.matchMethod!=='unresolved');
+const refs=matched.flatMap(s=>s.sourceRef.split(', '));assert.strictEqual(new Set(refs).size,refs.length);
+assert(matched.every(s=>s.sourceStock===s.units));
+assert(sites.filter(s=>s.mode==='2').every(s=>s.available===null));
+assert(sites.filter(s=>s.matchMethod==='unresolved').every(s=>s.available===null));
+assert(sites.some(s=>s.serial===8&&s.mode==='1'&&s.sourceStock===624));
+assert(sites.some(s=>s.serial===28&&s.mode==='1'&&s.sourceStock===140));
+console.log(`PASS: ${master.projects.length} master projects, ${sites.length} BHK-specific cards, ${matched.length} matched 1BHK projects, ${refs.length} distinct report rows assigned.`);

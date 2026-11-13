@@ -1,0 +1,14 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
+const src=fs.readFileSync(require.resolve('../script.js'),'utf8');
+const ctx={OLH:require('../core'),state:{selected:null,position:null},saved:new Set(),coverPhoto:()=>null,icon:()=>'',escapeHTML:String,displayName:s=>s.name,distanceText:()=>'',text:k=>k};
+vm.createContext(ctx);
+for(const name of ['badge','negativeQuotaNote','projectCard'])vm.runInContext(src.split('\n').find(line=>line.startsWith(`function ${name}(`)),ctx);
+const base={name:'Fixture',key:'test',number:1,displayNumber:'1',mode:'1',area:'Test',survey:'1',parcelLabel:'Project',available:0,mlaAvailable:0,breakdown:[-2,-3,5],mlaBreakdown:[47,-70,23]};
+let html=ctx.projectCard(base);
+for(const label of ['Public SC: -2','Public General: -3','MLA General: -70','MLA quota · 0 reported'])assert(html.includes(label),label);
+html=ctx.projectCard({...base,available:-5,mlaAvailable:-19,breakdown:[1,2,-8],mlaBreakdown:[-1,2,-20]});
+for(const label of ['Public · -5 reported','MLA quota · -19 reported','Public Minority: -8','MLA SC: -1','MLA Minority: -20'])assert(html.includes(label),label);
+assert(html.includes('card-mla negative-quota'));
+html=ctx.projectCard({...base,available:20,mlaAvailable:10});assert(html.includes('Public General: -3'));assert(html.includes('MLA General: -70'));
+html=ctx.projectCard({...base,available:null,mlaAvailable:null,breakdown:null,mlaBreakdown:null});assert(!html.includes('null reported'));assert(!html.includes('undefined'));assert(!html.includes('class="negative-quota"'));
+console.log('PASS card rendering: both quotas, every negative category, negative/zero/positive totals and missing data');

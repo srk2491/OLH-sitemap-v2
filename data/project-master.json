@@ -28,7 +28,9 @@
       },
       "legacy_keys": {
         "1": "1-7"
-      }
+      },
+      "name_kn": "ಹೊರಮಾವು ಆಗರ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-002",
@@ -50,7 +52,9 @@
       },
       "legacy_keys": {
         "1": "1-5"
-      }
+      },
+      "name_kn": "ಕ್ಯಾಲಸನಹಳ್ಳಿ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-003",
@@ -72,7 +76,9 @@
       },
       "legacy_keys": {
         "1": "1-6"
-      }
+      },
+      "name_kn": "ಬಿದರಹಳ್ಳಿ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-004",
@@ -94,7 +100,9 @@
       },
       "legacy_keys": {
         "1": "1-10"
-      }
+      },
+      "name_kn": "ಕೂಗೂರು",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-005",
@@ -116,7 +124,9 @@
       },
       "legacy_keys": {
         "1": "1-11"
-      }
+      },
+      "name_kn": "ಚಿಕ್ಕನಹಳ್ಳಿ ಕಮ್ಮನಹಳ್ಳಿ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-006",
@@ -138,7 +148,9 @@
       },
       "legacy_keys": {
         "2": "2-1"
-      }
+      },
+      "name_kn": "ಗೂಳಿಮಂಗಲ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-007",
@@ -160,7 +172,9 @@
       },
       "legacy_keys": {
         "1": "1-16"
-      }
+      },
+      "name_kn": "ದೊಡ್ಡನಾಗಮಂಗಲ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-008",
@@ -180,7 +194,9 @@
         "category_kn": "ಯಶವಂತಪುರ",
         "location_kn": "ದೇವಗೆರೆ"
       },
-      "legacy_keys": {}
+      "legacy_keys": {},
+      "name_kn": "ದೇವಗೆರೆ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-009",
@@ -203,7 +219,9 @@
       "legacy_keys": {
         "1": "1-18",
         "2": "2-2"
-      }
+      },
+      "name_kn": "ಲಿಂಗಾಪುರ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-010",
@@ -226,7 +244,9 @@
       "legacy_keys": {
         "1": "1-20",
         "2": "2-3"
-      }
+      },
+      "name_kn": "ಆನೇಕಲ್ ಗ್ರಾಮಾಂತರ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-011",
@@ -249,7 +269,9 @@
       "legacy_keys": {
         "1": "1-45",
         "2": "2-4"
-      }
+      },
+      "name_kn": "ಗಾಣಿಗರಹಳ್ಳಿ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-012",
@@ -271,7 +293,9 @@
       },
       "legacy_keys": {
         "1": "1-40"
-      }
+      },
+      "name_kn": "ಅಗ್ರಹಾರ ಪಾಳ್ಯ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-013",
@@ -293,7 +317,9 @@
       },
       "legacy_keys": {
         "1": "1-37"
-      }
+      },
+      "name_kn": "ಪಿಲ್ಲಹಳ್ಳಿ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-014",
@@ -313,7 +339,9 @@
         "category_kn": "ಯಲಹಂಕ",
         "location_kn": "ಸಿಂಗನಾಯಕನಹಳ್ಳಿ"
       },
-      "legacy_keys": {}
+      "legacy_keys": {},
+      "name_kn": "ಸಿಂಗನಾಯಕನಹಳ್ಳಿ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-015",
@@ -335,7 +363,9 @@
       },
       "legacy_keys": {
         "2": "2-5"
-      }
+      },
+      "name_kn": "ನಾಗದಾಸನಹಳ್ಳಿ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-016",
@@ -355,7 +385,9 @@
         "category_kn": "ಯಲಹಂಕ",
         "location_kn": "ಬಿಳಿಜಾಜಿ"
       },
-      "legacy_keys": {}
+      "legacy_keys": {},
+      "name_kn": "ಬಿಳಿಜಾಜಿ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-017",
@@ -375,7 +407,9 @@
         "category_kn": "ಯಲಹಂಕ",
         "location_kn": "ಗೋವಿಂದಪುರ"
       },
-      "legacy_keys": {}
+      "legacy_keys": {},
+      "name_kn": "ಗೋವಿಂದಪುರ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-018",
@@ -397,7 +431,9 @@
       },
       "legacy_keys": {
         "1": "1-2"
-      }
+      },
+      "name_kn": "ನವರತ್ನ ಅಗ್ರಹಾರ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-019",
@@ -417,7 +453,9 @@
         "category_kn": "ಬ್ಯಾಟರಾಯನಪುರ",
         "location_kn": "ಬೈಯ್ಯಪ್ಪನಹಳ್ಳಿ"
       },
-      "legacy_keys": {}
+      "legacy_keys": {},
+      "name_kn": "ಬೈಯ್ಯಪ್ಪನಹಳ್ಳಿ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-020",
@@ -439,7 +477,9 @@
       },
       "legacy_keys": {
         "1": "1-1"
-      }
+      },
+      "name_kn": "ಸಾದೇನಹಳ್ಲಿ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-021",
@@ -459,7 +499,9 @@
         "category_kn": "ಯಲಹಂಕ",
         "location_kn": "ಕುಕ್ಕನಹಳ್ಳಿ"
       },
-      "legacy_keys": {}
+      "legacy_keys": {},
+      "name_kn": "ಕುಕ್ಕನಹಳ್ಳಿ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-022",
@@ -479,7 +521,9 @@
         "category_kn": "ಯಲಹಂಕ",
         "location_kn": "ಕುಕ್ಕನಹಳ್ಳಿ"
       },
-      "legacy_keys": {}
+      "legacy_keys": {},
+      "name_kn": "ಕುಕ್ಕನಹಳ್ಳಿ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-023",
@@ -501,7 +545,9 @@
       },
       "legacy_keys": {
         "1": "1-36"
-      }
+      },
+      "name_kn": "ಬೆತ್ತನಗೆರೆ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-024",
@@ -524,7 +570,9 @@
       "legacy_keys": {
         "1": "1-30",
         "2": "2-6"
-      }
+      },
+      "name_kn": "ಕೆಂಚನಾಪುರ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-025",
@@ -544,7 +592,9 @@
         "category_kn": "ಯಶವಂತಪುರ",
         "location_kn": "ನೆಲಗುಳಿ ಭಾಗ-3"
       },
-      "legacy_keys": {}
+      "legacy_keys": {},
+      "name_kn": "ನೆಲಗುಳಿ ಭಾಗ-3",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-026",
@@ -564,7 +614,9 @@
         "category_kn": "ಯಶವಂತಪುರ",
         "location_kn": "ನೆಲಗುಳಿ ಭಾಗ-2"
       },
-      "legacy_keys": {}
+      "legacy_keys": {},
+      "name_kn": "ನೆಲಗುಳಿ ಭಾಗ-2",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-027",
@@ -586,7 +638,9 @@
       },
       "legacy_keys": {
         "2": "2-9"
-      }
+      },
+      "name_kn": "ಭೀಮನಕುಪ್ಪೆ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-028",
@@ -608,7 +662,9 @@
       },
       "legacy_keys": {
         "1": "1-24"
-      }
+      },
+      "name_kn": "ದೇವಗೆರೆ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-029",
@@ -628,7 +684,9 @@
         "category_kn": "ಯಶವಂತಪುರ",
         "location_kn": "ಚಿನ್ನ ಕುರ್ಚಿ"
       },
-      "legacy_keys": {}
+      "legacy_keys": {},
+      "name_kn": "ಚಿನ್ನ ಕುರ್ಚಿ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-030",
@@ -650,7 +708,9 @@
       },
       "legacy_keys": {
         "1": "1-27"
-      }
+      },
+      "name_kn": "ಪುನಗಮಾರನಹಳ್ಲಿ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-031",
@@ -672,7 +732,9 @@
       },
       "legacy_keys": {
         "2": "2-10"
-      }
+      },
+      "name_kn": "ತೋಟಗೆರೆ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-032",
@@ -694,7 +756,9 @@
       },
       "legacy_keys": {
         "2": "2-11"
-      }
+      },
+      "name_kn": "ಕೆ. ನಾರಾಯಣಪುರ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-033",
@@ -714,7 +778,9 @@
         "category_kn": "ಯಶವಂತಪುರ",
         "location_kn": "ಮುದ್ದಯನಪಾಳ್ಯ"
       },
-      "legacy_keys": {}
+      "legacy_keys": {},
+      "name_kn": "ಮುದ್ದಯನಪಾಳ್ಯ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-034",
@@ -736,7 +802,9 @@
       },
       "legacy_keys": {
         "1": "1-25"
-      }
+      },
+      "name_kn": "ಚಿಕ್ಕೆಲ್ಲೂರು ರಾಂಪುರ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-035",
@@ -758,7 +826,9 @@
       },
       "legacy_keys": {
         "2": "2-12"
-      }
+      },
+      "name_kn": "ಮುದ್ದಯನಪಾಳ್ಯ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-036",
@@ -778,7 +848,9 @@
         "category_kn": "ಬೆಂಗಳೂರು ದಕ್ಷಿಣ",
         "location_kn": "ಜೆ ಭಿಂಗಿಪುರ"
       },
-      "legacy_keys": {}
+      "legacy_keys": {},
+      "name_kn": "ಜೆ ಭಿಂಗಿಪುರ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-037",
@@ -798,7 +870,9 @@
         "category_kn": "ಬೆಂಗಳೂರು ದಕ್ಷಿಣ",
         "location_kn": null
       },
-      "legacy_keys": {}
+      "legacy_keys": {},
+      "name_kn": "ಅರೆಹಳ್ಳಿ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-038",
@@ -818,7 +892,9 @@
         "category_kn": "ಬ್ಯಾಟರಾಯನಪುರ",
         "location_kn": "ಗೊಲ್ಲ ಹಳ್ಳಿ"
       },
-      "legacy_keys": {}
+      "legacy_keys": {},
+      "name_kn": "ಗೊಲ್ಲ ಹಳ್ಳಿ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-039",
@@ -838,7 +914,9 @@
         "category_kn": "ಬ್ಯಾಟರಾಯನಪುರ",
         "location_kn": "ಬೋಯಿಲಹಳ್ಳಿ"
       },
-      "legacy_keys": {}
+      "legacy_keys": {},
+      "name_kn": "ಬೋಯಿಲಹಳ್ಳಿ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-040",
@@ -858,7 +936,9 @@
         "category_kn": "ಬ್ಯಾಟರಾಯನಪುರ",
         "location_kn": "ಕಟ್ಟಿಗೇನಹಳ್ಳಿ"
       },
-      "legacy_keys": {}
+      "legacy_keys": {},
+      "name_kn": "ಕಟ್ಟಿಗೇನಹಳ್ಳಿ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-041",
@@ -878,7 +958,9 @@
         "category_kn": "ಬ್ಯಾಟರಾಯನಪುರ",
         "location_kn": null
       },
-      "legacy_keys": {}
+      "legacy_keys": {},
+      "name_kn": "ಕುದುರೆಗೆರೆ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-042",
@@ -898,7 +980,9 @@
         "category_kn": "ಬ್ಯಾಟರಾಯನಪುರ",
         "location_kn": null
       },
-      "legacy_keys": {}
+      "legacy_keys": {},
+      "name_kn": "ಮಹದೇವಗೊಡಿಕೆಹಳ್ಳಿ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-043",
@@ -918,7 +1002,9 @@
         "category_kn": "ಬ್ಯಾಟರಾಯನಪುರ",
         "location_kn": null
       },
-      "legacy_keys": {}
+      "legacy_keys": {},
+      "name_kn": "ಬಂಡಿಕೊಡಿಗೆಹಳ್ಳಿ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-044",
@@ -940,7 +1026,9 @@
       },
       "legacy_keys": {
         "1": "1-46"
-      }
+      },
+      "name_kn": "ಶೆಟ್ಟಿ ಹಳ್ಳಿ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-045",
@@ -960,7 +1048,9 @@
         "category_kn": "ಕೃಷ್ಣರಾಜಪುರಂ",
         "location_kn": "ಹೊರಮಾವು-82"
       },
-      "legacy_keys": {}
+      "legacy_keys": {},
+      "name_kn": "ಹೊರಮಾವು-82",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-046",
@@ -980,7 +1070,9 @@
         "category_kn": "ಯಲಹಂಕ",
         "location_kn": "ಇಟಗಲ್ ಪುರ"
       },
-      "legacy_keys": {}
+      "legacy_keys": {},
+      "name_kn": "ಇಟಗಲ್ ಪುರ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-047",
@@ -1000,7 +1092,9 @@
         "category_kn": "ಯಲಹಂಕ",
         "location_kn": "ಮುತ್ತುಗದಹಳ್ಳಿ"
       },
-      "legacy_keys": {}
+      "legacy_keys": {},
+      "name_kn": "ಮುತ್ತುಗದಹಳ್ಳಿ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-048",
@@ -1020,7 +1114,9 @@
         "category_kn": "ಯಲಹಂಕ",
         "location_kn": "ತಮ್ಮರಸನಹಳ್ಳಿ"
       },
-      "legacy_keys": {}
+      "legacy_keys": {},
+      "name_kn": "ತಮ್ಮರಸನಹಳ್ಳಿ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-049",
@@ -1042,7 +1138,9 @@
       },
       "legacy_keys": {
         "1": "1-50"
-      }
+      },
+      "name_kn": "ಅಗ್ರಹಾರ ಪಾಳ್ಯ 29",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-050",
@@ -1062,7 +1160,9 @@
         "category_kn": "ಯಲಹಂಕ",
         "location_kn": "ಕಡತನಮಲೆ"
       },
-      "legacy_keys": {}
+      "legacy_keys": {},
+      "name_kn": "ಕಡತನಮಲೆ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-051",
@@ -1082,7 +1182,9 @@
         "category_kn": "ಯಲಹಂಕ",
         "location_kn": "ಹುಣ್ಣೀಗೆರೆ"
       },
-      "legacy_keys": {}
+      "legacy_keys": {},
+      "name_kn": "ಹುಣ್ಣೀಗೆರೆ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-052",
@@ -1104,7 +1206,9 @@
       },
       "legacy_keys": {
         "1": "1-35"
-      }
+      },
+      "name_kn": "ಗೌಡನಹಳ್ಳಿ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-053",
@@ -1126,7 +1230,9 @@
       },
       "legacy_keys": {
         "1": "1-31"
-      }
+      },
+      "name_kn": "ಮಲ್ಲಸಂದ್ರ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-054",
@@ -1146,7 +1252,9 @@
         "category_kn": "ಯಲಹಂಕ",
         "location_kn": "ಮುತ್ತುಗದಹಳ್ಳಿ"
       },
-      "legacy_keys": {}
+      "legacy_keys": {},
+      "name_kn": "ಮುತ್ತುಗದಹಳ್ಳಿ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-055",
@@ -1168,7 +1276,9 @@
       },
       "legacy_keys": {
         "1": "1-38"
-      }
+      },
+      "name_kn": "ಆಲೂರು",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-056",
@@ -1190,7 +1300,9 @@
       },
       "legacy_keys": {
         "1": "1-47"
-      }
+      },
+      "name_kn": "ಕೋಲವೂರಾಯನಹಳ್ಳಿ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-057",
@@ -1210,7 +1322,9 @@
         "category_kn": "ಯಲಹಂಕ",
         "location_kn": null
       },
-      "legacy_keys": {}
+      "legacy_keys": {},
+      "name_kn": "ಮುದ್ದನಹಳ್ಳಿ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-058",
@@ -1230,7 +1344,9 @@
         "category_kn": "ಯಲಹಂಕ",
         "location_kn": null
       },
-      "legacy_keys": {}
+      "legacy_keys": {},
+      "name_kn": "ಮುದ್ದನಹಳ್ಳಿ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-059",
@@ -1250,7 +1366,9 @@
         "category_kn": "ಯಲಹಂಕ",
         "location_kn": null
       },
-      "legacy_keys": {}
+      "legacy_keys": {},
+      "name_kn": "ಮುದ್ದನಹಳ್ಳಿ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-060",
@@ -1270,7 +1388,9 @@
         "category_kn": "ಯಲಹಂಕ",
         "location_kn": null
       },
-      "legacy_keys": {}
+      "legacy_keys": {},
+      "name_kn": "ಮುದ್ದನಹಳ್ಳಿ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-061",
@@ -1290,7 +1410,9 @@
         "category_kn": "ಯಲಹಂಕ",
         "location_kn": null
       },
-      "legacy_keys": {}
+      "legacy_keys": {},
+      "name_kn": "ಮುದ್ದನಹಳ್ಳಿ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-062",
@@ -1310,7 +1432,9 @@
         "category_kn": "ಯಲಹಂಕ",
         "location_kn": null
       },
-      "legacy_keys": {}
+      "legacy_keys": {},
+      "name_kn": "ಅವ್ವೇರಹಳ್ಳಿ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-063",
@@ -1330,7 +1454,9 @@
         "category_kn": "ಯಶವಂತಪುರ",
         "location_kn": "ಮುದ್ದಯನಪಾಳ್ಯ"
       },
-      "legacy_keys": {}
+      "legacy_keys": {},
+      "name_kn": "ಮುದ್ದಯನಪಾಳ್ಯ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-064",
@@ -1350,7 +1476,9 @@
         "category_kn": "ಯಶವಂತಪುರ",
         "location_kn": "ದೇವಗೆರೆ"
       },
-      "legacy_keys": {}
+      "legacy_keys": {},
+      "name_kn": "ದೇವಗೆರೆ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-065",
@@ -1370,7 +1498,9 @@
         "category_kn": "ಯಶವಂತಪುರ",
         "location_kn": "ದೇವಗೆರೆ"
       },
-      "legacy_keys": {}
+      "legacy_keys": {},
+      "name_kn": "ದೇವಗೆರೆ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-066",
@@ -1390,7 +1520,9 @@
         "category_kn": "ಯಶವಂತಪುರ",
         "location_kn": "ದೇವಗೆರೆ"
       },
-      "legacy_keys": {}
+      "legacy_keys": {},
+      "name_kn": "ದೇವಗೆರೆ",
+      "booking_status": "unknown"
     },
     {
       "project_id": "xls-067",
@@ -1410,7 +1542,9 @@
         "category_kn": "ಯಶವಂತಪುರ",
         "location_kn": null
       },
-      "legacy_keys": {}
+      "legacy_keys": {},
+      "name_kn": "ಕಣ್ಮಿನಿಕಿ",
+      "booking_status": "unknown"
     }
   ]
 }

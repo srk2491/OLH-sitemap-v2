@@ -1,0 +1,16 @@
+/* Keep English/Kannada hierarchy and vertical rhythm identical. */
+.explorer-body.upbeat .sidebar>.intro h1{font-size:34px!important;line-height:1.18!important;min-height:2.36em;letter-spacing:-1.1px!important;font-weight:600!important}
+.explorer-body.upbeat .sidebar>.intro .eyebrow{font-size:9px!important;line-height:1.5!important;min-height:1.5em;letter-spacing:1.4px!important}
+.explorer-body.upbeat .sidebar>.intro>p:last-of-type{font-size:12px!important;line-height:1.6!important;min-height:3.2em}
+.explorer-body.upbeat .sidebar .results-heading strong{font-size:16px!important;line-height:1.4!important;min-height:1.4em;font-weight:650!important;letter-spacing:0!important}
+.explorer-body.upbeat .sidebar .results-heading small{font-size:11px!important;line-height:1.5!important;min-height:1.5em}
+.explorer-body.upbeat .card-body>strong,.explorer-body.upbeat .group-description strong{font-size:18px!important;line-height:1.4!important;min-height:1.4em;font-weight:650!important;letter-spacing:0!important}
+.explorer-body.upbeat .card-body small,.explorer-body.upbeat .group-description small{font-size:11px!important;line-height:1.55!important;min-height:1.55em}
+.explorer-body.upbeat .quota-label{font-size:10px!important;line-height:1.4!important;min-height:1.4em}
+.explorer-body.upbeat .quota-unit{font-size:9px!important;line-height:1.4!important;min-height:1.4em}
+.explorer-body.upbeat .segment button{font-size:12px!important;line-height:1.4!important}
+.explorer-body.upbeat .segment button small{font-size:10px!important;line-height:1.4!important}
+.explorer-body.upbeat .brand-title{font-size:16px!important;line-height:1.35!important}
+.explorer-body.upbeat .brand small{font-size:10px!important;line-height:1.4!important}
+.explorer-body.upbeat [lang="kn"]{font-family:'Noto Sans Kannada',Inter,system-ui,sans-serif;letter-spacing:0}
+@media(max-width:700px){.explorer-body.upbeat .sidebar>.intro h1{font-size:29px!important;line-height:1.2!important;min-height:2.4em}.explorer-body.upbeat .sidebar>.intro>p:last-of-type{display:none}.explorer-body.upbeat .card-body>strong,.explorer-body.upbeat .group-description strong{font-size:16px!important;line-height:1.4!important}}
