@@ -39,11 +39,15 @@ def get_matched_english_name(kannada_name_from_web):
 
 # --- STEP 2: SCRAPER SETUP ---
 options = webdriver.ChromeOptions()
+# Do not make driver.get wait for every network resource; the Ashraya site
+# can keep connections open. Explicit waits below wait for the actual tables.
+options.page_load_strategy = "none"
 options.add_argument("--headless=new")
 options.add_argument("--no-sandbox")
 options.add_argument("--disable-dev-shm-usage")
 driver = webdriver.Chrome(options=options)
-wait = WebDriverWait(driver, 15)
+driver.set_page_load_timeout(45)
+wait = WebDriverWait(driver, 30)
 
 def scrape_sub_table():
     wait.until(EC.presence_of_element_located((By.ID, 'grdLocationwise_LinkButton1_0')))
