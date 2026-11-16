@@ -5,7 +5,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parent
 FILES = ['index.html', 'style.css', 'upbeat.css', 'design.css', 'search-refine.css', 'language-parity.css', 'viewport-tuning.css', 'script.js', 'icons.js', 'core.js', 'locations.js', 'voice-search.js', 'accessibility.js', 'media.js', 'media-config.js', 'media-cloud.js', 'media-admin.html', 'media-admin.js', 'media-admin.css', 'site-board.html', 'ashraya_master_report.json']
-DIRECTORIES = ['data', 'vendor', 'assets', 'media']
+DIRECTORIES = ['data', 'vendor', 'assets']
 
 
 def build(destination=None):
