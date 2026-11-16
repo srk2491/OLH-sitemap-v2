@@ -7,6 +7,7 @@ The upload page is visible to the public, but only accounts explicitly added to 
 ## One-time setup
 
 1. Create a Supabase project. In **SQL Editor**, run `supabase/media-schema.sql`.
+   If the media service is already set up, also run `supabase/media-edit-policy.sql` once to enable metadata edits and replacement uploads. Existing remove and upload policies remain in place.
 2. In **Authentication → URL Configuration**, set **Site URL** to `https://olh-sitemap-preview.pages.dev/media-admin.html`. Add `https://olh-sitemap-preview.pages.dev/**` to **Redirect URLs**. This directs invite links to the password setup page instead of the default `localhost:3000`.
 3. In the project settings, copy the **Project URL** and **anon/public key** into `media-config.js`:
 
