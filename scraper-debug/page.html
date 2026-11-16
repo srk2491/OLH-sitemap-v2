@@ -1,0 +1,737 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>
+
+</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><link rel="stylesheet" href="layout/styles/layout.css" type="text/css">
+    <script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="layout/scripts/jquery.jcarousel.pack.js"></script>
+    <script type="text/javascript" src="layout/scripts/jquery.jcarousel.setup.js"></script>
+    <style>
+        .heading
+        {
+            color: #FFFFFF;
+            background-color: #008B00;
+            height: 30px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .row
+        {
+            color: #666666;
+            background-color: #F7F7F7;
+            text-align: center;
+            font-size: 14px;
+        }
+        .alt-row
+        {
+            color: #666666;
+            background-color: #E8E8E8;
+            text-align: center;
+            font-size: 14px;
+        }
+        .empty-row
+        {
+            background-color: red;
+            color: green;
+            text-align: center;
+            font-size: 14px;
+        }
+        .datalistStyle
+        {
+            text-align: center;
+            font-family: Arial;
+            font-size: 11px;
+            width: 15px;
+        }
+        .datalist_item_css
+        {
+            text-align: center;
+            width: 15px;
+        }
+        .datalist_css
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="./frmConstwise_Report_Available.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="8379A025">
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="">
+</div>
+    <div>
+        <!-- ####################################################################################################### -->
+      <div class="wrapper col1" style="height: 140px;">
+        <div id="header">
+            <table style="border: none;">
+                <tbody><tr style="border: none;">
+                    <td style="border: none;">
+                        <h1>
+                            <a href="index.html">
+                                <img src="Images/karnataka_logo_Kan.png" width="80px">
+                            </a>
+                        </h1>
+                        <p style="color: White; margin-top: -4px;margin-left:-5px; font-size: 16px; font-weight: bold">
+                            ವಸತಿ ಇಲಾಖೆ
+                        </p>
+                    </td>
+                    <td style="border: none;">
+                        <br>
+                        <span style="font-size: 20px; font-weight: bold; color: White;">
+                            ರಾಜೀವ್
+                            ಗಾಂಧಿ ವಸತಿ ನಿಗಮ ನಿಯಮಿತ
+                        </span><br>
+                        <span style="font-size:15px; font-weight: bold; color: White;">(ಕರ್ನಾಟಕ ಸರ್ಕಾರದ ಒಂದು ಉದ್ಯಮ) </span>
+                    </td>
+                    <td style="border: none;">
+                        <span style="font-size: 26px; font-weight: bold; color: Yellow">
+                            ಮುಖ್ಯಮಂತ್ರಿಗಳ ಬಹುಮಹಡಿ
+                            ಬೆಂಗಳೂರು ವಸತಿ ಯೋಜನೆ
+                        </span>
+                        <br>
+                        <center>
+                            <span style="font-size: 26px; font-weight: bold; color: Yellow">
+                                1 ಬಿ ಎಚ್ ಕೆ (1 BHK)
+                            </span>
+                        </center>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+    </div>
+        <!-- ####################################################################################################### -->
+        <center>
+            <div>
+                <div style="border: solid 1px #ECF1EF; padding: 10px; background-color: White;
+                     border-radius: 10px; min-height: 460px;">
+                    <table style="border: none;">
+                        <tbody><tr style="border: none;">
+                            <td style="border: none;">
+                                <a href="index.html" style="width: 200px">
+                                    <img src="Images/HomeIcon.png" width="40px"></a>
+                            </td>
+                            <td style="border:none;">
+                                <span style="text-decoration: underline; font-size: 20px; font-weight: bold;text-align:center ;
+                                    color: Black;">ಸಾರ್ವಜನಿಕರು/ಸ್ಥಳೀಯ ಕ್ಷೇತ್ರವಾರು ಲಭ್ಯವಿರುವ/ಹಂಚಿಕೆಯಾದ ಫ್ಲಾಟ್ ಗಳ ಮಾಹಿತಿ</span>
+                            </td>
+                        </tr>
+                    </tbody></table>
+                    <div>
+
+                        <div>
+	<table cellspacing="0" rules="all" border="1" id="grdConstwise" style="border-collapse:collapse;">
+		<tbody><tr>
+			<th colspan="1" style="background-color:#8B8682;"></th><th colspan="12" style="background-color:#FEE0C6;">ಸಾರ್ವಜನಿಕರ ಫ್ಲಾಟ್ ಗಳ ಸ್ಥಿತಿ</th><th colspan="12" style="background-color:#8EE5EE;">ಸ್ಥಳೀಯ ಕ್ಷೇತ್ರವಾರು ಫ್ಲಾಟ್ ಗಳ ಸ್ಥಿತಿ</th>
+		</tr><tr>
+			<th colspan="1" style="background-color:#8B8682;"></th><th colspan="4" style="background-color:#FEE0C6;">ಒಟ್ಟು ಫ್ಲಾಟ್ ಗಳು</th><th colspan="4" style="background-color:#FEE0C6;">ಆಯ್ಕೆ ಮಾಡಲಾಗಿರುವ ಒಟ್ಟು ಫ್ಲಾಟ್ ಗಳು</th><th colspan="4" style="background-color:#FEE0C6;">ಲಭ್ಯವಿರುವ ಫ್ಲಾಟ್ ಗಳು</th><th colspan="4" style="background-color:#8EE5EE;">ಒಟ್ಟು ಫ್ಲಾಟ್ ಗಳು</th><th colspan="4" style="background-color:#8EE5EE;">ಆಯ್ಕೆ ಮಾಡಲಾಗಿರುವ ಒಟ್ಟು ಫ್ಲಾಟ್ ಗಳು</th><th colspan="4" style="background-color:#8EE5EE;">ಲಭ್ಯವಿರುವ ಫ್ಲಾಟ್ ಗಳು</th>
+		</tr><tr>
+			<th style="color:#FFFFFF;background-color:#8B8682;">ಕ್ಷೇತ್ರ</th><th style="background-color:#FEE0C6;">ಪ.ಜಾ/ಪ.ಪಂ</th><th style="background-color:#FEE0C6;">ಸಾಮಾನ್ಯ</th><th style="background-color:#FEE0C6;">ಅಲ್ಪಸಂಖ್ಯಾತರು</th><th style="background-color:#FEE0C6;">ಒಟ್ಟು</th><th style="background-color:#FEE0C6;">ಪ.ಜಾ/ಪ.ಪಂ</th><th style="background-color:#FEE0C6;">ಸಾಮಾನ್ಯ</th><th style="background-color:#FEE0C6;">ಅಲ್ಪಸಂಖ್ಯಾತರು</th><th style="background-color:#FEE0C6;">ಒಟ್ಟು</th><th style="background-color:#FEE0C6;">ಪ.ಜಾ/ಪ.ಪಂ</th><th style="background-color:#FEE0C6;">ಸಾಮಾನ್ಯ</th><th style="background-color:#FEE0C6;">ಅಲ್ಪಸಂಖ್ಯಾತರು</th><th style="background-color:#FEE0C6;">ಒಟ್ಟು</th><th style="background-color:#8EE5EE;">ಪ.ಜಾ/ಪ.ಪಂ</th><th style="background-color:#8EE5EE;">ಸಾಮಾನ್ಯ</th><th style="background-color:#8EE5EE;">ಅಲ್ಪಸಂಖ್ಯಾತರು</th><th style="background-color:#8EE5EE;">ಒಟ್ಟು</th><th style="background-color:#8EE5EE;">ಪ.ಜಾ/ಪ.ಪಂ</th><th style="background-color:#8EE5EE;">ಸಾಮಾನ್ಯ</th><th style="background-color:#8EE5EE;">ಅಲ್ಪಸಂಖ್ಯಾತರು</th><th style="background-color:#8EE5EE;">ಒಟ್ಟು</th><th style="background-color:#8EE5EE;">ಪ.ಜಾ/ಪ.ಪಂ</th><th style="background-color:#8EE5EE;">ಸಾಮಾನ್ಯ</th><th style="background-color:#8EE5EE;">ಅಲ್ಪಸಂಖ್ಯಾತರು</th><th style="background-color:#8EE5EE;">ಒಟ್ಟು</th>
+		</tr><tr class="row">
+			<td>
+                                        <a id="grdConstwise_LinkButton1_0" href="javascript:__doPostBack('grdConstwise$ctl05$LinkButton1','')" style="display:inline-block;border-style:None;color: Blue; text-decoration: underline; border: none">ಆನೇಕಲ್</a>
+                                        
+                                        
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblpublic_SC_Total_0">809</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lbl_public_Gen_Total_0">1015</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblpublic_Mino_Total_0">203</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblpublic_Total_0">2027</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_SC_Selected_0">452</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Gen_Selected_0">665</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Mino_Selected_0">139</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Total_Selected_0">1256</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lbPublic_SC_Available_0">357</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Gen_Available_0">350</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Mino_Available_0">64</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Total_Available_0">771</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_SC_Total_0">808</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lbl_MLA_Gen_Total_0">1007</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Mino_Total_0">202</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Total_0">2017</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_SC_Selected_0">222</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Gen_Selected_0">308</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Mino_Selected_0">109</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Total_Selected_0">639</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lbMLA_SC_Available_0">586</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Gen_Available_0">699</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Mino_Available_0">93</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Total_Available_0">1378</span>
+                                    </td>
+		</tr><tr class="alt-row">
+			<td>
+                                        <a id="grdConstwise_LinkButton1_1" href="javascript:__doPostBack('grdConstwise$ctl06$LinkButton1','')" style="display:inline-block;border-style:None;color: Blue; text-decoration: underline; border: none">ಕೃಷ್ಣರಾಜಪುರಂ</a>
+                                        
+                                        
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblpublic_SC_Total_1">116</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lbl_public_Gen_Total_1">144</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblpublic_Mino_Total_1">28</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblpublic_Total_1">288</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_SC_Selected_1">116</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Gen_Selected_1">144</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Mino_Selected_1">28</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Total_Selected_1">288</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lbPublic_SC_Available_1">0</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Gen_Available_1">0</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Mino_Available_1">0</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Total_Available_1">0</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_SC_Total_1">115</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lbl_MLA_Gen_Total_1">142</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Mino_Total_1">31</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Total_1">288</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_SC_Selected_1">38</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Gen_Selected_1">37</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Mino_Selected_1">16</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Total_Selected_1">91</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lbMLA_SC_Available_1">77</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Gen_Available_1">105</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Mino_Available_1">15</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Total_Available_1">197</span>
+                                    </td>
+		</tr><tr class="row">
+			<td>
+                                        <a id="grdConstwise_LinkButton1_2" href="javascript:__doPostBack('grdConstwise$ctl07$LinkButton1','')" style="display:inline-block;border-style:None;color: Blue; text-decoration: underline; border: none">ದಾಸರಹಳ್ಳಿ</a>
+                                        
+                                        
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblpublic_SC_Total_2">227</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lbl_public_Gen_Total_2">282</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblpublic_Mino_Total_2">57</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblpublic_Total_2">566</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_SC_Selected_2">226</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Gen_Selected_2">281</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Mino_Selected_2">55</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Total_Selected_2">562</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lbPublic_SC_Available_2">1</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Gen_Available_2">1</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Mino_Available_2">2</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Total_Available_2">4</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_SC_Total_2">227</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lbl_MLA_Gen_Total_2">282</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Mino_Total_2">57</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Total_2">566</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_SC_Selected_2">127</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Gen_Selected_2">266</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Mino_Selected_2">46</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Total_Selected_2">439</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lbMLA_SC_Available_2">100</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Gen_Available_2">16</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Mino_Available_2">11</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Total_Available_2">127</span>
+                                    </td>
+		</tr><tr class="alt-row">
+			<td>
+                                        <a id="grdConstwise_LinkButton1_3" href="javascript:__doPostBack('grdConstwise$ctl08$LinkButton1','')" style="display:inline-block;border-style:None;color: Blue; text-decoration: underline; border: none">ಬೆಂಗಳೂರು ದಕ್ಷಿಣ</a>
+                                        
+                                        
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblpublic_SC_Total_3">128</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lbl_public_Gen_Total_3">155</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblpublic_Mino_Total_3">35</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblpublic_Total_3">318</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_SC_Selected_3">127</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Gen_Selected_3">151</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Mino_Selected_3">35</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Total_Selected_3">313</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lbPublic_SC_Available_3">1</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Gen_Available_3">4</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Mino_Available_3">0</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Total_Available_3">5</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_SC_Total_3">106</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lbl_MLA_Gen_Total_3">132</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Mino_Total_3">26</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Total_3">264</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_SC_Selected_3">101</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Gen_Selected_3">128</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Mino_Selected_3">21</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Total_Selected_3">250</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lbMLA_SC_Available_3">5</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Gen_Available_3">4</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Mino_Available_3">5</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Total_Available_3">14</span>
+                                    </td>
+		</tr><tr class="row">
+			<td>
+                                        <a id="grdConstwise_LinkButton1_4" href="javascript:__doPostBack('grdConstwise$ctl09$LinkButton1','')" style="display:inline-block;border-style:None;color: Blue; text-decoration: underline; border: none">ಬ್ಯಾಟರಾಯನಪುರ</a>
+                                        
+                                        
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblpublic_SC_Total_4">388</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lbl_public_Gen_Total_4">493</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblpublic_Mino_Total_4">106</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblpublic_Total_4">987</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_SC_Selected_4">368</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Gen_Selected_4">465</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Mino_Selected_4">104</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Total_Selected_4">937</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lbPublic_SC_Available_4">20</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Gen_Available_4">28</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Mino_Available_4">2</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Total_Available_4">50</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_SC_Total_4">377</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lbl_MLA_Gen_Total_4">479</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Mino_Total_4">100</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Total_4">956</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_SC_Selected_4">78</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Gen_Selected_4">95</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Mino_Selected_4">63</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Total_Selected_4">236</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lbMLA_SC_Available_4">299</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Gen_Available_4">384</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Mino_Available_4">37</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Total_Available_4">720</span>
+                                    </td>
+		</tr><tr class="alt-row">
+			<td>
+                                        <a id="grdConstwise_LinkButton1_5" href="javascript:__doPostBack('grdConstwise$ctl10$LinkButton1','')" style="display:inline-block;border-style:None;color: Blue; text-decoration: underline; border: none">ಮಹದೇವಪುರ</a>
+                                        
+                                        
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblpublic_SC_Total_5">841</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lbl_public_Gen_Total_5">1051</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblpublic_Mino_Total_5">211</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblpublic_Total_5">2103</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_SC_Selected_5">298</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Gen_Selected_5">415</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Mino_Selected_5">155</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Total_Selected_5">868</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lbPublic_SC_Available_5">543</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Gen_Available_5">636</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Mino_Available_5">56</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Total_Available_5">1235</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_SC_Total_5">839</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lbl_MLA_Gen_Total_5">1049</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Mino_Total_5">209</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Total_5">2097</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_SC_Selected_5">56</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Gen_Selected_5">108</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Mino_Selected_5">14</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Total_Selected_5">178</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lbMLA_SC_Available_5">783</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Gen_Available_5">941</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Mino_Available_5">195</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Total_Available_5">1919</span>
+                                    </td>
+		</tr><tr class="row">
+			<td>
+                                        <a id="grdConstwise_LinkButton1_6" href="javascript:__doPostBack('grdConstwise$ctl11$LinkButton1','')" style="display:inline-block;border-style:None;color: Blue; text-decoration: underline; border: none">ಯಲಹಂಕ</a>
+                                        
+                                        
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblpublic_SC_Total_6">2954</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lbl_public_Gen_Total_6">3701</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblpublic_Mino_Total_6">756</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblpublic_Total_6">7411</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_SC_Selected_6">1440</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Gen_Selected_6">2821</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Mino_Selected_6">600</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Total_Selected_6">4861</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lbPublic_SC_Available_6">1514</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Gen_Available_6">880</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Mino_Available_6">156</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Total_Available_6">2550</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_SC_Total_6">2954</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lbl_MLA_Gen_Total_6">3665</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Mino_Total_6">787</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Total_6">7406</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_SC_Selected_6">352</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Gen_Selected_6">1509</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Mino_Selected_6">55</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Total_Selected_6">1916</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lbMLA_SC_Available_6">2602</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Gen_Available_6">2156</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Mino_Available_6">732</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Total_Available_6">5490</span>
+                                    </td>
+		</tr><tr class="alt-row">
+			<td>
+                                        <a id="grdConstwise_LinkButton1_7" href="javascript:__doPostBack('grdConstwise$ctl12$LinkButton1','')" style="display:inline-block;border-style:None;color: Blue; text-decoration: underline; border: none">ಯಶವಂತಪುರ</a>
+                                        
+                                        
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblpublic_SC_Total_7">3020</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lbl_public_Gen_Total_7">3729</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblpublic_Mino_Total_7">743</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblpublic_Total_7">7492</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_SC_Selected_7">1396</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Gen_Selected_7">2165</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Mino_Selected_7">429</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Total_Selected_7">3990</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lbPublic_SC_Available_7">1624</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Gen_Available_7">1564</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Mino_Available_7">314</span>
+                                    </td><td style="background-color:#FEF9ED;">
+                                        <span id="grdConstwise_lblPublic_Total_Available_7">3502</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_SC_Total_7">1631</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lbl_MLA_Gen_Total_7">2068</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Mino_Total_7">421</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Total_7">4120</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_SC_Selected_7">147</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Gen_Selected_7">428</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Mino_Selected_7">129</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Total_Selected_7">704</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lbMLA_SC_Available_7">1484</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Gen_Available_7">1640</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Mino_Available_7">292</span>
+                                    </td><td style="background-color:LightCyan;">
+                                        <span id="grdConstwise_lblMLA_Total_Available_7">3416</span>
+                                    </td>
+		</tr><tr>
+			<td align="center" style="color:White;background-color:#8B8682;font-weight:bold;">
+                                        <span id="grdConstwise_lblTo">ಒಟ್ಟು</span>
+                                    </td><td align="center" style="background-color:#FEE0C6;font-weight:bold;">
+                                        <span id="grdConstwise_lblTo_public_SC_Total">8483</span>
+                                    </td><td align="center" style="background-color:#FEE0C6;font-weight:bold;">
+                                        <span id="grdConstwise_lblTo_public_Gen_Total">10570</span>
+                                    </td><td align="center" style="background-color:#FEE0C6;font-weight:bold;">
+                                        <span id="grdConstwise_lblTo_public_Mino_Total">2139</span>
+                                    </td><td align="center" style="background-color:#FEE0C6;font-weight:bold;">
+                                        <span id="grdConstwise_lblTo_public_Total">21192</span>
+                                    </td><td align="center" style="background-color:#FEE0C6;font-weight:bold;">
+                                        <span id="grdConstwise_lblTo_Public_SC_Selected">4423</span>
+                                    </td><td align="center" style="background-color:#FEE0C6;font-weight:bold;">
+                                        <span id="grdConstwise_lblTo_Public_Gen_Selected">7107</span>
+                                    </td><td align="center" style="background-color:#FEE0C6;font-weight:bold;">
+                                        <span id="grdConstwise_lblTo_Public_Mino_Selected">1545</span>
+                                    </td><td align="center" style="background-color:#FEE0C6;font-weight:bold;">
+                                        <span id="grdConstwise_lblTo_Public_Total_Selected">13075</span>
+                                    </td><td align="center" style="background-color:#FEE0C6;font-weight:bold;">
+                                        <span id="grdConstwise_lblTo_Public_SC_Available">4060</span>
+                                    </td><td align="center" style="background-color:#FEE0C6;font-weight:bold;">
+                                        <span id="grdConstwise_lblTo_Public_Gen_Available">3463</span>
+                                    </td><td align="center" style="background-color:#FEE0C6;font-weight:bold;">
+                                        <span id="grdConstwise_lblTo_Public_Mino_Available">594</span>
+                                    </td><td align="center" style="background-color:#FEE0C6;font-weight:bold;">
+                                        <span id="grdConstwise_lblTo_Public_Total_Available">8117</span>
+                                    </td><td align="center" style="background-color:#8EE5EE;font-weight:bold;">
+                                        <span id="grdConstwise_lblTo_MLA_SC_Total">7057</span>
+                                    </td><td align="center" style="background-color:#8EE5EE;font-weight:bold;">
+                                        <span id="grdConstwise_lblTo_MLA_Gen_Total">8824</span>
+                                    </td><td align="center" style="background-color:#8EE5EE;font-weight:bold;">
+                                        <span id="grdConstwise_lblTo_MLA_Mino_Total">1833</span>
+                                    </td><td align="center" style="background-color:#8EE5EE;font-weight:bold;">
+                                        <span id="grdConstwise_lblTo_MLA_Total">17714</span>
+                                    </td><td align="center" style="background-color:#8EE5EE;font-weight:bold;">
+                                        <span id="grdConstwise_lblTo_MLA_SC_Selected">1121</span>
+                                    </td><td align="center" style="background-color:#8EE5EE;font-weight:bold;">
+                                        <span id="grdConstwise_lblTo_MLA_Gen_Selected">2879</span>
+                                    </td><td align="center" style="background-color:#8EE5EE;font-weight:bold;">
+                                        <span id="grdConstwise_lblTo_MLA_Mino_Selected">453</span>
+                                    </td><td align="center" style="background-color:#8EE5EE;font-weight:bold;">
+                                        <span id="grdConstwise_lblTo_MLA_Total_Selected">4453</span>
+                                    </td><td align="center" style="background-color:#8EE5EE;font-weight:bold;">
+                                        <span id="grdConstwise_lblTo_MLA_SC_Available">5936</span>
+                                    </td><td align="center" style="background-color:#8EE5EE;font-weight:bold;">
+                                        <span id="grdConstwise_lblTo_MLA_Gen_Available">5945</span>
+                                    </td><td align="center" style="background-color:#8EE5EE;font-weight:bold;">
+                                        <span id="grdConstwise_lblTo_MLA_Mino_Available">1380</span>
+                                    </td><td align="center" style="background-color:#8EE5EE;font-weight:bold;">
+                                        <span id="grdConstwise_lblTo_MLA_Total_Available">13261</span>
+                                    </td>
+		</tr>
+	</tbody></table>
+</div>
+
+                        
+
+                        
+                        
+                        <center>
+                        </center>
+                        
+                        <br class="clear">
+                    </div>
+                </div>
+            </div>
+        </center>
+        <!-- ####################################################################################################### -->
+       <div class="wrapper col4" style="height:150px">
+        <div id="footer">
+            <!-- <div class="box1">
+                <h2>
+                    A Little Company Information !</h2>
+                <img class="imgl" src="images/demo/imgl.gif" alt="" />
+                <p>
+                    Morbitincidunt maurisque eros molest nunc anteget sed vel lacus mus semper. Anterdumnullam
+                    interdum eros dui urna consequam ac nisl nullam ligula vestassa. Condimentumfelis
+                    et amet tellent quisquet a leo lacus nec augue</p>
+                <p>
+                    Portortornec condimenterdum eget consectetuer condis.</p>
+            </div>-->
+            <div class="">
+                <h2>
+                    ಸಂಪರ್ಕಿಸಿ !
+                </h2>
+                <table width="100%" style="border:none;">
+                    <tbody><tr style="border:none;">
+                        <td style="border:none;">
+                            <ul>
+                                <li>ರಾಜೀವ್ ಗಾಂಧಿ ವಸತಿ ನಿಗಮ ನಿಯಮಿತ</li>
+                                <li>ಕಾವೇರಿ ಭವನ, 9ನೇ ಮಹಡಿ, </li>
+                                <li>ಸಿ &amp; ಎಫ್ ಬ್ಲಾಕ್, ಕೆ. ಜಿ . ರೋಡ್, </li>
+                                <li>ಬೆಂಗಳೂರು - 560009</li>
+                            </ul>
+                        </td>
+
+                        <td style="border:none;float:right;">
+                            <ul>
+                                <li>ಫೋನ್ : 91-080-22106888, 91-080-23118888</li>
+                                <li>ಫ್ಯಾಕ್ಸ್: 91-080-22247317</li>
+                                <li>Email: rgrhcl@nic.in </li>
+                                <li>ವೆಬ್ ಸೈಟ್: https://ashraya.karnataka.gov.in</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody></table>
+
+            </div>
+            <!--<div class="box flickrbox">
+                <h2>
+                    Latest Flickr Images !</h2>
+                <div class="wrap">
+                    <div class="fix">
+                    </div>
+                    <div class="flickr_badge_image" id="flickr_badge_image1">
+                        <a href="#">
+                            <img src="images/demo/80x80.gif" alt="" /></a></div>
+                    <div class="flickr_badge_image" id="flickr_badge_image2">
+                        <a href="#">
+                            <img src="images/demo/80x80.gif" alt="" /></a></div>
+                    <div class="flickr_badge_image" id="flickr_badge_image3">
+                        <a href="#">
+                            <img src="images/demo/80x80.gif" alt="" /></a></div>
+                    <div class="flickr_badge_image" id="flickr_badge_image4">
+                        <a href="#">
+                            <img src="images/demo/80x80.gif" alt="" /></a></div>
+                    <div class="flickr_badge_image" id="flickr_badge_image5">
+                        <a href="#">
+                            <img src="images/demo/80x80.gif" alt="" /></a></div>
+                    <div class="flickr_badge_image" id="flickr_badge_image6">
+                        <a href="#">
+                            <img src="images/demo/80x80.gif" alt="" /></a></div>
+                    <div class="fix">
+                    </div>
+                </div>
+            </div>-->
+            <br class="clear">
+        </div>
+    </div>
+        <!-- ####################################################################################################### -->
+        <div class="wrapper col5">
+            <div id="copyright">
+                <p class="fl_left">
+                    Copyright © 2021 - All Rights Reserved - <a href="#">RGRHCL</a></p>
+               
+                <br class="clear">
+            </div>
+        </div>
+    </div>
+    </form>
+
+
+</body></html>
