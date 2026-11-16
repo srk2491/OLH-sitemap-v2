@@ -5,6 +5,11 @@ on:
     - cron: "0 8,20 * * *"
       timezone: "Asia/Kolkata"
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "ashraya_master_report.json"
 
 permissions:
   contents: write
@@ -28,12 +33,15 @@ jobs:
           node-version: "20"
 
       - name: Install scraper requirements
+        if: github.event_name != 'push'
         run: pip install -r requirements-scraper.txt
 
       - name: Scrape Ashraya data
+        if: github.event_name != 'push'
         run: python Scraping.py
-	      - name: Save scraper diagnostics
-        if: always()
+
+      - name: Save scraper diagnostics
+        if: always() && github.event_name != 'push'
         uses: actions/upload-artifact@v4
         with:
           name: scraper-debug
@@ -41,6 +49,7 @@ jobs:
           if-no-files-found: ignore
 
       - name: Save updated data to GitHub
+        if: github.event_name != 'push'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
