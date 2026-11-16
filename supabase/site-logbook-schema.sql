@@ -67,3 +67,45 @@ as $$ begin new.updated_at = now(); return new; end; $$;
 drop trigger if exists site_logbook_updated_at on public.site_logbook;
 create trigger site_logbook_updated_at before update on public.site_logbook
 for each row execute function public.set_site_logbook_updated_at();
+
+
+-- Separate, assignable follow-up actions for the site's Kanban board.
+create table if not exists public.site_logbook_actions (
+  id uuid primary key default gen_random_uuid(),
+  site_key text not null check (site_key ~ '^[12]-[A-Za-z0-9_-]+$'),
+  meeting_id uuid references public.site_logbook(id) on delete set null,
+  title text not null check (char_length(title) between 1 and 180),
+  description text not null default '' check (char_length(description) <= 8000),
+  owner text not null default '' check (char_length(owner) <= 200),
+  due_date date,
+  priority text not null default 'Normal' check (priority in ('Low','Normal','High')),
+  status text not null default 'Open'
+    check (status in ('Open','In progress','Awaiting response','Completed')),
+  created_by uuid not null references auth.users(id),
+  updated_by uuid not null references auth.users(id),
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+create index if not exists site_logbook_actions_site_status_due
+  on public.site_logbook_actions(site_key, status, due_date);
+alter table public.site_logbook_actions enable row level security;
+drop policy if exists "Approved board users can read follow-up actions" on public.site_logbook_actions;
+drop policy if exists "Approved board users can create follow-up actions" on public.site_logbook_actions;
+drop policy if exists "Approved board users can update follow-up actions" on public.site_logbook_actions;
+create policy "Approved board users can read follow-up actions" on public.site_logbook_actions
+  for select to authenticated using (public.is_olh_site_board_user());
+create policy "Approved board users can create follow-up actions" on public.site_logbook_actions
+  for insert to authenticated with check (
+    public.is_olh_site_board_user() and created_by = auth.uid() and updated_by = auth.uid()
+  );
+create policy "Approved board users can update follow-up actions" on public.site_logbook_actions
+  for update to authenticated using (public.is_olh_site_board_user())
+  with check (public.is_olh_site_board_user() and updated_by = auth.uid());
+grant select, insert, update on public.site_logbook_actions to authenticated;
+
+create or replace function public.set_site_logbook_action_updated_at()
+returns trigger language plpgsql set search_path = public
+as $$ begin new.updated_at = now(); return new; end; $$;
+drop trigger if exists site_logbook_action_updated_at on public.site_logbook_actions;
+create trigger site_logbook_action_updated_at before update on public.site_logbook_actions
+for each row execute function public.set_site_logbook_action_updated_at();
