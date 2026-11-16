@@ -27,6 +27,6 @@ where email = lower('official@example.gov.in');
 
 ## Using the board
 
-Each note is linked to one selected site and includes meeting/site-visit date, participants, discussion, decisions, follow-up actions, owner, due date and status. Use the Kanban view to move cards between Open, For review, In progress and Completed. Use Logbook to review entries chronologically. Archive hides an entry from the active board while retaining it in the database; turn on **Show archived** to view it again.
+Meeting notes are linked to a selected site and include the date, participants, discussion and decisions. Create one follow-up card per action to assign its owner, priority and due date, and optionally link it to a meeting. Move cards between Open, In progress, Awaiting response and Completed. Meeting notes remain in the Meeting notes Kanban and searchable Meeting log. Archive hides a note from the active views while retaining it in the database; turn on **Show archived** to view it again.
 
 The board uses database row-level security. Do not disable the policies or place a Supabase service-role key in browser files. The only browser key is the existing publishable/anon key already used by the dashboard's media gallery.
