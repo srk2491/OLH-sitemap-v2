@@ -146,3 +146,41 @@ create policy "Approved board users can read ticket history" on public.site_logb
 create policy "Approved board users can add ticket history" on public.site_logbook_action_updates
   for insert to authenticated with check (public.is_olh_site_board_user() and created_by = auth.uid());
 grant select, insert on public.site_logbook_action_updates to authenticated;
+
+
+-- One persistent meeting session can contain many separate site-specific notes.
+create table if not exists public.site_logbook_meetings (
+  id uuid primary key default gen_random_uuid(),
+  title text not null check (char_length(title) between 1 and 180),
+  meeting_date date not null,
+  participants text not null default '' check (char_length(participants) <= 1000),
+  status text not null default 'In progress' check (status in ('In progress','Completed')),
+  created_by uuid not null references auth.users(id),
+  updated_by uuid not null references auth.users(id),
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+alter table public.site_logbook
+  add column if not exists meeting_session_id uuid references public.site_logbook_meetings(id) on delete set null;
+create index if not exists site_logbook_meetings_status_date
+  on public.site_logbook_meetings(status, meeting_date desc);
+create index if not exists site_logbook_session_notes
+  on public.site_logbook(meeting_session_id, meeting_date desc);
+alter table public.site_logbook_meetings enable row level security;
+drop policy if exists "Approved board users can read meeting sessions" on public.site_logbook_meetings;
+drop policy if exists "Approved board users can create meeting sessions" on public.site_logbook_meetings;
+drop policy if exists "Approved board users can update meeting sessions" on public.site_logbook_meetings;
+create policy "Approved board users can read meeting sessions" on public.site_logbook_meetings
+  for select to authenticated using (public.is_olh_site_board_user());
+create policy "Approved board users can create meeting sessions" on public.site_logbook_meetings
+  for insert to authenticated with check (
+    public.is_olh_site_board_user() and created_by = auth.uid() and updated_by = auth.uid()
+  );
+create policy "Approved board users can update meeting sessions" on public.site_logbook_meetings
+  for update to authenticated using (public.is_olh_site_board_user())
+  with check (public.is_olh_site_board_user() and updated_by = auth.uid());
+grant select, insert, update on public.site_logbook_meetings to authenticated;
+drop trigger if exists site_logbook_meetings_updated_at on public.site_logbook_meetings;
+create trigger site_logbook_meetings_updated_at
+  before update on public.site_logbook_meetings
+  for each row execute function public.set_site_logbook_updated_at();
