@@ -27,6 +27,6 @@ where email = lower('official@example.gov.in');
 
 ## Using the board
 
-Meeting notes are linked to a selected site and include the date, participants, discussion and decisions. Create one follow-up card per action to assign its owner, priority and due date, and optionally link it to a meeting. Move cards between Open, In progress, Awaiting response and Completed. Meeting notes remain in the Meeting notes Kanban and searchable Meeting log. Archive hides a note from the active views while retaining it in the database; turn on **Show archived** to view it again.
+A single meeting note can be linked to several sites. In the meeting form, select all sites discussed in **Sites discussed**; hold Ctrl on Windows or Command on Mac to select multiple. The same meeting note then appears in each selected site's logbook without being duplicated. Create one follow-up card per action to assign its owner, priority and due date, and optionally link it to the meeting. Move cards between Open, In progress, Awaiting response and Completed. Meeting notes remain in the Meeting notes Kanban and searchable Meeting log. Archive hides a note from the active views while retaining it in the database; turn on **Show archived** to view it again.
 
 The board uses database row-level security. Do not disable the policies or place a Supabase service-role key in browser files. The only browser key is the existing publishable/anon key already used by the dashboard's media gallery.
