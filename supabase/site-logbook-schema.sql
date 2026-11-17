@@ -122,3 +122,27 @@ as $$ begin new.updated_at = now(); return new; end; $$;
 drop trigger if exists site_logbook_action_updated_at on public.site_logbook_actions;
 create trigger site_logbook_action_updated_at before update on public.site_logbook_actions
 for each row execute function public.set_site_logbook_action_updated_at();
+
+
+-- Append-only updates preserve the discussion trail across review meetings.
+create table if not exists public.site_logbook_action_updates (
+  id uuid primary key default gen_random_uuid(),
+  action_id uuid not null references public.site_logbook_actions(id) on delete cascade,
+  site_key text not null check (site_key ~ '^[12]-[A-Za-z0-9_-]+$'),
+  meeting_id uuid references public.site_logbook(id) on delete set null,
+  note text not null check (char_length(note) between 1 and 8000),
+  status text not null check (status in ('Open','In progress','Awaiting response','Completed')),
+  owner text not null default '' check (char_length(owner) <= 200),
+  created_by uuid not null references auth.users(id),
+  created_at timestamptz not null default now()
+);
+create index if not exists site_logbook_action_updates_action_date on public.site_logbook_action_updates(action_id, created_at);
+create index if not exists site_logbook_action_updates_site_date on public.site_logbook_action_updates(site_key, created_at desc);
+alter table public.site_logbook_action_updates enable row level security;
+drop policy if exists "Approved board users can read ticket history" on public.site_logbook_action_updates;
+drop policy if exists "Approved board users can add ticket history" on public.site_logbook_action_updates;
+create policy "Approved board users can read ticket history" on public.site_logbook_action_updates
+  for select to authenticated using (public.is_olh_site_board_user());
+create policy "Approved board users can add ticket history" on public.site_logbook_action_updates
+  for insert to authenticated with check (public.is_olh_site_board_user() and created_by = auth.uid());
+grant select, insert on public.site_logbook_action_updates to authenticated;
