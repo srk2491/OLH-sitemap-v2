@@ -1,13 +1,13 @@
-# Online site photo and video uploads
+# Online site media and project documents
 
-v1.15 adds an authenticated upload page at `/media-admin.html`. An approved official chooses a 1 BHK or 2 BHK site, uploads JPG/PNG/WebP or MP4/WebM, and the public map reads that site's gallery from the online media service. An open map refreshes galleries when it regains focus and every two minutes. Existing `data/media.json` galleries continue to work as a fallback.
+The authenticated `/media-admin.html` page supports project photos/videos and official project PDFs. Photos and videos appear in the site gallery. PDFs uploaded with their document type, title, issuing authority and date appear in a separate Project documents section on that site’s public dashboard card. PDFs are public immediately after upload, so the uploader must confirm they are approved for public release. Existing `data/media.json` photo/video galleries continue to work as a fallback.
 
-The upload page is visible to the public, but only accounts explicitly added to the uploader allowlist can upload or remove media. It uses a public/anonymous client key; never put a service-role key in this project. Database and Storage row-level security in `supabase/media-schema.sql` enforce the write restriction.
+The upload page is visible to the public, but only accounts explicitly added to the uploader allowlist can upload or remove media. It uses a public/anonymous client key. Database and Storage row-level security restrict uploads and edits to approved officials; never put a service-role key in this project.
 
 ## One-time setup
 
 1. Create a Supabase project. In **SQL Editor**, run `supabase/media-schema.sql`.
-   If the media service is already set up, also run `supabase/media-edit-policy.sql` once to enable metadata edits and replacement uploads. Existing remove and upload policies remain in place.
+   If the media service is already set up, also run `supabase/media-edit-policy.sql` once to enable metadata edits and replacement uploads. To enable project PDFs, run `supabase/site-documents-schema.sql` after the media service is set up. Existing remove and upload policies remain in place.
 2. In **Authentication → URL Configuration**, set **Site URL** to `https://olh-sitemap-preview.pages.dev/media-admin.html`. Add `https://olh-sitemap-preview.pages.dev/**` to **Redirect URLs**. This directs invite links to the password setup page instead of the default `localhost:3000`.
 3. In the project settings, copy the **Project URL** and **anon/public key** into `media-config.js`:
 
