@@ -8,8 +8,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - "ashraya_master_report.json"
 
 permissions:
   contents: write

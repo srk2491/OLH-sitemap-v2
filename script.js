@@ -43,7 +43,7 @@ const translations = {
   }
 };
 const original=new Map([...document.querySelectorAll('[data-i18n]')].map(el=>[el,el.innerHTML]));
-const labels={en:{availability:'Availability',unknown:'Availability not published',zero:'None available',limited:'available',available:'available',sites:'sites found',directions:'Get directions',share:'Share site',photos:'Photos & videos',noMedia:'No photos or videos have been published for this site yet.'},kn:{availability:'ಲಭ್ಯತೆ',unknown:'ಲಭ್ಯತೆ ಪ್ರಕಟಿಸಲಾಗಿಲ್ಲ',zero:'ಲಭ್ಯವಿಲ್ಲ',limited:'ಲಭ್ಯ',available:'ಲಭ್ಯ',sites:'ಸ್ಥಳಗಳು',directions:'ಮಾರ್ಗ ನೋಡಿ',share:'ಸ್ಥಳ ಹಂಚಿಕೊಳ್ಳಿ',photos:'ಚಿತ್ರಗಳು ಮತ್ತು ವೀಡಿಯೊಗಳು',noMedia:'ಈ ಸ್ಥಳಕ್ಕೆ ಇನ್ನೂ ಚಿತ್ರಗಳು ಅಥವಾ ವೀಡಿಯೊಗಳನ್ನು ಪ್ರಕಟಿಸಲಾಗಿಲ್ಲ.'}};
+const labels={en:{availability:'Availability',unknown:'Availability not published',zero:'None available',limited:'available',available:'available',sites:'sites found',directions:'Get directions',share:'Share site',photos:'Photos & videos',noMedia:'No photos or videos have been published for this site yet.',documents:'Project documents',noDocuments:'No project documents have been published for this site yet.',documentIssuer:'Issuing authority',documentDate:'Document date',viewDocument:'View PDF ↗'},kn:{availability:'ಲಭ್ಯತೆ',unknown:'ಲಭ್ಯತೆ ಪ್ರಕಟಿಸಲಾಗಿಲ್ಲ',zero:'ಲಭ್ಯವಿಲ್ಲ',limited:'ಲಭ್ಯ',available:'ಲಭ್ಯ',sites:'ಸ್ಥಳಗಳು',directions:'ಮಾರ್ಗ ನೋಡಿ',share:'ಸ್ಥಳ ಹಂಚಿಕೊಳ್ಳಿ',photos:'ಚಿತ್ರಗಳು ಮತ್ತು ವೀಡಿಯೊಗಳು',noMedia:'ಈ ಸ್ಥಳಕ್ಕೆ ಇನ್ನೂ ಚಿತ್ರಗಳು ಅಥವಾ ವೀಡಿಯೊಗಳನ್ನು ಪ್ರಕಟಿಸಲಾಗಿಲ್ಲ.',documents:'ಯೋಜನೆಯ ದಾಖಲೆಗಳು',noDocuments:'ಈ ಸ್ಥಳಕ್ಕೆ ಯಾವುದೇ ಯೋಜನಾ ದಾಖಲೆಗಳನ್ನು ಇನ್ನೂ ಪ್ರಕಟಿಸಲಾಗಿಲ್ಲ.',documentIssuer:'ದಾಖಲೆ ನೀಡಿದ ಪ್ರಾಧಿಕಾರ',documentDate:'ದಾಖಲೆಯ ದಿನಾಂಕ',viewDocument:'PDF ನೋಡಿ ↗'}};
 const text=k=>labels[lang][k];
 const tr=(en,kn)=>lang==='kn'?kn:en;
 function displayName(s){return lang==='kn'&&s.nameKn?s.nameKn:s.name;}
@@ -148,7 +148,8 @@ function renderMarkers(){if(!map)return;layer.clearLayers();markers.clear();
 }
 function populateAreas(){const areas=[...new Set(sites.filter(s=>s.mode===state.mode).map(s=>s.constituency))].sort();$('constituencyFilter').innerHTML=`<option value="">${tr('All constituencies','ಎಲ್ಲಾ ವಿಧಾನಸಭಾ ಕ್ಷೇತ್ರಗಳು')}</option>`+areas.map(a=>`<option value="${escapeHTML(a)}">${escapeHTML(a)}</option>`).join('');$('constituencyFilter').value=state.constituency;const suggestions=[...new Set(sites.filter(s=>s.mode===state.mode).flatMap(s=>[s.name,s.nameKn,s.locationName,s.locationNameKn,s.constituency,s.agency]).filter(Boolean))].sort((a,b)=>a.localeCompare(b));$('siteSuggestions').innerHTML=suggestions.map(v=>`<option value="${escapeHTML(v)}"></option>`).join('');}
 function changeMode(mode){state.expanded=null;state.mode=mode;state.location='';state.constituency='';state.selected=null;closeDetails(false);populateAreas();document.querySelectorAll('[data-mode]').forEach(b=>{b.classList.toggle('active',b.dataset.mode===mode);b.setAttribute('aria-pressed',b.dataset.mode===mode);});render();writeURL();fit();}
-function selectSite(key,update=true){const s=filtered.find(s=>s.key===key);if(!s)return;state.selected=key;state.expanded=s.locationId;render();renderDetails(s);if(!$('siteDialog').open){if(innerWidth<=700)$('siteDialog').showModal();else $('siteDialog').show();}$('detailTitle').focus({preventScroll:true});if(map&&OLH.validCoordinates(s))map.panTo([s.latitude,s.longitude],{animate:!matchMedia('(prefers-reduced-motion: reduce)').matches});if(update)writeURL();}
+function presentSiteDialog(){const dialog=$('siteDialog'),mobile=matchMedia('(max-width:700px)').matches,presentation=mobile?'modal':'modeless';if(dialog.open&&dialog.dataset.presentation===presentation)return;if(dialog.open)dialog.close();if(mobile&&typeof dialog.showModal==='function'){dialog.showModal();dialog.dataset.presentation='modal';}else{dialog.show();dialog.dataset.presentation='modeless';}}
+function selectSite(key,update=true){const s=filtered.find(s=>s.key===key);if(!s)return;state.selected=key;state.expanded=s.locationId;render();renderDetails(s);presentSiteDialog();$('detailTitle').focus({preventScroll:true});if(map&&OLH.validCoordinates(s))map.panTo([s.latitude,s.longitude],{animate:!matchMedia('(prefers-reduced-motion: reduce)').matches});if(update)writeURL();}
 function availabilityTable(s) {
   const kn = lang === 'kn';
 
@@ -330,7 +331,7 @@ function renderDetails(s) {
         </div>
       </section>
 
-      <div class="availability-box">
+      <section class="project-documents"><h3>${text("documents")}</h3><div id="siteDocuments" class="project-document-list"><p class="media-empty">${t("Loading project documents…","ಯೋಜನೆಯ ದಾಖಲೆಗಳನ್ನು ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ…")}</p></div></section><div class="availability-box">
         <span class="eyebrow">
           ${t('AVAILABILITY AT A GLANCE', 'ಲಭ್ಯತೆಯ ಸಂಕ್ಷಿಪ್ತ ಮಾಹಿತಿ')}
         </span>
@@ -423,7 +424,9 @@ function renderDetails(s) {
     });
 
   renderGallery(s);
+  renderProjectDocuments(s);
 }
+async function renderProjectDocuments(s){const host=$('siteDocuments');if(!host)return;host.replaceChildren();try{const docs=await OLHCloudMedia.listDocuments(s.key);if(state.selected!==s.key)return;if(!docs.length){const p=document.createElement('p');p.className='media-empty';p.textContent=text('noDocuments');host.append(p);return;}for(const doc of docs){const card=document.createElement('article');card.className='project-document-card';const h=document.createElement('h4');h.textContent=doc.title;const type=document.createElement('span');type.className='project-document-type';type.textContent=doc.document_type;const issuer=document.createElement('p');issuer.textContent=text('documentIssuer')+': '+doc.issuing_authority;card.append(type,h,issuer);if(doc.document_date){const date=document.createElement('p');date.textContent=text('documentDate')+': '+new Date(doc.document_date+'T00:00:00').toLocaleDateString(lang==='kn'?'kn-IN':'en-IN');card.append(date);}const link=document.createElement('a');link.href=doc.src;link.target='_blank';link.rel='noopener noreferrer';link.textContent=text('viewDocument');card.append(link);host.append(card);}}catch(error){if(state.selected!==s.key)return;const p=document.createElement('p');p.className='media-empty';p.textContent=tr('Project documents could not be loaded right now.','ಯೋಜನೆಯ ದಾಖಲೆಗಳನ್ನು ಈಗ ಲೋಡ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ.');host.append(p);console.warn('Could not load public project documents.',error);}}
 async function renderGallery(s){const token=++galleryToken;galleryURLs.forEach(URL.revokeObjectURL);galleryURLs=[];
  try{const result=await OLHMedia.gallery(manifest,s.key,preview);if(token!==galleryToken||state.selected!==s.key)return;
  const items=result.items;$('galleryStatus').hidden=items.length>0;if(!items.length)$('galleryStatus').textContent=text('noMedia');
