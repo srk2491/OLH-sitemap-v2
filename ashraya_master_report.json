@@ -5,10 +5,10 @@
             {
                 "location_kn": "ಆನೇಕಲ್ ಗ್ರಾಮಾಂತರ",
                 "location_en": "Anekal Gramanthara",
-                "SC flats": "349",
-                "GEN flats": "342",
+                "SC flats": "347",
+                "GEN flats": "339",
                 "Min Flats": "64",
-                "Total": "755",
+                "Total": "750",
                 "mla_quota": {
                     "SC": "463",
                     "General": "560",
@@ -2123,10 +2123,10 @@
             {
                 "location_kn": "ಅಗ್ರಹಾರ ಪಾಳ್ಯ",
                 "location_en": "Unknown (ಅಗ್ರಹಾರ ಪಾಳ್ಯ)",
-                "SC flats": "8",
+                "SC flats": "7",
                 "GEN flats": "0",
                 "Min Flats": "0",
-                "Total": "8",
+                "Total": "7",
                 "mla_quota": {
                     "SC": "44",
                     "General": "-87",
@@ -2240,9 +2240,9 @@
                 "location_kn": "ಅಗ್ರಹಾರ ಪಾಳ್ಯ 29",
                 "location_en": "Unknown (ಅಗ್ರಹಾರ ಪಾಳ್ಯ 29)",
                 "SC flats": "91",
-                "GEN flats": "3",
+                "GEN flats": "2",
                 "Min Flats": "0",
-                "Total": "94",
+                "Total": "93",
                 "mla_quota": {
                     "SC": "203",
                     "General": "248",
@@ -2587,10 +2587,10 @@
             {
                 "location_kn": "ಕುಕ್ಕನಹಳ್ಳಿ",
                 "location_en": "Kukkanahalli",
-                "SC flats": "17",
+                "SC flats": "16",
                 "GEN flats": "2",
                 "Min Flats": "0",
-                "Total": "19",
+                "Total": "18",
                 "mla_quota": {
                     "SC": "62",
                     "General": "-39",
@@ -3167,10 +3167,10 @@
             {
                 "location_kn": "ತಮ್ಮರಸನಹಳ್ಳಿ",
                 "location_en": "Unknown (ತಮ್ಮರಸನಹಳ್ಳಿ)",
-                "SC flats": "16",
+                "SC flats": "15",
                 "GEN flats": "1",
                 "Min Flats": "0",
-                "Total": "17",
+                "Total": "16",
                 "mla_quota": {
                     "SC": "141",
                     "General": "176",
@@ -3864,9 +3864,9 @@
                 "location_kn": "ಮಲ್ಲಸಂದ್ರ",
                 "location_en": "Mallasandra",
                 "SC flats": "30",
-                "GEN flats": "1",
+                "GEN flats": "0",
                 "Min Flats": "0",
-                "Total": "31",
+                "Total": "30",
                 "mla_quota": {
                     "SC": "90",
                     "General": "120",
@@ -5261,9 +5261,9 @@
                 "location_kn": "ಪುನಗಮಾರನಹಳ್ಲಿ",
                 "location_en": "Punagamaranahalli",
                 "SC flats": "70",
-                "GEN flats": "2",
+                "GEN flats": "0",
                 "Min Flats": "0",
-                "Total": "72",
+                "Total": "70",
                 "mla_quota": {
                     "SC": "0",
                     "General": "1",
@@ -5376,10 +5376,10 @@
             {
                 "location_kn": "ಮುದ್ದಯನಪಾಳ್ಯ",
                 "location_en": "Muddayyanapalya",
-                "SC flats": "1418",
-                "GEN flats": "1518",
-                "Min Flats": "309",
-                "Total": "3245",
+                "SC flats": "1417",
+                "GEN flats": "1517",
+                "Min Flats": "308",
+                "Total": "3242",
                 "mla_quota": {
                     "SC": "1208",
                     "General": "1506",
