@@ -2239,10 +2239,10 @@
             {
                 "location_kn": "ಅಗ್ರಹಾರ ಪಾಳ್ಯ 29",
                 "location_en": "Unknown (ಅಗ್ರಹಾರ ಪಾಳ್ಯ 29)",
-                "SC flats": "91",
+                "SC flats": "90",
                 "GEN flats": "2",
                 "Min Flats": "0",
-                "Total": "93",
+                "Total": "92",
                 "mla_quota": {
                     "SC": "203",
                     "General": "248",
@@ -2587,10 +2587,10 @@
             {
                 "location_kn": "ಕುಕ್ಕನಹಳ್ಳಿ",
                 "location_en": "Kukkanahalli",
-                "SC flats": "16",
+                "SC flats": "15",
                 "GEN flats": "2",
                 "Min Flats": "0",
-                "Total": "18",
+                "Total": "17",
                 "mla_quota": {
                     "SC": "62",
                     "General": "-39",
@@ -3283,10 +3283,10 @@
             {
                 "location_kn": "ತೋಟಗೆರೆ",
                 "location_en": "Thotagere",
-                "SC flats": "14",
+                "SC flats": "13",
                 "GEN flats": "0",
                 "Min Flats": "0",
-                "Total": "14",
+                "Total": "13",
                 "mla_quota": {
                     "SC": "20",
                     "General": "-12",
@@ -3632,9 +3632,9 @@
                 "location_kn": "ಬೆತ್ತನಗೆರೆ",
                 "location_en": "Bettanagere",
                 "SC flats": "465",
-                "GEN flats": "413",
+                "GEN flats": "411",
                 "Min Flats": "89",
-                "Total": "967",
+                "Total": "965",
                 "mla_quota": {
                     "SC": "630",
                     "General": "786",
@@ -5376,10 +5376,10 @@
             {
                 "location_kn": "ಮುದ್ದಯನಪಾಳ್ಯ",
                 "location_en": "Muddayyanapalya",
-                "SC flats": "1417",
+                "SC flats": "1416",
                 "GEN flats": "1517",
                 "Min Flats": "308",
-                "Total": "3242",
+                "Total": "3241",
                 "mla_quota": {
                     "SC": "1208",
                     "General": "1506",
