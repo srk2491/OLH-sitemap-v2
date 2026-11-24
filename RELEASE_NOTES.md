@@ -1,3 +1,13 @@
+# v1.16.0 — Logbook meeting and all-sites views — 2026-11-24
+
+- Default the logbook to All sites and All home types so notes and action tickets are visible without first picking a site.
+- Add an All meetings / selected meeting filter; applying a meeting shows its site-specific notes and action tickets linked to its site discussions.
+- Fetch action tickets and their update history across all sites. Add an explicit site selector to action-ticket creation, and show the site and meeting on tickets.
+- Rename the follow-up board to Action tickets and explain that an action ticket is an assigned task with an owner, due date, priority, status and later progress updates.
+- Checks: logbook inline JavaScript syntax passes; extracted filter-logic checks pass for all-sites default and meeting/site/home-type filtering; bilingual voice-search regression tests pass; Python sources compile; public build includes site-board.html and excludes official-tools/. The existing tests/check.js data-integrity check fails at its sourceStock-versus-units assertion, which is outside the logbook files changed here.
+- Limitation: tickets appear under a meeting when linked to a site discussion from that meeting. Existing unlinked tickets remain visible under All meetings.
+- Upgrade: replace the project files with this release, commit and push to `main`; the existing workflow builds and deploys the logbook page to Cloudflare Pages.
+
 # v1.13.0 — Compact desktop layout repair — 2026-11-11
 
 - Correct the short-window layout that left the first housing card clipped under the fixed footer. At desktop heights of 620px and above, the first result now fits fully while search, home-type tabs, filters and location totals remain visible.
