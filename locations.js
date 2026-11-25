@@ -23,15 +23,16 @@ function decorateMode(sites){
   if(!groups.has(s.locationId))groups.set(s.locationId,{id:s.locationId,name:s.locationName,constituency:s.constituency||'Other / not specified',sites:[]});groups.get(s.locationId).sites.push(s);
  }
  const all=[...groups.values()];for(const g of all){const ps=[...new Map(g.sites.filter(coords).map(s=>[s.project_id,s])).values()];g.latitude=ps.length?ps.reduce((a,s)=>a+s.latitude,0)/ps.length:null;g.longitude=ps.length?ps.reduce((a,s)=>a+s.longitude,0)/ps.length:null;g.angle=ps.length?(Math.atan2((g.longitude-77.5946)*Math.cos(12.9716*Math.PI/180),g.latitude-12.9716)+2*Math.PI)%(2*Math.PI):Infinity;}
- // Number presentation sites in clockwise order within each constituency, so every constituency starts at 1.
- all.sort((a,b)=>a.constituency.localeCompare(b.constituency)||a.angle-b.angle||a.id.localeCompare(b.id));
- const nextNumber=new Map();
- all.forEach(g=>{const number=(nextNumber.get(g.constituency)||0)+1;nextNumber.set(g.constituency,number);const unique=[...new Set(g.sites.map(s=>s.serial))].sort((a,b)=>a-b);
-  for(const s of g.sites){s.number=number;s.locationLatitude=g.latitude;s.locationLongitude=g.longitude;
+ // Keep the dashboard's original city-wide clockwise numbering.
+ all.sort((a,b)=>a.angle-b.angle||a.id.localeCompare(b.id));
+ const nextLogbookNumber=new Map();
+ all.forEach((g,i)=>{const logbookNumber=(nextLogbookNumber.get(g.constituency)||0)+1;nextLogbookNumber.set(g.constituency,logbookNumber);const unique=[...new Set(g.sites.map(s=>s.serial))].sort((a,b)=>a-b);
+  for(const s of g.sites){s.number=i+1;s.logbookNumber=logbookNumber;s.locationLatitude=g.latitude;s.locationLongitude=g.longitude;
    const parcel=s.name.match(/parcel[-\s]*(\d+)/i);
    const repeat=g.sites.some(x=>x.mode===s.mode&&x.project_id!==s.project_id&&x.survey===s.survey);
    s.parcelLabel=parcel?'Parcel '+parcel[1]:'Survey '+s.survey+(repeat?' · Contract '+s.serial:'');
-   s.displayNumber=unique.length>1?`${number}.${parcel?parcel[1]:unique.indexOf(s.serial)+1}`:String(number);
+   s.displayNumber=unique.length>1?(i+1)+'.'+(parcel?parcel[1]:unique.indexOf(s.serial)+1):String(i+1);
+   s.logbookDisplayNumber=unique.length>1?logbookNumber+'.'+(parcel?parcel[1]:unique.indexOf(s.serial)+1):String(logbookNumber);
   }
  });return sites;
 }
