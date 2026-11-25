@@ -1,3 +1,10 @@
+# v1.16.1 — Constituency numbering and logbook filters — 2026-11-25
+
+- Number presentation sites consecutively in clockwise order within each constituency; each constituency starts at 1. Persistent project keys and source serials are unchanged.
+- When switching the logbook home-type filter to All home types, reset the site filter to All sites so action tickets and notes across the full dashboard are visible.
+- Checks: logbook inline JavaScript syntax and isolated constituency-numbering/filter regression checks pass. No database schema change.
+- Upgrade: replace the project files with this release, commit and push to `main`; the existing workflow builds and deploys the updated logbook and dashboard to Cloudflare Pages.
+
 # v1.16.0 — Logbook meeting and all-sites views — 2026-11-24
 
 - Default the logbook to All sites and All home types so notes and action tickets are visible without first picking a site.

@@ -20,16 +20,18 @@ function decorateMode(sites){
  for(const s of sites){const entry=reviewed.find(g=>g[3].includes(s.serial));
   s.locationId=s.mode+'-'+(entry?.[0]||s.project_id)+'-'+s.constituency.toLowerCase().replace(/[^a-z0-9]+/g,'-');
   s.locationName=entry?.[1]||s.name;s.locationNameKn=entry?.[2]||s.nameKn;
-  if(!groups.has(s.locationId))groups.set(s.locationId,{id:s.locationId,name:s.locationName,sites:[]});groups.get(s.locationId).sites.push(s);
+  if(!groups.has(s.locationId))groups.set(s.locationId,{id:s.locationId,name:s.locationName,constituency:s.constituency||'Other / not specified',sites:[]});groups.get(s.locationId).sites.push(s);
  }
  const all=[...groups.values()];for(const g of all){const ps=[...new Map(g.sites.filter(coords).map(s=>[s.project_id,s])).values()];g.latitude=ps.length?ps.reduce((a,s)=>a+s.latitude,0)/ps.length:null;g.longitude=ps.length?ps.reduce((a,s)=>a+s.longitude,0)/ps.length:null;g.angle=ps.length?(Math.atan2((g.longitude-77.5946)*Math.cos(12.9716*Math.PI/180),g.latitude-12.9716)+2*Math.PI)%(2*Math.PI):Infinity;}
- all.sort((a,b)=>a.angle-b.angle||a.id.localeCompare(b.id));
- all.forEach((g,i)=>{const unique=[...new Set(g.sites.map(s=>s.serial))].sort((a,b)=>a-b);
-  for(const s of g.sites){s.number=i+1;s.locationLatitude=g.latitude;s.locationLongitude=g.longitude;
+ // Number presentation sites in clockwise order within each constituency, so every constituency starts at 1.
+ all.sort((a,b)=>a.constituency.localeCompare(b.constituency)||a.angle-b.angle||a.id.localeCompare(b.id));
+ const nextNumber=new Map();
+ all.forEach(g=>{const number=(nextNumber.get(g.constituency)||0)+1;nextNumber.set(g.constituency,number);const unique=[...new Set(g.sites.map(s=>s.serial))].sort((a,b)=>a-b);
+  for(const s of g.sites){s.number=number;s.locationLatitude=g.latitude;s.locationLongitude=g.longitude;
    const parcel=s.name.match(/parcel[-\s]*(\d+)/i);
    const repeat=g.sites.some(x=>x.mode===s.mode&&x.project_id!==s.project_id&&x.survey===s.survey);
    s.parcelLabel=parcel?'Parcel '+parcel[1]:'Survey '+s.survey+(repeat?' · Contract '+s.serial:'');
-   s.displayNumber=unique.length>1?`${i+1}.${parcel?parcel[1]:unique.indexOf(s.serial)+1}`:String(i+1);
+   s.displayNumber=unique.length>1?`${number}.${parcel?parcel[1]:unique.indexOf(s.serial)+1}`:String(number);
   }
  });return sites;
 }
