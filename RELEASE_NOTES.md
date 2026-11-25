@@ -1,3 +1,10 @@
+# v1.16.3 — Keep constituency numbering in logbook only — 2026-11-25
+
+- Restore the dashboard and map's original city-wide clockwise site numbering.
+- Keep separate constituency-local site labels in the staff logbook only, so each constituency starts at 1 there.
+- Checks: location helper logic and logbook inline JavaScript syntax pass; verified the map uses `displayNumber` while the logbook uses `logbookDisplayNumber`. No data keys or database schema changed.
+- Reload the dashboard and logbook after deployment.
+
 # v1.16.2 — Explicit site card opening — 2026-11-25
 
 - Selecting a site now only updates the logbook filters; the site card opens only when the user chooses View site card.
