@@ -1,3 +1,10 @@
+# v1.16.2 — Explicit site card opening — 2026-11-25
+
+- Selecting a site now only updates the logbook filters; the site card opens only when the user chooses View site card.
+- Keep the explicit site-card buttons available in the main logbook and site-note form.
+- Checks: logbook inline JavaScript syntax passes; confirmed the site selector no longer invokes the card and the explicit buttons remain wired.
+- No database schema change. Push to `main` to trigger the existing Cloudflare Pages deployment.
+
 # v1.16.1 — Constituency numbering and logbook filters — 2026-11-25
 
 - Number presentation sites consecutively in clockwise order within each constituency; each constituency starts at 1. Persistent project keys and source serials are unchanged.
