@@ -5,15 +5,15 @@
             {
                 "location_kn": "ಆನೇಕಲ್ ಗ್ರಾಮಾಂತರ",
                 "location_en": "Anekal Gramanthara",
-                "SC flats": "347",
-                "GEN flats": "338",
+                "SC flats": "346",
+                "GEN flats": "336",
                 "Min Flats": "64",
-                "Total": "749",
+                "Total": "746",
                 "mla_quota": {
                     "SC": "463",
-                    "General": "560",
+                    "General": "561",
                     "Minority": "81",
-                    "Total": "1104",
+                    "Total": "1105",
                     "source_headers": {
                         "SC": [
                             "ಸ್ಥಳೀಯ ಕ್ಷೇತ್ರವಾರು ಫ್ಲಾಟ್ ಗಳ ಸ್ಥಿತಿ",
@@ -353,15 +353,15 @@
             {
                 "location_kn": "ಚಿಕ್ಕನಹಳ್ಳಿ ಕಮ್ಮನಹಳ್ಳಿ",
                 "location_en": "Chikkanahalli Kamanahalli",
-                "SC flats": "3",
-                "GEN flats": "7",
+                "SC flats": "5",
+                "GEN flats": "8",
                 "Min Flats": "0",
-                "Total": "10",
+                "Total": "13",
                 "mla_quota": {
                     "SC": "54",
-                    "General": "73",
+                    "General": "74",
                     "Minority": "6",
-                    "Total": "133",
+                    "Total": "134",
                     "source_headers": {
                         "SC": [
                             "ಸ್ಥಳೀಯ ಕ್ಷೇತ್ರವಾರು ಫ್ಲಾಟ್ ಗಳ ಸ್ಥಿತಿ",
@@ -475,9 +475,9 @@
                 "Total": "4",
                 "mla_quota": {
                     "SC": "28",
-                    "General": "29",
+                    "General": "30",
                     "Minority": "-1",
-                    "Total": "56",
+                    "Total": "57",
                     "source_headers": {
                         "SC": [
                             "ಸ್ಥಳೀಯ ಕ್ಷೇತ್ರವಾರು ಫ್ಲಾಟ್ ಗಳ ಸ್ಥಿತಿ",
@@ -1765,10 +1765,10 @@
             {
                 "location_kn": "ಬೈಯ್ಯಪ್ಪನಹಳ್ಳಿ",
                 "location_en": "Unknown (ಬೈಯ್ಯಪ್ಪನಹಳ್ಳಿ)",
-                "SC flats": "6",
+                "SC flats": "7",
                 "GEN flats": "8",
                 "Min Flats": "0",
-                "Total": "14",
+                "Total": "15",
                 "mla_quota": {
                     "SC": "207",
                     "General": "230",
@@ -2002,10 +2002,10 @@
             {
                 "location_kn": "ಬಿದರಹಳ್ಳಿ",
                 "location_en": "Bidarahalli",
-                "SC flats": "543",
-                "GEN flats": "636",
+                "SC flats": "545",
+                "GEN flats": "637",
                 "Min Flats": "56",
-                "Total": "1235",
+                "Total": "1238",
                 "mla_quota": {
                     "SC": "783",
                     "General": "941",
@@ -2239,10 +2239,10 @@
             {
                 "location_kn": "ಅಗ್ರಹಾರ ಪಾಳ್ಯ 29",
                 "location_en": "Unknown (ಅಗ್ರಹಾರ ಪಾಳ್ಯ 29)",
-                "SC flats": "90",
-                "GEN flats": "2",
+                "SC flats": "91",
+                "GEN flats": "3",
                 "Min Flats": "0",
-                "Total": "92",
+                "Total": "94",
                 "mla_quota": {
                     "SC": "203",
                     "General": "248",
@@ -2703,15 +2703,15 @@
             {
                 "location_kn": "ಕುಕ್ಕನಹಳ್ಳಿ",
                 "location_en": "Kukkanahalli",
-                "SC flats": "44",
+                "SC flats": "37",
                 "GEN flats": "1",
                 "Min Flats": "0",
-                "Total": "45",
+                "Total": "38",
                 "mla_quota": {
                     "SC": "81",
-                    "General": "48",
+                    "General": "49",
                     "Minority": "10",
-                    "Total": "139",
+                    "Total": "140",
                     "source_headers": {
                         "SC": [
                             "ಸ್ಥಳೀಯ ಕ್ಷೇತ್ರವಾರು ಫ್ಲಾಟ್ ಗಳ ಸ್ಥಿತಿ",
@@ -2936,9 +2936,9 @@
                 "location_kn": "ಗೋವಿಂದಪುರ",
                 "location_en": "Govindapura",
                 "SC flats": "106",
-                "GEN flats": "72",
+                "GEN flats": "74",
                 "Min Flats": "16",
-                "Total": "194",
+                "Total": "196",
                 "mla_quota": {
                     "SC": "141",
                     "General": "173",
@@ -3168,9 +3168,9 @@
                 "location_kn": "ತಮ್ಮರಸನಹಳ್ಳಿ",
                 "location_en": "Unknown (ತಮ್ಮರಸನಹಳ್ಳಿ)",
                 "SC flats": "15",
-                "GEN flats": "1",
+                "GEN flats": "2",
                 "Min Flats": "0",
-                "Total": "16",
+                "Total": "17",
                 "mla_quota": {
                     "SC": "141",
                     "General": "176",
@@ -3632,9 +3632,9 @@
                 "location_kn": "ಬೆತ್ತನಗೆರೆ",
                 "location_en": "Bettanagere",
                 "SC flats": "465",
-                "GEN flats": "411",
-                "Min Flats": "89",
-                "Total": "965",
+                "GEN flats": "413",
+                "Min Flats": "90",
+                "Total": "968",
                 "mla_quota": {
                     "SC": "630",
                     "General": "786",
@@ -3747,10 +3747,10 @@
             {
                 "location_kn": "ಬಿಳಿಜಾಜಿ",
                 "location_en": "Unknown (ಬಿಳಿಜಾಜಿ)",
-                "SC flats": "646",
-                "GEN flats": "382",
-                "Min Flats": "50",
-                "Total": "1078",
+                "SC flats": "645",
+                "GEN flats": "383",
+                "Min Flats": "52",
+                "Total": "1080",
                 "mla_quota": {
                     "SC": "711",
                     "General": "718",
@@ -4796,10 +4796,10 @@
             {
                 "location_kn": "ದೇವಗೆರೆ",
                 "location_en": "Devagere",
-                "SC flats": "0",
+                "SC flats": "1",
                 "GEN flats": "0",
                 "Min Flats": "0",
-                "Total": "0",
+                "Total": "1",
                 "mla_quota": {
                     "SC": "7",
                     "General": "-8",
@@ -4918,9 +4918,9 @@
                 "Total": "1",
                 "mla_quota": {
                     "SC": "71",
-                    "General": "-7",
+                    "General": "-6",
                     "Minority": "-35",
-                    "Total": "29",
+                    "Total": "30",
                     "source_headers": {
                         "SC": [
                             "ಸ್ಥಳೀಯ ಕ್ಷೇತ್ರವಾರು ಫ್ಲಾಟ್ ಗಳ ಸ್ಥಿತಿ",
@@ -5260,10 +5260,10 @@
             {
                 "location_kn": "ಪುನಗಮಾರನಹಳ್ಲಿ",
                 "location_en": "Punagamaranahalli",
-                "SC flats": "69",
-                "GEN flats": "0",
+                "SC flats": "71",
+                "GEN flats": "1",
                 "Min Flats": "0",
-                "Total": "69",
+                "Total": "72",
                 "mla_quota": {
                     "SC": "0",
                     "General": "1",
@@ -5377,9 +5377,9 @@
                 "location_kn": "ಮುದ್ದಯನಪಾಳ್ಯ",
                 "location_en": "Muddayyanapalya",
                 "SC flats": "1416",
-                "GEN flats": "1517",
+                "GEN flats": "1518",
                 "Min Flats": "308",
-                "Total": "3241",
+                "Total": "3242",
                 "mla_quota": {
                     "SC": "1208",
                     "General": "1506",
